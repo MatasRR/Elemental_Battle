@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/Scenos/_Pradin\u0117.unity"
+    guid: 54dec3dc378b4084c80f2fcdc9d41b4c
+  - enabled: 1
+    path: Assets/Scenos/Registracija.unity
+    guid: 0b599787fc18b14478ab52091b21dd59
+  - enabled: 1
+    path: Assets/Scenos/Prisijungimas.unity
+    guid: e9d8615feb9eb5d4fb9f476621f631d6
+  - enabled: 1
+    path: "Assets/Scenos/Prane\u0161imas.unity"
+    guid: f73d839b2ae5eac408a77f906c1bd88d
+  - enabled: 1
+    path: Assets/Scenos/Meniu.unity
+    guid: 50657d02489b14a43abc48c49a5fa1db
+  - enabled: 1
+    path: "Assets/Scenos/Savaranki\u0161kas.unity"
+    guid: 7e06956ee0e42f444b85b19a52a5e683
+  m_configObjects: {}
