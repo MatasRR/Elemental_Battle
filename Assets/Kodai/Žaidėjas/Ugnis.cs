@@ -25,6 +25,10 @@ public class Ugnis : Elementas
     public float B3_CD;
 
     public float B3Zala;
+    public float B3Nuotolis;
+    public float B3Gyvybes;
+    public float B3MaxSugeriamaZala;
+    public float B3Trukme;
 
     public GameObject B3Daiktas;
 
@@ -37,6 +41,14 @@ public class Ugnis : Elementas
     private float LikesB4VFXLaikas;
     public Transform B4VFXAtsiradimoVieta;
     public GameObject B4VFX;
+
+    [Header("B 5: ")]
+    public float B5_CD;
+
+    public float B5Zala;
+
+    public float B5DaiktoGreitis;
+    public GameObject B5Daiktas;
 
     [Header("U 1: ")]
     public float U1_CD;
@@ -109,14 +121,17 @@ public class Ugnis : Elementas
     [PunRPC]
     void RPCKurtiUgnisB3()
     {
-        Vector3 AtsiradimoVieta = transform.position + new Vector3(0, 0, 0); /// Reiketu priesais zaideja
-        GameObject UgnisB3 = Instantiate(B3Daiktas, AtsiradimoVieta, Quaternion.Euler(-90, 0, 0));
+        Vector3 AtsiradimoVieta = transform.position + transform.forward * B3Nuotolis;
+        GameObject UgnisB3 = Instantiate(B3Daiktas, AtsiradimoVieta, KulkosAtsiradimoVieta.rotation);
         Kulka KulkosKodas = UgnisB3.GetComponent<Kulka>();
+        Skydas SkydoKodas = UgnisB3.GetComponent<Skydas>();
 
         KulkosKodas.Zala = B3Zala;
         KulkosKodas.Autorius = gameObject;
+        SkydoKodas.Gyvybes = B3Gyvybes;
+        SkydoKodas.MaxSugeriamaZala = B3MaxSugeriamaZala;
 
-        Destroy(UgnisB3, 10);
+        Destroy(UgnisB3, B3Trukme);
     }
 
     public override void B4()
@@ -156,6 +171,29 @@ public class Ugnis : Elementas
         Destroy(UgnisB4VFX, 2);
     }
 
+    public override void B5()
+    {
+        if (Physics.Raycast(Kamera.ScreenPointToRay(Input.mousePosition), out RaycastHit PataikytasObjektas))
+        {
+            photonView.RPC("RPCKurtiUgnisB5", RpcTarget.All, PataikytasObjektas.point);
+        }
+    }
+
+    [PunRPC]
+    void RPCKurtiUgnisB5(Vector3 ZiurimasTaskas)
+    {
+        GameObject UgnisB5 = Instantiate(B5Daiktas, KulkosAtsiradimoVieta.position, KulkosAtsiradimoVieta.rotation);
+        Kulka KulkosKodas = UgnisB5.GetComponent<Kulka>();
+
+        UgnisB5.transform.LookAt(ZiurimasTaskas);
+
+        KulkosKodas.Greitis = B5DaiktoGreitis;
+        KulkosKodas.Zala = B5Zala;
+        KulkosKodas.Autorius = gameObject;
+
+        Destroy(UgnisB5, 10);
+    }
+
     public override void U1()
     {
         if (Physics.Raycast(Kamera.ScreenPointToRay(Input.mousePosition), out RaycastHit PataikytasObjektas, U1SpindulioIlgis))
@@ -192,7 +230,7 @@ public class Ugnis : Elementas
             case 1: BCD = B1_CD; break;
             case 2: BCD = B2_CD; break;
             case 3: BCD = B3_CD; break;
-            case 4: BCD = B4_CD; break;/*
+            case 4: BCD = B4_CD; break;
             case 5: BCD = B5_CD; break;/*
             case 6: BCD = B6_CD; break;/*
             case 7: BCD = B7_CD; break;/*
@@ -204,7 +242,7 @@ public class Ugnis : Elementas
             case 1: BBCD = B1_CD; break;
             case 2: BBCD = B2_CD; break;
             case 3: BBCD = B3_CD; break;
-            case 4: BBCD = B4_CD; break;/*
+            case 4: BBCD = B4_CD; break;
             case 5: BBCD = B5_CD; break;/*
             case 6: BBCD = B6_CD; break;/*
             case 7: BBCD = B7_CD; break;/*
@@ -216,7 +254,7 @@ public class Ugnis : Elementas
             case 1: BBBCD = B1_CD; break;
             case 2: BBBCD = B2_CD; break;
             case 3: BBBCD = B3_CD; break;
-            case 4: BBBCD = B4_CD; break;/*
+            case 4: BBBCD = B4_CD; break;
             case 5: BBBCD = B5_CD; break;/*
             case 6: BBBCD = B6_CD; break;/*
             case 7: BBBCD = B7_CD; break;/*

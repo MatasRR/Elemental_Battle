@@ -100,6 +100,7 @@ public class Zeme : Elementas
         KulkosKodas.Greitis = B3DaiktoGreitis;
         KulkosKodas.Zala = B3Zala;
         KulkosKodas.Autorius = gameObject;
+        ZemeB3.transform.GetChild(0).GetComponent<Sukimasis>().SukimosiVektorius = new Vector3(0, 0, B3SukimosiGreitis);
 
         Destroy(ZemeB3, 10);
     }

@@ -1,2 +1,138 @@
-Base path: C:/Program Files/Unity/Hub/Editor/2019.1.11f1/Editor/Data
+Base path: 'C:/Program Files/Unity/Hub/Editor/2019.2.10f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.2.10f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
+Cmd: preprocessCompute
+  insize=4809 outsize=4811 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=4811 outsize=2003 ok=1
+Cmd: preprocessCompute
+  insize=3598 outsize=3600 ok=1
+Cmd: preprocess
+  insize=12423 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1626 outsize=1628 ok=1
+Cmd: preprocessCompute
+  insize=4828 outsize=4830 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=4830 outsize=2215 ok=1
+Cmd: preprocessCompute
+  insize=3598 outsize=3600 ok=1
+Cmd: preprocess
+  insize=12423 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1626 outsize=1628 ok=1
+Cmd: preprocessCompute
+  insize=4828 outsize=4830 ok=1
+Cmd: preprocessCompute
+  insize=3598 outsize=3600 ok=1
+Cmd: preprocess
+  insize=12423 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1626 outsize=1628 ok=1
+Cmd: preprocessCompute
+  insize=4809 outsize=4811 ok=1
+Cmd: preprocessCompute
+  insize=3598 outsize=3600 ok=1
+Cmd: preprocess
+  insize=12423 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1626 outsize=1628 ok=1
+Cmd: preprocessCompute
+  insize=6823 outsize=6825 ok=1
+Cmd: preprocessCompute
+  insize=3612 outsize=3614 ok=1
+Cmd: preprocess
+  insize=12431 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1627 outsize=1629 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=12329 outsize=3722 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=12329 outsize=6122 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=6634 outsize=6636 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=6636 outsize=4099 ok=1
+Cmd: preprocessCompute
+  insize=3612 outsize=3614 ok=1
+Cmd: preprocess
+  insize=12431 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1627 outsize=1629 ok=1
+Cmd: preprocessCompute
+  insize=4828 outsize=4830 ok=1
+Cmd: preprocessCompute
+  insize=3598 outsize=3600 ok=1
+Cmd: preprocess
+  insize=12423 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1626 outsize=1628 ok=1
+Cmd: preprocessCompute
+  insize=4813 outsize=4815 ok=1
+Cmd: preprocessCompute
+  insize=3598 outsize=3600 ok=1
+Cmd: preprocess
+  insize=12423 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1626 outsize=1628 ok=1
+Cmd: preprocessCompute
+  insize=6634 outsize=6636 ok=1
+Cmd: preprocessCompute
+  insize=3612 outsize=3614 ok=1
+Cmd: preprocess
+  insize=12431 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1627 outsize=1629 ok=1
+Cmd: preprocessCompute
+  insize=6634 outsize=6636 ok=1
+Cmd: preprocessCompute
+  insize=3612 outsize=3614 ok=1
+Cmd: preprocess
+  insize=12431 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1627 outsize=1629 ok=1
+Cmd: preprocessCompute
+  insize=6634 outsize=6636 ok=1
+Cmd: preprocessCompute
+  insize=3612 outsize=3614 ok=1
+Cmd: preprocess
+  insize=12431 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1627 outsize=1629 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at (1596): 'cross': implicit truncation of vector type\nCompiling Vertex program with _SURFACE_TYPE_TRANSPARENT _BLENDMODE_ALPHA
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=0 insize=32457 outsize=6102 kw=_SURFACE_TYPE_TRANSPARENT _BLENDMODE_ALPHA pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at (1596): 'cross': implicit truncation of vector type\nCompiling Fragment program with _SURFACE_TYPE_TRANSPARENT _BLENDMODE_ALPHA
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=32457 outsize=262 kw=_SURFACE_TYPE_TRANSPARENT _BLENDMODE_ALPHA pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=6823 outsize=6825 ok=1
+Cmd: preprocessCompute
+  insize=3612 outsize=3614 ok=1
+Cmd: preprocess
+  insize=12431 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1627 outsize=1629 ok=1
+Cmd: preprocessCompute
+  insize=6634 outsize=6636 ok=1
+Cmd: preprocessCompute
+  insize=3612 outsize=3614 ok=1
+Cmd: preprocess
+  insize=12431 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1627 outsize=1629 ok=1
+Cmd: preprocessCompute
+  insize=6634 outsize=6636 ok=1
+Cmd: preprocessCompute
+  insize=3612 outsize=3614 ok=1
+Cmd: preprocess
+  insize=12431 outsize=438 ok=1
+Cmd: preprocessCompute
+  insize=1627 outsize=1629 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=28310 outsize=1518 kw=DEBUG_DISPLAY _SURFACE_TYPE_TRANSPARENT _BLENDMODE_ALPHA pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at (2581): pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them\nCompiling Fragment program with DEBUG_DISPLAY _SURFACE_TYPE_TRANSPARENT _BLENDMODE_ALPHA
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
+  api=4 type=1 insize=28310 outsize=10534 kw=DEBUG_DISPLAY _SURFACE_TYPE_TRANSPARENT _BLENDMODE_ALPHA pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1

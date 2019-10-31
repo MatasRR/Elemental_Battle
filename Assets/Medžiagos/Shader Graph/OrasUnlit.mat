@@ -10,15 +10,17 @@ Material:
   m_Name: OrasUnlit
   m_Shader: {fileID: -6465566751694194690, guid: e35a5fe6e996e4b4a86d3b62e92f2250,
     type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _BLENDMODE_ALPHA _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap:
     MotionVector: User
+    RenderType: Transparent
   disabledShaderPasses:
   - MOTIONVECTORS
+  - TransparentBackface
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
@@ -27,8 +29,42 @@ Material:
     - Vector1_3254E0E1: 0.5
     - Vector1_3603276E: 3
     - Vector1_5F210425: 2
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffEnable: 0
+    - _AlphaDstBlend: 10
+    - _AlphaSrcBlend: 1
+    - _BlendMode: 0
+    - _CullMode: 2
+    - _CullModeForward: 2
+    - _DoubleSidedEnable: 0
+    - _DoubleSidedNormalMode: 2
+    - _DstBlend: 10
+    - _ReceivesSSR: 0
+    - _RenderQueueType: 5
+    - _RequireSplitLighting: 0
+    - _SrcBlend: 1
+    - _StencilRef: 0
+    - _StencilRefDepth: 32
+    - _StencilRefDistortionVec: 64
+    - _StencilRefGBuffer: 2
+    - _StencilRefMV: 160
+    - _StencilWriteMask: 3
+    - _StencilWriteMaskDepth: 48
+    - _StencilWriteMaskDistortionVec: 64
+    - _StencilWriteMaskGBuffer: 3
+    - _StencilWriteMaskMV: 176
+    - _SurfaceType: 1
+    - _TransparentBackfaceEnable: 0
+    - _TransparentCullMode: 2
+    - _TransparentSortPriority: 0
+    - _UseShadowThreshold: 0
+    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestGBuffer: 4
+    - _ZTestTransparent: 4
+    - _ZWrite: 1
     m_Colors:
-    - Color_603E44BD: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 0.39215687}
+    - Color_603E44BD: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0.39215687}
     - Color_A29BB8B7: {r: 11.984314, g: 11.984314, b: 11.984314, a: 1}
     - Vector2_64D14590: {r: 0.25, g: 0.25, b: 0, a: 0}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
