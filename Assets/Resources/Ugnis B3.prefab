@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 3479311114505999116}
   - component: {fileID: 3823383964115134811}
   - component: {fileID: 477278979265030872}
-  - component: {fileID: 6134473125843141756}
-  - component: {fileID: 348529354122691695}
+  - component: {fileID: 5102353537958185084}
   m_Layer: 0
   m_Name: Ugnis B3
   m_TagString: Skydas
@@ -62,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 67980ca7fa844524fad6eb2c16cf8b14, type: 2}
+  - {fileID: 2100000, guid: 2e58c0ed51bd4c343becabb33cfdbbce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,7 +133,7 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &6134473125843141756
+--- !u!114 &5102353537958185084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,26 +142,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3479311114505999219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c23a847bc25a7549b3dcd439f76a458, type: 3}
+  m_Script: {fileID: 11500000, guid: 02d93138398ff994f84deab444cb9825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Gyvybes: 0
   MaxSugeriamaZala: 0
   Autorius: {fileID: 0}
   IgnoruojaSavoKulkas: 0
---- !u!114 &348529354122691695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3479311114505999219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba782e7f2b77c184d8e1666aab0fa77f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Greitis: 0
-  Zala: 0
-  Autorius: {fileID: 0}
-  EinaKiaurai: 1
+  SukietejimoLaikas: 0
+  SukietejusiMedziaga: {fileID: 0}

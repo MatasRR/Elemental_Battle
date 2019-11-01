@@ -3466,8 +3466,10 @@ MonoBehaviour:
   B3Zala: 20
   B3Nuotolis: 5
   B3Gyvybes: 50
-  B3MaxSugeriamaZala: 0
-  B3Trukme: 50
+  B3MaxSugeriamaZala: 50
+  B3SukietejimoTrukme: 3
+  B3SukietejusiMedziaga: {fileID: 2100000, guid: 8638602904805c44d849fa9623d0b089,
+    type: 2}
   B3Daiktas: {fileID: 3479311114505999219, guid: 3f899e9975c7a6148876af604cab33bb,
     type: 3}
   B4_CD: 35

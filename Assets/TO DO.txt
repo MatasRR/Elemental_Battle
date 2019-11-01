@@ -4,4 +4,12 @@ Debesies mesh
 Žemės drebėjimo VFX
 Skydo kodas??
 Fire DOT effect?
-Sugalvoti, ką daryti su ugnies siena
+Sugalvoti, ką daryti su ugnies siena (OnTriggerEnter --> kas kiek nors laiko tikrinti, ar bounds.entends ir zaloti)
+	Šitą įdėti į UgnisB3 kodą, nedėti Kulkos kodo, žalos nustatymas pagal VanduoB2, žalojimo dažnis
+Jei yra OrasB1 : Kulka, ar ieškant Kulkos kodo randamas OroB1 kodas (tas pats su skydais)
+Lightning stuns
+Thunderstorm
+Vortex atsiradimas (dabar counter-intuitive)
+OroU1 reagavimas į uždangas (Physics.RayCast)
+Ice field?
+Prideti prie Kulkos kodo root ir disarm, jei 0 --> nieko nedaryt

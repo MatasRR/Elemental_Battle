@@ -79,13 +79,13 @@
     <Compile Include="Assets\Pagalbinės programos\Photon\PhotonRealtime\Code\WebRpc.cs" />
     <None Include="Assets\Pagalbinės programos\Photon\PhotonRealtime\Code\PhotonRealtime.asmdef" />
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Rasa/Documents/Mato/Unity/GitHub/Elemental_Battle/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Matas/Documents/IT/Projects/Unity/Elemental_Battle/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/Rasa/Documents/Mato/Unity/GitHub/Elemental_Battle/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/Matas/Documents/IT/Projects/Unity/Elemental_Battle/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Rasa/Documents/Mato/Unity/GitHub/Elemental_Battle/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Matas/Documents/IT/Projects/Unity/Elemental_Battle/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -283,31 +283,31 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
-      <HintPath>C:/Users/Rasa/Documents/Mato/Unity/GitHub/Elemental_Battle/Assets/Pagalbinės programos/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+      <HintPath>C:/Users/Matas/Documents/IT/Projects/Unity/Elemental_Battle/Assets/Pagalbinės programos/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>C:/Users/Rasa/Documents/Mato/Unity/GitHub/Elemental_Battle/Assets/Pagalbinės programos/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+      <HintPath>C:/Users/Matas/Documents/IT/Projects/Unity/Elemental_Battle/Assets/Pagalbinės programos/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/Rasa/Documents/Mato/Unity/GitHub/Elemental_Battle/Assets/Pagalbinės programos/Photon/PhotonUnityNetworking/Code/Editor/Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:/Users/Matas/Documents/IT/Projects/Unity/Elemental_Battle/Assets/Pagalbinės programos/Photon/PhotonUnityNetworking/Code/Editor/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/Users/Rasa/Documents/Mato/Unity/GitHub/Elemental_Battle/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/Matas/Documents/IT/Projects/Unity/Elemental_Battle/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/Rasa/Documents/Mato/Unity/GitHub/Elemental_Battle/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Matas/Documents/IT/Projects/Unity/Elemental_Battle/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/Rasa/Documents/Mato/Unity/GitHub/Elemental_Battle/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Matas/Documents/IT/Projects/Unity/Elemental_Battle/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/Rasa/Documents/Mato/Unity/GitHub/Elemental_Battle/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Matas/Documents/IT/Projects/Unity/Elemental_Battle/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/Rasa/Documents/Mato/Unity/GitHub/Elemental_Battle/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/Matas/Documents/IT/Projects/Unity/Elemental_Battle/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>C:/Users/Rasa/Documents/Mato/Unity/GitHub/Elemental_Battle/Library/PackageCache/com.unity.render-pipelines.high-definition@6.9.0-preview/Editor/Core/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+      <HintPath>C:/Users/Matas/Documents/IT/Projects/Unity/Elemental_Battle/Library/PackageCache/com.unity.render-pipelines.high-definition@6.9.0-preview/Editor/Core/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.10f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

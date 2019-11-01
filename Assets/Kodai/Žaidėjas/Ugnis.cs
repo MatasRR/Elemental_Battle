@@ -25,11 +25,13 @@ public class Ugnis : Elementas
     public float B3_CD;
 
     public float B3Zala;
+    public float B3ZalojimoDaznis;
     public float B3Nuotolis;
     public float B3Gyvybes;
     public float B3MaxSugeriamaZala;
-    public float B3Trukme;
+    public float B3SukietejimoTrukme;
 
+    public Material B3SukietejusiMedziaga;
     public GameObject B3Daiktas;
 
     [Header("B 4: ")]
@@ -46,6 +48,7 @@ public class Ugnis : Elementas
     public float B5_CD;
 
     public float B5Zala;
+    public float B5StingdymoLaikas;
 
     public float B5DaiktoGreitis;
     public GameObject B5Daiktas;
@@ -123,15 +126,15 @@ public class Ugnis : Elementas
     {
         Vector3 AtsiradimoVieta = transform.position + transform.forward * B3Nuotolis;
         GameObject UgnisB3 = Instantiate(B3Daiktas, AtsiradimoVieta, KulkosAtsiradimoVieta.rotation);
-        Kulka KulkosKodas = UgnisB3.GetComponent<Kulka>();
-        Skydas SkydoKodas = UgnisB3.GetComponent<Skydas>();
-
-        KulkosKodas.Zala = B3Zala;
-        KulkosKodas.Autorius = gameObject;
+        UgnisB3 SkydoKodas = UgnisB3.GetComponent<UgnisB3>();
+        
+        SkydoKodas.Zala = B3Zala;
+        SkydoKodas.ZalojimoDaznis = B3ZalojimoDaznis;
+        SkydoKodas.Autorius = gameObject;
         SkydoKodas.Gyvybes = B3Gyvybes;
         SkydoKodas.MaxSugeriamaZala = B3MaxSugeriamaZala;
-
-        Destroy(UgnisB3, B3Trukme);
+        SkydoKodas.SukietejimoLaikas = B3SukietejimoTrukme;
+        SkydoKodas.SukietejusiMedziaga = B3SukietejusiMedziaga;
     }
 
     public override void B4()

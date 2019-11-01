@@ -6053,7 +6053,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: FLAME WALL (WIP)
+  m_Text: LAVA WALL (WIP)
 --- !u!222 &691697845
 CanvasRenderer:
   m_ObjectHideFlags: 0
