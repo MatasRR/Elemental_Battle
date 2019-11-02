@@ -27,11 +27,8 @@ public class Ugnis : Elementas
     public float B3Zala;
     public float B3ZalojimoDaznis;
     public float B3Nuotolis;
-    public float B3Gyvybes;
-    public float B3MaxSugeriamaZala;
-    public float B3SukietejimoTrukme;
-
-    public Material B3SukietejusiMedziaga;
+    public float B3Trukme;
+    
     public GameObject B3Daiktas;
 
     [Header("B 4: ")]
@@ -49,6 +46,7 @@ public class Ugnis : Elementas
 
     public float B5Zala;
     public float B5StingdymoLaikas;
+    public float B5NuginklavimoLaikas;
 
     public float B5DaiktoGreitis;
     public GameObject B5Daiktas;
@@ -61,13 +59,38 @@ public class Ugnis : Elementas
     public float U1DaiktoGreitis;
     public float U1SpindulioIlgis;
     public GameObject U1Daiktas;
+
+    [Header("U 3: ")]
+    public float U3_CD;
+
+    public float U3Zala;
+    public float U3SustingdymoLaikas;
+    public float U3NuginklavimoLaikas;
+
+    public float U3SpindulioIlgis;
+    public float U3ZaibuAtsiradimoSpindulys;
+    public float U3Pakelimas;
+    private Vector3 U3ZaibuAtsiradimoVieta;
+
+    public float U3Trukme;
+    private float LikusiU3Trukme;
     
+    public float U3BeTaikinioDaznis;
+    private float LikesU3BeTaikinioLaikas;
+    public float U3SuTaikiniuDaznis;
+    private float LikesU3SuTaikiniuLaikas;
+
+    public float U3Greitis;
+    public GameObject U3Daiktas;
+    public GameObject U3Zaibas;
+
 
     public override void Update()
     {
         base.Update();
 
         B4Liepsnos();
+        U3ZaibuLaikmatis();
     }
 
     public override void B1()
@@ -126,15 +149,13 @@ public class Ugnis : Elementas
     {
         Vector3 AtsiradimoVieta = transform.position + transform.forward * B3Nuotolis;
         GameObject UgnisB3 = Instantiate(B3Daiktas, AtsiradimoVieta, KulkosAtsiradimoVieta.rotation);
-        UgnisB3 SkydoKodas = UgnisB3.GetComponent<UgnisB3>();
-        
-        SkydoKodas.Zala = B3Zala;
-        SkydoKodas.ZalojimoDaznis = B3ZalojimoDaznis;
-        SkydoKodas.Autorius = gameObject;
-        SkydoKodas.Gyvybes = B3Gyvybes;
-        SkydoKodas.MaxSugeriamaZala = B3MaxSugeriamaZala;
-        SkydoKodas.SukietejimoLaikas = B3SukietejimoTrukme;
-        SkydoKodas.SukietejusiMedziaga = B3SukietejusiMedziaga;
+        UgnisB3 KulkosKodas = UgnisB3.GetComponent<UgnisB3>();
+
+        KulkosKodas.Daznis = B3ZalojimoDaznis;
+        KulkosKodas.Zala = B3Zala;
+        KulkosKodas.Autorius = gameObject;
+
+        Destroy(UgnisB3, B3Trukme);
     }
 
     public override void B4()
@@ -192,6 +213,8 @@ public class Ugnis : Elementas
 
         KulkosKodas.Greitis = B5DaiktoGreitis;
         KulkosKodas.Zala = B5Zala;
+        KulkosKodas.SustingdymoLaikas = B5StingdymoLaikas;
+        KulkosKodas.NuginklavimoLaikas = B5NuginklavimoLaikas;
         KulkosKodas.Autorius = gameObject;
 
         Destroy(UgnisB5, 10);
@@ -225,6 +248,103 @@ public class Ugnis : Elementas
         Destroy(UgnisU1, 10);
     }
 
+    public override void U3()
+    {
+        if (Physics.Raycast(Kamera.ScreenPointToRay(Input.mousePosition), out RaycastHit PataikytasObjektas, U3SpindulioIlgis))
+        {
+            photonView.RPC("RPCKurtiUgnisU3", RpcTarget.All, PataikytasObjektas.point);
+        }
+        else
+        {
+            photonView.RPC("RPCKurtiUgnisU3", RpcTarget.All, transform.position);
+        }
+    }
+
+    [PunRPC]
+    void RPCKurtiUgnisU3(Vector3 AtsiradimoVieta)
+    {
+        AtsiradimoVieta += new Vector3(0, U3Pakelimas, 0);
+        GameObject VanduoU3 = Instantiate(U3Daiktas, AtsiradimoVieta, Quaternion.identity);
+
+        VanduoU3.transform.rotation *= Quaternion.Euler(-90, 0, 0);
+
+        U3ZaibuAtsiradimoVieta = AtsiradimoVieta;
+        LikusiU3Trukme = U3Trukme;
+
+        Destroy(VanduoU3, U3Trukme);
+    }
+
+    void U3ZaibuLaikmatis()
+    {
+        if (LikusiU3Trukme > 0f)
+        {
+            LikusiU3Trukme -= Time.deltaTime;
+
+            /// Be taikinio
+            if (LikesU3BeTaikinioLaikas > 0)
+            {
+                LikesU3BeTaikinioLaikas -= Time.deltaTime;
+            }
+            else
+            {
+                photonView.RPC("RPCKurtiUgnisU3ZaibaBeTaikinio", RpcTarget.All);
+                LikesU3BeTaikinioLaikas = U3BeTaikinioDaznis;
+            }
+            
+            /// Su taikiniu
+            if (LikesU3SuTaikiniuLaikas > 0)
+            {
+                LikesU3SuTaikiniuLaikas -= Time.deltaTime;
+            }
+            else
+            {
+                photonView.RPC("RPCKurtiUgnisU3ZaibaSuTaikiniu", RpcTarget.All);
+                LikesU3SuTaikiniuLaikas = U3SuTaikiniuDaznis;
+            }
+        }
+    }
+
+    [PunRPC]
+    void RPCKurtiUgnisU3ZaibaBeTaikinio()
+    {
+        Vector3 U3ZaiboAtsiradimoVieta = U3ZaibuAtsiradimoVieta;
+        U3ZaiboAtsiradimoVieta.x += Random.Range(-U3ZaibuAtsiradimoSpindulys, U3ZaibuAtsiradimoSpindulys);
+        U3ZaiboAtsiradimoVieta.z += Random.Range(-U3ZaibuAtsiradimoSpindulys, U3ZaibuAtsiradimoSpindulys);
+        GameObject Zaibas = Instantiate(U3Zaibas, U3ZaiboAtsiradimoVieta, Quaternion.Euler(90, 0, 0));
+        Kulka KulkosKodas = Zaibas.GetComponent<Kulka>();
+
+        KulkosKodas.Zala = U3Zala;
+        KulkosKodas.Greitis = U3Greitis;
+        KulkosKodas.SustingdymoLaikas = U3SustingdymoLaikas;
+        KulkosKodas.NuginklavimoLaikas = U3NuginklavimoLaikas;
+        KulkosKodas.Autorius = gameObject;
+
+        Destroy(Zaibas, 10);
+    }
+
+    [PunRPC]
+    void RPCKurtiUgnisU3ZaibaSuTaikiniu()
+    {
+        RaycastHit Pataike;
+        if (Physics.SphereCast(U3ZaibuAtsiradimoVieta, U3ZaibuAtsiradimoSpindulys, Vector3.down, out Pataike, U3Pakelimas * 5))
+        {
+            if (Pataike.transform.GetComponent<Zaidejas>() != null)
+            {
+                Vector3 U3ZaiboAtsiradimoVieta = new Vector3(Pataike.transform.position.x, U3ZaibuAtsiradimoVieta.y, Pataike.transform.position.z);
+
+                GameObject Zaibas = Instantiate(U3Zaibas, U3ZaiboAtsiradimoVieta, Quaternion.Euler(90, 0, 0));
+                Kulka KulkosKodas = Zaibas.GetComponent<Kulka>();
+
+                KulkosKodas.Zala = U3Zala;
+                KulkosKodas.Greitis = U3Greitis;
+                KulkosKodas.SustingdymoLaikas = U3SustingdymoLaikas;
+                KulkosKodas.NuginklavimoLaikas = U3NuginklavimoLaikas;
+                KulkosKodas.Autorius = gameObject;
+
+                Destroy(Zaibas, 10);
+            }
+        }
+    }
 
     public override void CDNustatymas()
     {
@@ -266,8 +386,8 @@ public class Ugnis : Elementas
         }
         switch (Duomenys.U)
         {
-            case 1: UCD = U1_CD; break;/*
-            case 2: UCD = U2_CD; break;/*
+            case 1: UCD = U1_CD; break;
+            //case 2: UCD = U2_CD; break;
             case 3: UCD = U3_CD; break;/*
             case 4: UCD = U4_CD; break;/*
             case 5: UCD = U5_CD; break;/*

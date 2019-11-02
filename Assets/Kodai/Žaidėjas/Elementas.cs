@@ -104,7 +104,7 @@ public class Elementas : MonoBehaviourPun
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKey(KeyCode.Alpha1))
         {
             if (DabBCD == 0)
             {
@@ -125,7 +125,7 @@ public class Elementas : MonoBehaviourPun
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKey(KeyCode.Alpha2))
         {
             if (DabBBCD == 0)
             {
@@ -146,7 +146,7 @@ public class Elementas : MonoBehaviourPun
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKey(KeyCode.Alpha3))
         {
             if (DabBBBCD == 0)
             {

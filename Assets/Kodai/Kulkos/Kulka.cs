@@ -10,6 +10,18 @@ public class Kulka : MonoBehaviour
     public float Zala;
     [HideInInspector]
     public GameObject Autorius;
+
+    [HideInInspector]
+    public float SustingdymoLaikas;
+    [HideInInspector]
+    public float NuginklavimoLaikas;
+    [HideInInspector]
+    public float SuletinimoLaikas;
+    [HideInInspector]
+    public float SuletinimoStipris;
+    [HideInInspector]
+    public float SoklumoSilpninimoStipris;
+
     public bool EinaKiaurai = false;
 
     public virtual void Start()
@@ -47,6 +59,19 @@ public class Kulka : MonoBehaviour
             Zaidejas ZaidejoKodas = go.GetComponent<Zaidejas>();
             ZaidejoKodas.KeistiPaskutiniZalojusiZaideja(Autorius);
             ZaidejoKodas.GautiZalos(Zala);
+
+            if (SustingdymoLaikas != 0)
+            {
+                ZaidejoKodas.JudejimoCCLaikas += SustingdymoLaikas;
+            }
+            if (NuginklavimoLaikas != 0)
+            {
+                ZaidejoKodas.PuolimoCCLaikas += NuginklavimoLaikas;
+            }
+            if (SuletinimoLaikas != 0)
+            {
+                StartCoroutine(Suletinimas(ZaidejoKodas));
+            }
         }
         else if (go.CompareTag("Skydas"))
         {
@@ -65,5 +90,16 @@ public class Kulka : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator Suletinimas(Zaidejas AukosZaidejoKodas)
+    {
+        AukosZaidejoKodas.GreicioMod *= SuletinimoStipris;
+        AukosZaidejoKodas.SoklumoMod *= SoklumoSilpninimoStipris;
+        AukosZaidejoKodas.GreicioIrSoklumoPerskaiciavimas();
+        yield return new WaitForSeconds(SuletinimoLaikas);
+        AukosZaidejoKodas.GreicioMod /= SuletinimoStipris;
+        AukosZaidejoKodas.SoklumoMod /= SoklumoSilpninimoStipris;
+        AukosZaidejoKodas.GreicioIrSoklumoPerskaiciavimas();
     }
 }

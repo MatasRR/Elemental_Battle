@@ -63,13 +63,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Kodai\Kulkos\Kulka.cs" />
+    <Compile Include="Assets\Kodai\Kulkos\LavosSiena.cs" />
     <Compile Include="Assets\Kodai\Kulkos\OrasB5.cs" />
     <Compile Include="Assets\Kodai\Kulkos\OrasU1.cs" />
     <Compile Include="Assets\Kodai\Kulkos\OrasU2.cs" />
     <Compile Include="Assets\Kodai\Kulkos\Skydas.cs" />
     <Compile Include="Assets\Kodai\Kulkos\Sukimasis.cs" />
     <Compile Include="Assets\Kodai\Kulkos\UgnisB3.cs" />
-    <Compile Include="Assets\Kodai\Kulkos\VanduoB5.cs" />
     <Compile Include="Assets\Kodai\Kulkos\VanduoU1.cs" />
     <Compile Include="Assets\Kodai\Kulkos\VanduoU2.cs" />
     <Compile Include="Assets\Kodai\Kulkos\VanduoU3.cs" />

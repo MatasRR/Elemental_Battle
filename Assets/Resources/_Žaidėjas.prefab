@@ -3312,6 +3312,8 @@ MonoBehaviour:
   UCDFonas: {fileID: 0}
   B1_CD: 4
   B1Zala: 25
+  B1SuletinimoStipris: 0.1
+  B1SuletinimoLaikas: 3
   B1DaiktoGreitis: 25
   B1Daiktas: {fileID: 4490117974554063683, guid: 60a7378dfe9d2f94f88d47b9b1b07f74,
     type: 3}
@@ -3463,13 +3465,10 @@ MonoBehaviour:
   B2Daiktas: {fileID: 7860602315191403013, guid: 3cde7de65ac9ae54c956302223d4d2f5,
     type: 3}
   B3_CD: 20
-  B3Zala: 20
-  B3Nuotolis: 5
-  B3Gyvybes: 50
-  B3MaxSugeriamaZala: 50
-  B3SukietejimoTrukme: 3
-  B3SukietejusiMedziaga: {fileID: 2100000, guid: 8638602904805c44d849fa9623d0b089,
-    type: 2}
+  B3Zala: 10
+  B3ZalojimoDaznis: 0.2
+  B3Nuotolis: 7
+  B3Trukme: 5
   B3Daiktas: {fileID: 3479311114505999219, guid: 3f899e9975c7a6148876af604cab33bb,
     type: 3}
   B4_CD: 35
@@ -3478,9 +3477,11 @@ MonoBehaviour:
   B4VFXAtsiradimoDaznis: 0.05
   B4VFXAtsiradimoVieta: {fileID: 7433504506195126701}
   B4VFX: {fileID: 8166246280830311476, guid: 10b5b6c0f9b3df640be518c367723790, type: 3}
-  B5_CD: 3
+  B5_CD: 30
   B5Zala: 50
-  B5DaiktoGreitis: 100
+  B5StingdymoLaikas: 2
+  B5NuginklavimoLaikas: 2
+  B5DaiktoGreitis: 70
   B5Daiktas: {fileID: 8162213766306360664, guid: 322251af12bf48a42bcfbb01da059c1f,
     type: 3}
   U1_CD: 60
@@ -3488,6 +3489,21 @@ MonoBehaviour:
   U1DaiktoGreitis: 50
   U1SpindulioIlgis: 50
   U1Daiktas: {fileID: 2692523196379564093, guid: 27a17794338409e46af60c5a127bb8bb,
+    type: 3}
+  U3_CD: 5
+  U3Zala: 10
+  U3SustingdymoLaikas: 0.2
+  U3NuginklavimoLaikas: 0.2
+  U3SpindulioIlgis: 100
+  U3ZaibuAtsiradimoSpindulys: 12
+  U3Pakelimas: 50
+  U3Trukme: 10
+  U3BeTaikinioDaznis: 0.1
+  U3SuTaikiniuDaznis: 0.5
+  U3Greitis: 70
+  U3Daiktas: {fileID: 8860187693273821742, guid: db7dcaac96a3ec74fa59b91d0b82e20c,
+    type: 3}
+  U3Zaibas: {fileID: 8162213766306360664, guid: c9d2ff0084e26d743aee9c24d27ce802,
     type: 3}
 --- !u!1 &6540156060547812444
 GameObject:

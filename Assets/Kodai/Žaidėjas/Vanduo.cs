@@ -10,8 +10,10 @@ public class Vanduo : Elementas
 	public float B1_CD;
 
 	public float B1Zala;
+    public float B1SuletinimoStipris;
+    public float B1SuletinimoLaikas;
 
-	public float B1DaiktoGreitis;
+    public float B1DaiktoGreitis;
 	public GameObject B1Daiktas;
 
 	[Header("B 2: ")]
@@ -114,6 +116,8 @@ public class Vanduo : Elementas
 
         KulkosKodas.Greitis = B1DaiktoGreitis;
         KulkosKodas.Zala = B1Zala;
+        KulkosKodas.SuletinimoLaikas = B1SuletinimoLaikas;
+        KulkosKodas.SuletinimoStipris = B1SuletinimoStipris;
         KulkosKodas.Autorius = gameObject;
 
         Destroy(VanduoB1, 10);
@@ -221,14 +225,14 @@ public class Vanduo : Elementas
     void RPCKurtiVanduoB5(Vector3 ZiurimasTaskas)
     {
         GameObject VanduoB5 = Instantiate(B5Daiktas, KulkosAtsiradimoVieta.position, KulkosAtsiradimoVieta.rotation);
-        VanduoB5 KulkosKodas = VanduoB5.GetComponent<VanduoB5>();
+        Kulka KulkosKodas = VanduoB5.GetComponent<Kulka>();
 
         VanduoB5.transform.LookAt(ZiurimasTaskas);
 
         KulkosKodas.Greitis = B5DaiktoGreitis;
         KulkosKodas.Zala = B5Zala;
+        KulkosKodas.SustingdymoLaikas = B5JudejimoCCLaikas;
         KulkosKodas.Autorius = gameObject;
-        KulkosKodas.JudejimoCCLaikas = B5JudejimoCCLaikas;
 
         Destroy(VanduoB5, 10);
     }
