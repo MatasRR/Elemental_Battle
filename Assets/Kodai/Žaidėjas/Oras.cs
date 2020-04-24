@@ -88,6 +88,7 @@ public class Oras : Elementas
         KulkosKodas.Greitis = B1DaiktoGreitis;
         KulkosKodas.Zala = B1Zala;
         KulkosKodas.Autorius = gameObject;
+        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
         
 		Destroy (OrasB1, 10);
 	}
@@ -149,6 +150,7 @@ public class Oras : Elementas
         KulkosKodas.Greitis = B5DaiktoGreitis;
         KulkosKodas.Zala = B5Zala;
         KulkosKodas.Autorius = gameObject;
+        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
         KulkosKodas.Jega = B5Jega;
 
         Destroy(OrasB5, 10);
@@ -219,7 +221,11 @@ public class Oras : Elementas
 
             if (PataikeKitam.CompareTag("Player"))
             {
-                PataikeKitam.GetComponent<Zaidejas>().GautiZalos(U1Zala);
+                Zaidejas AukosZaidejoKodas = PataikeKitam.GetComponent<Zaidejas>();
+                if (AukosZaidejoKodas.KomandosNr != ZaidejoKodas.KomandosNr || AukosZaidejoKodas.KomandosNr == 0)
+                {
+                    AukosZaidejoKodas.GautiZalos(U1Zala);
+                }
             }
             else if (PataikeKitam.CompareTag("Skydas"))
             {
@@ -245,6 +251,7 @@ public class Oras : Elementas
         KulkosKodas.Greitis = U2DaiktoGreitis;
         KulkosKodas.Zala = U2Zala;
         KulkosKodas.Autorius = gameObject;
+        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
         KulkosKodas.Jega = U2Jega;
 
         Destroy(OrasU2, 10);

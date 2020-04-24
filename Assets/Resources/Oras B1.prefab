@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4051735218510075702}
   - component: {fileID: 2384896088988730538}
+  - component: {fileID: 4901394591195320894}
   - component: {fileID: 8173537657278978887}
   - component: {fileID: 1392459429196841749}
   m_Layer: 9
@@ -43,11 +44,24 @@ MeshCollider:
   m_GameObject: {fileID: 9053628130273458566}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -2124705421725058983, guid: 4611e563e78570a4a840b9007c158a97, type: 3}
+--- !u!65 &4901394591195320894
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9053628130273458566}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 0.2, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0.75}
 --- !u!54 &8173537657278978887
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -79,6 +93,11 @@ MonoBehaviour:
   Greitis: 0
   Zala: 0
   Autorius: {fileID: 0}
+  SustingdymoLaikas: 0
+  NuginklavimoLaikas: 0
+  SuletinimoLaikas: 0
+  SuletinimoStipris: 0
+  SoklumoSilpninimoStipris: 0
   EinaKiaurai: 0
 --- !u!1001 &7969993145808836201
 PrefabInstance:
@@ -87,11 +106,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4051735218510075702}
     m_Modifications:
-    - target: {fileID: 2477518565244016377, guid: d8edf6595d9b4c54d890d14106248af3,
-        type: 3}
-      propertyPath: m_Name
-      value: Oras B1 forma
-      objectReference: {fileID: 0}
     - target: {fileID: 1457675181955278058, guid: d8edf6595d9b4c54d890d14106248af3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -146,6 +160,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2477518565244016377, guid: d8edf6595d9b4c54d890d14106248af3,
+        type: 3}
+      propertyPath: m_Name
+      value: Oras B1 forma
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8edf6595d9b4c54d890d14106248af3, type: 3}

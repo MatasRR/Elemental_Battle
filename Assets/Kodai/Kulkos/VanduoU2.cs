@@ -57,6 +57,7 @@ public class VanduoU2 : Kulka
             }
 
             Rigidbody KitoRB = PataikeKitam.GetComponent<Rigidbody>();
+            Zaidejas AukosZaidejoKodas = PataikeKitam.GetComponent<Zaidejas>();
             if (KitoRB != null)
             {
                 Vector3 SulygintaPagalYJegosVieta = transform.position;
@@ -67,7 +68,10 @@ public class VanduoU2 : Kulka
             
             if (PataikeKitam.CompareTag("Player"))
             {
-                PataikeKitam.GetComponent<Zaidejas>().GautiZalos(Zala);
+                if (AukosZaidejoKodas.KomandosNr != KomandosNr || AukosZaidejoKodas.KomandosNr == 0)
+                {
+                    AukosZaidejoKodas.GautiZalos(Zala);
+                }
             }
             else if (PataikeKitam.CompareTag("Skydas"))
             {

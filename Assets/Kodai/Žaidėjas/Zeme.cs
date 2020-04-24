@@ -21,6 +21,7 @@ public class Zeme : Elementas
     public float B2Gyvybes;
     public float B2MaxSugeriamaZala;
     public float B2Nuotolis;
+    public float B2Trukme;
     public GameObject B2Daiktas;
 
     [Header("B 3: ")]
@@ -61,6 +62,7 @@ public class Zeme : Elementas
         KulkosKodas.Greitis = B1DaiktoGreitis;
         KulkosKodas.Zala = B1Zala;
         KulkosKodas.Autorius = gameObject;
+        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
 
         Destroy(ZemeB1, 10);
     }
@@ -79,6 +81,8 @@ public class Zeme : Elementas
 
         SkydoKodas.Gyvybes = B2Gyvybes;
         SkydoKodas.MaxSugeriamaZala = B2MaxSugeriamaZala;
+
+        Destroy(ZemeB2, B2Trukme);
     }
 
     public override void B3()
@@ -100,6 +104,7 @@ public class Zeme : Elementas
         KulkosKodas.Greitis = B3DaiktoGreitis;
         KulkosKodas.Zala = B3Zala;
         KulkosKodas.Autorius = gameObject;
+        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
         ZemeB3.transform.GetChild(0).GetComponent<Sukimasis>().SukimosiVektorius = new Vector3(0, 0, B3SukimosiGreitis);
 
         Destroy(ZemeB3, 10);
@@ -140,9 +145,12 @@ public class Zeme : Elementas
             
             if (PataikeKitam.CompareTag("Player") && PataikeKitam.GetComponent<Judejimas>().AntZemes())
             {
-                Zaidejas KitoZaidejoKodas = PataikeKitam.GetComponent<Zaidejas>();
-                KitoZaidejoKodas.GautiZalos(U1Zala);
-                KitoZaidejoKodas.JudejimoCCLaikas += U1JudejimoCCLaikas;
+                Zaidejas AukosZaidejoKodas = PataikeKitam.GetComponent<Zaidejas>();
+                if (AukosZaidejoKodas.KomandosNr != ZaidejoKodas.KomandosNr || AukosZaidejoKodas.KomandosNr == 0)
+                {
+                    AukosZaidejoKodas.GautiZalos(U1Zala);
+                    AukosZaidejoKodas.JudejimoCCLaikas += U1JudejimoCCLaikas;
+                }                
             }
             else if (PataikeKitam.CompareTag("Skydas"))
             {

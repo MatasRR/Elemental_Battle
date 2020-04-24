@@ -15,6 +15,7 @@ public class Pasirinkimai : MonoBehaviour
     public GameObject KeruLentele;
     public GameObject ZaidimoRezimuLentele;
     public GameObject SlapyvardzioKeitimoLentele;
+    public GameObject KomanduPasirinkimoLentele;
     public GameObject[] KeruLenteles;
     
     public Button[] PaprastujuKeruMygtukai;
@@ -197,6 +198,23 @@ public class Pasirinkimai : MonoBehaviour
         {
             SlapyvardzioKeitimoLentele.SetActive(true);
         }
+    }
+
+    public void KeistiKomanduPasirinkimoLentelesAktyvuma()
+    {
+        if (KomanduPasirinkimoLentele.activeSelf)
+        {
+            KomanduPasirinkimoLentele.SetActive(false);
+        }
+        else
+        {
+            KomanduPasirinkimoLentele.SetActive(true);
+        }
+    }
+
+    public void PasirinktiKomanda(int Nr)
+    {
+        Duomenys.KomandosNr = Nr;
     }
 
     public void KeistiSlapyvardi()

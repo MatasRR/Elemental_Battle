@@ -13,6 +13,8 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public string Vardas;
     [HideInInspector]
     public int ElementoNr;
+    //[HideInInspector]
+    public int KomandosNr;
 
     [HideInInspector]
     public float Gyvybes;
@@ -114,6 +116,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public TextMeshProUGUI MazasisVardoTekstas;
 
     public TextMeshProUGUI NuzudymuIrMirciuTekstas;
+    public TextMeshProUGUI KomandosTekstas;
 
     public GameObject EkranoDrobe;
     public GameObject ZaidimoDrobe;
@@ -144,6 +147,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         GreicioMod = SoklumoMod = ZalosMod = 1f;
         SkraidymoCCLaikas = JudejimoCCLaikas = PuolimoCCLaikas = PaskutinioZalojusioZaidejoLaikmatis = 0f;
         SkraidymoLaikoIgnoravimas = JudejimoLaikoIgnoravimas = PuolimoLaikoIgnoravimas = NuzudymuSk = MirciuSk = 0;
+        KomandosTekstas.text = (KomandosNr == 0) ? "Savarankiškai" : "Komanda nr. " + KomandosNr; 
         DuomenysAtnaujinti = false;
         Gyvas = true;
 
@@ -463,6 +467,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
                     break;
             }
             Vardas = Duomenys.Slapyvardis;
+            KomandosNr = Duomenys.KomandosNr;
         }
     }
 }

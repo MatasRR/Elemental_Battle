@@ -10,6 +10,8 @@ public class Kulka : MonoBehaviour
     public float Zala;
     [HideInInspector]
     public GameObject Autorius;
+    [HideInInspector]
+    public int KomandosNr;
 
     [HideInInspector]
     public float SustingdymoLaikas;
@@ -57,6 +59,12 @@ public class Kulka : MonoBehaviour
         if (go.CompareTag("Player"))
         {
             Zaidejas ZaidejoKodas = go.GetComponent<Zaidejas>();
+
+            if (ZaidejoKodas.KomandosNr == KomandosNr && ZaidejoKodas.KomandosNr != 0)
+            {
+                return;
+            }
+
             ZaidejoKodas.KeistiPaskutiniZalojusiZaideja(Autorius);
             ZaidejoKodas.GautiZalos(Zala);
 

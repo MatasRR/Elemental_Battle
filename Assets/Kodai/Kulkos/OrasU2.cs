@@ -61,7 +61,11 @@ public class OrasU2 : Kulka
         if (go.CompareTag("Player"))
         {
             Rigidbody RB = go.GetComponent<Rigidbody>();
-            RB.AddForce(Vector3.up * Jega, ForceMode.Impulse);
+            Zaidejas AukosZaidejoKodas = go.GetComponent<Zaidejas>();
+            if (AukosZaidejoKodas.KomandosNr != KomandosNr || AukosZaidejoKodas.KomandosNr == 0)
+            {
+                RB.AddForce(Vector3.up * Jega, ForceMode.Impulse);
+            }            
         }
 
         base.Kontaktas(go);

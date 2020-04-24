@@ -112,6 +112,7 @@ public class Ugnis : Elementas
         KulkosKodas.Greitis = B1DaiktoGreitis;
         KulkosKodas.Zala = B1Zala;
         KulkosKodas.Autorius = gameObject;
+        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
 
         Destroy(UgnisB1, 10);
     }
@@ -154,6 +155,7 @@ public class Ugnis : Elementas
         KulkosKodas.Daznis = B3ZalojimoDaznis;
         KulkosKodas.Zala = B3Zala;
         KulkosKodas.Autorius = gameObject;
+        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
 
         Destroy(UgnisB3, B3Trukme);
     }
@@ -216,6 +218,7 @@ public class Ugnis : Elementas
         KulkosKodas.SustingdymoLaikas = B5StingdymoLaikas;
         KulkosKodas.NuginklavimoLaikas = B5NuginklavimoLaikas;
         KulkosKodas.Autorius = gameObject;
+        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
 
         Destroy(UgnisB5, 10);
     }
@@ -244,6 +247,7 @@ public class Ugnis : Elementas
         KulkosKodas.Greitis = U1DaiktoGreitis;
         KulkosKodas.Zala = U1Zala;
         KulkosKodas.Autorius = gameObject;
+        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
 
         Destroy(UgnisU1, 10);
     }
@@ -318,6 +322,7 @@ public class Ugnis : Elementas
         KulkosKodas.SustingdymoLaikas = U3SustingdymoLaikas;
         KulkosKodas.NuginklavimoLaikas = U3NuginklavimoLaikas;
         KulkosKodas.Autorius = gameObject;
+        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
 
         Destroy(Zaibas, 10);
     }
@@ -340,6 +345,7 @@ public class Ugnis : Elementas
                 KulkosKodas.SustingdymoLaikas = U3SustingdymoLaikas;
                 KulkosKodas.NuginklavimoLaikas = U3NuginklavimoLaikas;
                 KulkosKodas.Autorius = gameObject;
+                KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
 
                 Destroy(Zaibas, 10);
             }

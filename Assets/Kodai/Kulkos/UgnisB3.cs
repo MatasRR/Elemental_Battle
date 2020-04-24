@@ -58,7 +58,11 @@ public class UgnisB3 : Kulka
 
             if (PataikeKitam.CompareTag("Player"))
             {
-                PataikeKitam.GetComponent<Zaidejas>().GautiZalos(Zala);
+                Zaidejas AukosZaidejoKodas = PataikeKitam.GetComponent<Zaidejas>();
+                if (AukosZaidejoKodas.KomandosNr != KomandosNr || AukosZaidejoKodas.KomandosNr == 0)
+                {
+                    AukosZaidejoKodas.GautiZalos(Zala);
+                }
             }
             else if (PataikeKitam.CompareTag("Skydas"))
             {
