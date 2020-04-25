@@ -12,9 +12,16 @@ public class Skydas : MonoBehaviourPun
     public float MaxSugeriamaZala;
     [HideInInspector]
     public GameObject Autorius;
+    [HideInInspector]
+    public int KomandosNr;
 
     public bool IgnoruojaSavoKulkas;
-    
+
+    private void Start()
+    {
+        KomandosNr = Autorius.GetComponent<Zaidejas>().KomandosNr;
+    }
+
     void Update()
     {
         if (Gyvybes < 0)

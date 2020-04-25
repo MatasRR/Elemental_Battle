@@ -7,13 +7,6 @@ public class OrasB5 : Kulka
 {
     [HideInInspector]
     public float Jega;
-    public TextMeshProUGUI t;
-
-    public override void Start()
-    {
-        base.Start();
-        t.text = KomandosNr.ToString();
-    }
 
     public override void Kontaktas(GameObject go)
     {

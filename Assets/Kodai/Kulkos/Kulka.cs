@@ -88,11 +88,14 @@ public class Kulka : MonoBehaviour
             Skydas SkydoKodas = go.GetComponent<Skydas>();
             if (SkydoKodas.Autorius != Autorius || !SkydoKodas.IgnoruojaSavoKulkas)
             {
-                SkydoKodas.GautiZalos(Zala);
-                if (Zala < SkydoKodas.MaxSugeriamaZala)
+                if (SkydoKodas.KomandosNr != KomandosNr || SkydoKodas.KomandosNr == 0)
                 {
-                    Destroy(gameObject);
-                }
+                    SkydoKodas.GautiZalos(Zala);
+                    if (Zala < SkydoKodas.MaxSugeriamaZala)
+                    {
+                        Destroy(gameObject);
+                    }
+                }                    
             }
         }
 
