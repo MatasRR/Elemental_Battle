@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5396419268434056152}
   - component: {fileID: 7623195387140949777}
+  - component: {fileID: 4115834089691397919}
   - component: {fileID: 8803818611387594223}
   - component: {fileID: 6340676228826073294}
   - component: {fileID: 2296515900108064402}
@@ -44,11 +45,24 @@ MeshCollider:
   m_GameObject: {fileID: 3674144607275421254}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -5495902117074765545, guid: 474c1ed74dc11ad4c880aad90215bfae, type: 3}
+--- !u!65 &4115834089691397919
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3674144607275421254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 4.5, z: 4}
+  m_Center: {x: 0, y: 2.2, z: -2}
 --- !u!54 &8803818611387594223
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -102,6 +116,13 @@ MonoBehaviour:
   Greitis: 0
   Zala: 0
   Autorius: {fileID: 0}
+  KomandosNr: 0
+  ElementoNr: 0
+  SustingdymoLaikas: 0
+  NuginklavimoLaikas: 0
+  SuletinimoLaikas: 0
+  SuletinimoStipris: 0
+  SoklumoSilpninimoStipris: 0
   EinaKiaurai: 1
   GreitejimoProcentas: 0.02
   PlatejimoProcentas: 0.02
@@ -117,16 +138,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5396419268434056152}
     m_Modifications:
-    - target: {fileID: 3953984260060584640, guid: 5afcb52308fde684f9084922519337c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Vanduo U1 forma
-      objectReference: {fileID: 0}
-    - target: {fileID: 3953984260060584640, guid: 5afcb52308fde684f9084922519337c2,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 37161726377158867, guid: 5afcb52308fde684f9084922519337c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -181,6 +192,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953984260060584640, guid: 5afcb52308fde684f9084922519337c2,
+        type: 3}
+      propertyPath: m_Name
+      value: Vanduo U1 forma
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953984260060584640, guid: 5afcb52308fde684f9084922519337c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5afcb52308fde684f9084922519337c2, type: 3}

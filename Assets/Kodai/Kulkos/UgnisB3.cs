@@ -61,7 +61,7 @@ public class UgnisB3 : Kulka
                 Zaidejas AukosZaidejoKodas = PataikeKitam.GetComponent<Zaidejas>();
                 if (AukosZaidejoKodas.KomandosNr != KomandosNr || AukosZaidejoKodas.KomandosNr == 0)
                 {
-                    AukosZaidejoKodas.GautiZalos(Zala);
+                    AukosZaidejoKodas.GautiZalos(Zala, 4);
                 }
             }
             else if (PataikeKitam.CompareTag("Skydas"))

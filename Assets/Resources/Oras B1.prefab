@@ -93,6 +93,8 @@ MonoBehaviour:
   Greitis: 0
   Zala: 0
   Autorius: {fileID: 0}
+  KomandosNr: 0
+  KulkosElementas: 0
   SustingdymoLaikas: 0
   NuginklavimoLaikas: 0
   SuletinimoLaikas: 0

@@ -78,6 +78,13 @@ MonoBehaviour:
   Greitis: 0
   Zala: 0
   Autorius: {fileID: 0}
+  KomandosNr: 1
+  ElementoNr: 0
+  SustingdymoLaikas: 0
+  NuginklavimoLaikas: 0
+  SuletinimoLaikas: 0
+  SuletinimoStipris: 0
+  SoklumoSilpninimoStipris: 0
   EinaKiaurai: 0
   Jega: 0
   IlgejimoGreitis: 0
@@ -88,11 +95,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4860511043683355941}
     m_Modifications:
-    - target: {fileID: 6946388105850149970, guid: 2dfab47da1966324990f24626a253e1f,
-        type: 3}
-      propertyPath: m_Name
-      value: Vanduo U3 forma
-      objectReference: {fileID: 0}
     - target: {fileID: 6214368205472050753, guid: 2dfab47da1966324990f24626a253e1f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -147,6 +149,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946388105850149970, guid: 2dfab47da1966324990f24626a253e1f,
+        type: 3}
+      propertyPath: m_Name
+      value: Vanduo U3 forma
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dfab47da1966324990f24626a253e1f, type: 3}

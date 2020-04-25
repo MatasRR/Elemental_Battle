@@ -62,6 +62,7 @@ public class Elementas : MonoBehaviourPun
         JudejimoKodas = GetComponent<Judejimas>();
         Kamera = ZaidejoKodas.Kamera;
         KulkosAtsiradimoVieta = ZaidejoKodas.KulkosAtsiradimoVieta;
+
         BCDTekstas = ZaidejoKodas.BCDTekstas;
         BBCDTekstas = ZaidejoKodas.BBCDTekstas;
         BBBCDTekstas = ZaidejoKodas.BBBCDTekstas;

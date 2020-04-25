@@ -22,6 +22,11 @@ public class TinkloValdymas : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
     }
 
+    void Update()
+    {
+        //Debug.Log(PhotonNetwork.IsConnected);
+    }
+
     public override void OnConnectedToMaster()
     {
         JungimosiTekstas.SetActive(false);

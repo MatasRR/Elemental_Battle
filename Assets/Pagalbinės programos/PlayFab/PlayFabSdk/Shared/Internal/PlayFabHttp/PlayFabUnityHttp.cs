@@ -74,7 +74,6 @@ namespace PlayFab.Internal
 
 
 #if UNITY_2017_2_OR_NEWER
-                request.chunkedTransfer = false; // can be removed after Unity's PUT will be more stable
                 yield return request.SendWebRequest();
 #else
                 yield return request.Send();

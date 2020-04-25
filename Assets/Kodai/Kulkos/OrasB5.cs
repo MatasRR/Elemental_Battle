@@ -1,11 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class OrasB5 : Kulka
 {
     [HideInInspector]
     public float Jega;
+    public TextMeshProUGUI t;
+
+    public override void Start()
+    {
+        base.Start();
+        t.text = KomandosNr.ToString();
+    }
 
     public override void Kontaktas(GameObject go)
     {
@@ -20,6 +28,7 @@ public class OrasB5 : Kulka
                     return;
                 }
             }
+
             Vector3 SulygintaPagalYJegosVieta = Autorius.transform.position;
             SulygintaPagalYJegosVieta.y = go.transform.position.y;
             Vector3 JegosVektorius = (go.transform.position - SulygintaPagalYJegosVieta).normalized * Jega;

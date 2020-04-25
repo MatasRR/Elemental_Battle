@@ -12,6 +12,8 @@ public class Kulka : MonoBehaviour
     public GameObject Autorius;
     [HideInInspector]
     public int KomandosNr;
+    [HideInInspector]
+    public int ElementoNr;
 
     [HideInInspector]
     public float SustingdymoLaikas;
@@ -32,6 +34,7 @@ public class Kulka : MonoBehaviour
         {
             gameObject.GetComponent<Rigidbody>().velocity = transform.forward * Greitis;
         }
+        KomandosNr = Autorius.GetComponent<Zaidejas>().KomandosNr;
     }
 
     public virtual void Update()
@@ -60,25 +63,24 @@ public class Kulka : MonoBehaviour
         {
             Zaidejas ZaidejoKodas = go.GetComponent<Zaidejas>();
 
-            if (ZaidejoKodas.KomandosNr == KomandosNr && ZaidejoKodas.KomandosNr != 0)
+            if (ZaidejoKodas.KomandosNr != KomandosNr || ZaidejoKodas.KomandosNr == 0)
             {
-                return;
-            }
+                ZaidejoKodas.KeistiPaskutiniZalojusiZaideja(Autorius);
 
-            ZaidejoKodas.KeistiPaskutiniZalojusiZaideja(Autorius);
-            ZaidejoKodas.GautiZalos(Zala);
+                ZaidejoKodas.GautiZalos(Zala, ElementoNr);
 
-            if (SustingdymoLaikas != 0)
-            {
-                ZaidejoKodas.JudejimoCCLaikas += SustingdymoLaikas;
-            }
-            if (NuginklavimoLaikas != 0)
-            {
-                ZaidejoKodas.PuolimoCCLaikas += NuginklavimoLaikas;
-            }
-            if (SuletinimoLaikas != 0)
-            {
-                StartCoroutine(Suletinimas(ZaidejoKodas));
+                if (SustingdymoLaikas != 0)
+                {
+                    ZaidejoKodas.JudejimoCCLaikas += SustingdymoLaikas;
+                }
+                if (NuginklavimoLaikas != 0)
+                {
+                    ZaidejoKodas.PuolimoCCLaikas += NuginklavimoLaikas;
+                }
+                if (SuletinimoLaikas != 0)
+                {
+                    StartCoroutine(Suletinimas(ZaidejoKodas));
+                }
             }
         }
         else if (go.CompareTag("Skydas"))

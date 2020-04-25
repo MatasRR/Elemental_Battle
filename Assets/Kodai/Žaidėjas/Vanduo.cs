@@ -119,7 +119,8 @@ public class Vanduo : Elementas
         KulkosKodas.SuletinimoLaikas = B1SuletinimoLaikas;
         KulkosKodas.SuletinimoStipris = B1SuletinimoStipris;
         KulkosKodas.Autorius = gameObject;
-        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        KulkosKodas.ElementoNr = 2;
 
         Destroy(VanduoB1, 10);
     }
@@ -168,7 +169,8 @@ public class Vanduo : Elementas
 
             KulkosKodas.Zala = B3Zala;
             KulkosKodas.Autorius = gameObject;
-            KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+            //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+            KulkosKodas.ElementoNr = 2;
 
             Destroy(Laselis, 10);
         }
@@ -211,7 +213,8 @@ public class Vanduo : Elementas
         KulkosKodas.Greitis = B4DaiktoGreitis;
         KulkosKodas.Zala = B4Zala;
         KulkosKodas.Autorius = gameObject;
-        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        KulkosKodas.ElementoNr = 2;
 
         Destroy(VanduoB4, 10);
     }
@@ -236,7 +239,8 @@ public class Vanduo : Elementas
         KulkosKodas.Zala = B5Zala;
         KulkosKodas.SustingdymoLaikas = B5JudejimoCCLaikas;
         KulkosKodas.Autorius = gameObject;
-        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        KulkosKodas.ElementoNr = 2;
 
         Destroy(VanduoB5, 10);
     }
@@ -257,7 +261,8 @@ public class Vanduo : Elementas
         KulkosKodas.Greitis = U1DaiktoGreitis;
 		KulkosKodas.Zala = U1Zala;
         KulkosKodas.Autorius = gameObject;
-        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        KulkosKodas.ElementoNr = 2;
 
         Destroy (VanduoU1, 10);
 	}
@@ -282,7 +287,8 @@ public class Vanduo : Elementas
 
         KulkosKodas.Zala = U2Zala;
         KulkosKodas.Autorius = gameObject;
-        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        KulkosKodas.ElementoNr = 2;
         KulkosKodas.Jega = U2Jega;
         KulkosKodas.Daznis = U2Daznis;
         KulkosKodas.Dydis = U2SferosDydis;
@@ -327,7 +333,8 @@ public class Vanduo : Elementas
 
         KulkosKodas.Zala = U3Zala;
         KulkosKodas.Autorius = gameObject;
-        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        KulkosKodas.ElementoNr = 2;
         KulkosKodas.IlgejimoGreitis = U3IlgejimoGreitis;
         KulkosKodas.Jega = U3Jega;
 

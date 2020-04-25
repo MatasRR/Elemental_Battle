@@ -9,11 +9,13 @@ using TMPro;
 
 public class Zaidejas : MonoBehaviourPun, IPunObservable
 {
+    public Color[] VardoKomanduSpalvos;
+
     [HideInInspector]
     public string Vardas;
     [HideInInspector]
     public int ElementoNr;
-    //[HideInInspector]
+    [HideInInspector]
     public int KomandosNr;
 
     [HideInInspector]
@@ -93,7 +95,13 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     [HideInInspector]
     public float PaskutinioZalojusioZaidejoLaikmatis;
 
-    private bool DuomenysAtnaujinti;
+    public GameObject ZalosTekstoObjektas;
+    public Color ZalosTekstoOroSpalva;
+    public Color ZalosTekstoVandensSpalva;
+    public Color ZalosTekstoZemesSpalva;
+    public Color ZalosTekstoUgniesSpalva;
+
+    //private bool DuomenysAtnaujinti;
 
     [Header("UI: ")]
     public TextMeshProUGUI BCDTekstas;
@@ -147,8 +155,8 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         GreicioMod = SoklumoMod = ZalosMod = 1f;
         SkraidymoCCLaikas = JudejimoCCLaikas = PuolimoCCLaikas = PaskutinioZalojusioZaidejoLaikmatis = 0f;
         SkraidymoLaikoIgnoravimas = JudejimoLaikoIgnoravimas = PuolimoLaikoIgnoravimas = NuzudymuSk = MirciuSk = 0;
-        KomandosTekstas.text = (KomandosNr == 0) ? "Savarankiškai" : "Komanda nr. " + KomandosNr; 
-        DuomenysAtnaujinti = false;
+        KomandosTekstas.text = (KomandosNr == 0) ? "SOLO" : "TEAM " + KomandosNr; 
+        //DuomenysAtnaujinti = false;
         Gyvas = true;
 
         if (!photonView.IsMine)
@@ -265,6 +273,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         DuomenysAtnaujinti = true;
         */
         MazasisVardoTekstas.text = Vardas;
+        MazasisVardoTekstas.color = VardoKomanduSpalvos[KomandosNr];
         /*
         switch (ElementoNr)
         {
@@ -325,6 +334,10 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
                     Kamera.gameObject.SetActive(true);
                 }
             }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                GautiZalos(10, 4);
+            }
         }
     }
 
@@ -334,20 +347,43 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         PaskutinisZalojesZaidejas = NaujasZaidejas;
     }
 
-    public void GautiZalos (float Zala)
+    public void GautiZalos (float Zala, int ElementoNr)
     {
         if (photonView.IsMine)
         {
             float MofikuotaZala = Zala * ZalosMod;
-            photonView.RPC("RPCGautiZalos", RpcTarget.All, MofikuotaZala);
+            photonView.RPC("RPCGautiZalos", RpcTarget.All, MofikuotaZala, ElementoNr);
         }
     }
 
     [PunRPC]
-    private void RPCGautiZalos(float Zala)
+    private void RPCGautiZalos(float Zala, int ElementoNr)
     {
         Gyvybes -= Mathf.Clamp(Zala - Skydas, 0, Mathf.Infinity);
         Skydas -= Zala;
+
+        GameObject ZalosTekstas = Instantiate(ZalosTekstoObjektas, KulkosAtsiradimoVieta.transform.position, KulkosAtsiradimoVieta.transform.rotation);
+        ZalosTekstas.GetComponent<TextMeshPro>().text = Zala.ToString();
+        ZalosTekstas.GetComponent<ConstantForce>().force = new Vector3(Random.Range(-1, 1), Random.Range(4, 8), Random.Range(-1, 1));
+
+        if (ElementoNr == 1)
+        {
+            ZalosTekstas.GetComponent<TextMeshPro>().color = ZalosTekstoOroSpalva;
+        }
+        else if (ElementoNr == 2)
+        {
+            ZalosTekstas.GetComponent<TextMeshPro>().color = ZalosTekstoVandensSpalva;
+        }
+        else if (ElementoNr == 3)
+        {
+            ZalosTekstas.GetComponent<TextMeshPro>().color = ZalosTekstoZemesSpalva;
+        }
+        else if (ElementoNr == 4)
+        {
+            ZalosTekstas.GetComponent<TextMeshPro>().color = ZalosTekstoUgniesSpalva;
+        }
+
+        Destroy(ZalosTekstas, 2);
     }
 
     public void NuzudeKitaZaideja()
@@ -425,6 +461,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
             stream.SendNext(ElementoNr);
             stream.SendNext(NuzudymuSk);
             stream.SendNext(MirciuSk);
+            stream.SendNext(KomandosNr);
         }
         else if (stream.IsReading)
         {
@@ -435,6 +472,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
             ElementoNr = (int)stream.ReceiveNext();
             NuzudymuSk = (int)stream.ReceiveNext();
             MirciuSk = (int)stream.ReceiveNext();
+            KomandosNr = (int)stream.ReceiveNext();
         }
     }
 

@@ -44,6 +44,11 @@ public class Pasirinkimai : MonoBehaviour
         },
             result => Duomenys.Slapyvardis = result.PlayerProfile.DisplayName,
             error => Debug.LogError(error.GenerateErrorReport()));
+
+        foreach (Button Mygtukas in ZaidimoRezimuMygtukai)
+        {
+            Mygtukas.interactable = false;
+        }
     }
 
     void Update ()

@@ -69,6 +69,7 @@ public class Oras : Elementas
     public float U2AtsiradimoAukstis;
     public GameObject U2Daiktas;
 
+
     public override void B1 ()
 	{
         if (Physics.Raycast(Kamera.ScreenPointToRay(Input.mousePosition), out RaycastHit PataikytasObjektas))
@@ -88,9 +89,10 @@ public class Oras : Elementas
         KulkosKodas.Greitis = B1DaiktoGreitis;
         KulkosKodas.Zala = B1Zala;
         KulkosKodas.Autorius = gameObject;
-        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
-        
-		Destroy (OrasB1, 10);
+        //KulkosKodas.KomandosNr = KomandosNr;
+        KulkosKodas.ElementoNr = 1;
+
+        Destroy (OrasB1, 10);
 	}
 
     public override void B2 ()
@@ -142,7 +144,7 @@ public class Oras : Elementas
     [PunRPC]
     void RPCKurtiOrasB5(Vector3 ZiurimasTaskas)
     {
-        GameObject OrasB5 = Instantiate(B5Daiktas, KulkosAtsiradimoVieta.position, KulkosAtsiradimoVieta.rotation);
+        GameObject OrasB5 = Instantiate(B5Daiktas, transform.position, transform.rotation);
         OrasB5 KulkosKodas = OrasB5.GetComponent<OrasB5>();
 
         OrasB5.transform.LookAt(ZiurimasTaskas);
@@ -150,7 +152,8 @@ public class Oras : Elementas
         KulkosKodas.Greitis = B5DaiktoGreitis;
         KulkosKodas.Zala = B5Zala;
         KulkosKodas.Autorius = gameObject;
-        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        //KulkosKodas.KomandosNr = KomandosNr;
+        KulkosKodas.ElementoNr = 1;
         KulkosKodas.Jega = B5Jega;
 
         Destroy(OrasB5, 10);
@@ -224,7 +227,7 @@ public class Oras : Elementas
                 Zaidejas AukosZaidejoKodas = PataikeKitam.GetComponent<Zaidejas>();
                 if (AukosZaidejoKodas.KomandosNr != ZaidejoKodas.KomandosNr || AukosZaidejoKodas.KomandosNr == 0)
                 {
-                    AukosZaidejoKodas.GautiZalos(U1Zala);
+                    AukosZaidejoKodas.GautiZalos(U1Zala, 1);
                 }
             }
             else if (PataikeKitam.CompareTag("Skydas"))
@@ -251,7 +254,8 @@ public class Oras : Elementas
         KulkosKodas.Greitis = U2DaiktoGreitis;
         KulkosKodas.Zala = U2Zala;
         KulkosKodas.Autorius = gameObject;
-        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        //KulkosKodas.KomandosNr = KomandosNr;
+        KulkosKodas.ElementoNr = 1;
         KulkosKodas.Jega = U2Jega;
 
         Destroy(OrasU2, 10);

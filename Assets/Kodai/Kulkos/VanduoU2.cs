@@ -60,19 +60,23 @@ public class VanduoU2 : Kulka
             Zaidejas AukosZaidejoKodas = PataikeKitam.GetComponent<Zaidejas>();
             if (KitoRB != null)
             {
+                if (PataikeKitam.CompareTag("Player"))
+                {
+                    if (AukosZaidejoKodas.KomandosNr == KomandosNr && AukosZaidejoKodas.KomandosNr != 0)
+                    {
+                        return;
+                    }
+                }
+
+                AukosZaidejoKodas.GautiZalos(Zala, 2);
+
                 Vector3 SulygintaPagalYJegosVieta = transform.position;
                 SulygintaPagalYJegosVieta.y = KitoRB.position.y;
                 Vector3 JegosVektorius = (SulygintaPagalYJegosVieta - KitoRB.position).normalized * Jega;
                 KitoRB.AddForce(JegosVektorius, ForceMode.Impulse);
             }
             
-            if (PataikeKitam.CompareTag("Player"))
-            {
-                if (AukosZaidejoKodas.KomandosNr != KomandosNr || AukosZaidejoKodas.KomandosNr == 0)
-                {
-                    AukosZaidejoKodas.GautiZalos(Zala);
-                }
-            }
+            
             else if (PataikeKitam.CompareTag("Skydas"))
             {
                 PataikeKitam.GetComponent<Skydas>().GautiZalos(Zala);

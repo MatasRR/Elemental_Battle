@@ -62,7 +62,8 @@ public class Zeme : Elementas
         KulkosKodas.Greitis = B1DaiktoGreitis;
         KulkosKodas.Zala = B1Zala;
         KulkosKodas.Autorius = gameObject;
-        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        KulkosKodas.ElementoNr = 3;
 
         Destroy(ZemeB1, 10);
     }
@@ -104,7 +105,8 @@ public class Zeme : Elementas
         KulkosKodas.Greitis = B3DaiktoGreitis;
         KulkosKodas.Zala = B3Zala;
         KulkosKodas.Autorius = gameObject;
-        KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
+        KulkosKodas.ElementoNr = 3;
         ZemeB3.transform.GetChild(0).GetComponent<Sukimasis>().SukimosiVektorius = new Vector3(0, 0, B3SukimosiGreitis);
 
         Destroy(ZemeB3, 10);
@@ -148,7 +150,7 @@ public class Zeme : Elementas
                 Zaidejas AukosZaidejoKodas = PataikeKitam.GetComponent<Zaidejas>();
                 if (AukosZaidejoKodas.KomandosNr != ZaidejoKodas.KomandosNr || AukosZaidejoKodas.KomandosNr == 0)
                 {
-                    AukosZaidejoKodas.GautiZalos(U1Zala);
+                    AukosZaidejoKodas.GautiZalos(U1Zala, 3);
                     AukosZaidejoKodas.JudejimoCCLaikas += U1JudejimoCCLaikas;
                 }                
             }

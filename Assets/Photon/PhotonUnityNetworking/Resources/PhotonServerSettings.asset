@@ -60,5 +60,8 @@ MonoBehaviour:
   - RPCKurtiZemeU1
   - RPCMirtis
   - RPCPrisikelimas
+  - DestroySpaceship
+  - Fire
+  - RespawnSpaceship
   DisableAutoOpenWizard: 1
   ShowSettings: 0
