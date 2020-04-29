@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 879281764949347816}
   - component: {fileID: 8828540947990151870}
   - component: {fileID: 4704315123179303514}
+  - component: {fileID: 8626427518218076858}
   m_Layer: 9
   m_Name: Oras U2
   m_TagString: Untagged
@@ -44,7 +45,7 @@ MeshCollider:
   m_GameObject: {fileID: 4197086117908579420}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -102,15 +103,35 @@ MonoBehaviour:
   Greitis: 0
   Zala: 0
   Autorius: {fileID: 0}
+  KomandosNr: 0
+  ElementoNr: 0
+  SustingdymoLaikas: 0
+  NuginklavimoLaikas: 0
+  SuletinimoLaikas: 0
+  SuletinimoStipris: 0
+  SoklumoSilpninimoStipris: 0
   EinaKiaurai: 1
   Jega: 0
-  GreitejimoProcentas: 0.01
-  PlatejimoProcentas: 0.01
+  GreitejimoProcentas: 0.03
+  PlatejimoProcentas: 0.03
   NuotolisIkiZemes: 0.5
   NaikinimoRiba: 9
   KliutiesPerlipimoAukstis: 1
   YPokytis: 0.3
-  PradziosYMod: 3
+  PradziosYMod: 5
+--- !u!65 &8626427518218076858
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4197086117908579420}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 9, z: 0.6}
+  m_Center: {x: -0.1, y: 4.5, z: 0}
 --- !u!1001 &551936040272037912
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4459,7 +4459,7 @@ MonoBehaviour:
   BBBCDFonas: {fileID: 0}
   UCDFonas: {fileID: 0}
   B1_CD: 2
-  B1Zala: 20
+  B1Zala: 15
   B1Daiktas: {fileID: 9053628130273458566, guid: 52bb6cf560eaaab41b7395ee0ef668f0,
     type: 3}
   B1DaiktoGreitis: 40
@@ -4474,7 +4474,7 @@ MonoBehaviour:
   SoklumoKompensacija: 0.1
   B5_CD: 12
   B5Zala: 20
-  B5Jega: 20
+  B5Jega: 17
   B5DaiktoGreitis: 30
   B5Daiktas: {fileID: 2826960234985867226, guid: f914616c86243974c9370737e5b3b5b0,
     type: 3}
@@ -4578,9 +4578,9 @@ MonoBehaviour:
   U2Trukme: 10
   U2Daiktas: {fileID: 5630045372561694633, guid: 1f11cd02576d6fc4c88150ba0c2ce890,
     type: 3}
-  U3_CD: 50
-  U3Zala: 150
-  U3Jega: 20
+  U3_CD: 60
+  U3Zala: 250
+  U3Jega: 25
   U3IlgejimoGreitis: 1
   U3AtsiradimoNuotolis: 1
   U3Delsimas: 0.5
