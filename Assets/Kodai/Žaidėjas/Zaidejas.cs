@@ -113,6 +113,10 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public Image BBCDFonas;
     public Image BBBCDFonas;
     public Image UCDFonas;
+    public Image BPaveikslelis;
+    public Image BBPaveikslelis;
+    public Image BBBPaveikslelis;
+    public Image UPaveikslelis;
 
     public Image GyvybiuJuostele;
     public Image SkydoJuostele;

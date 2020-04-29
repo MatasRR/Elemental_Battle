@@ -8,6 +8,7 @@ public class Ugnis : Elementas
 {
     [Header("B 1: ")]
     public float B1_CD;
+    public Sprite B1Paveikslelis;
 
     public float B1Zala;
 
@@ -16,6 +17,7 @@ public class Ugnis : Elementas
 
     [Header("B 2: ")]
     public float B2_CD;
+    public Sprite B2Paveikslelis;
 
     public float B2GaunamosZalosMod;
     public float B2Trukme;
@@ -23,6 +25,7 @@ public class Ugnis : Elementas
 
     [Header("B 3: ")]
     public float B3_CD;
+    public Sprite B3Paveikslelis;
 
     public float B3Zala;
     public float B3ZalojimoDaznis;
@@ -33,6 +36,7 @@ public class Ugnis : Elementas
 
     [Header("B 4: ")]
     public float B4_CD;
+    public Sprite B4Paveikslelis;
 
     public float B4Trukme;
     public float SoklumoKompensacija;
@@ -43,6 +47,7 @@ public class Ugnis : Elementas
 
     [Header("B 5: ")]
     public float B5_CD;
+    public Sprite B5Paveikslelis;
 
     public float B5Zala;
     public float B5StingdymoLaikas;
@@ -53,6 +58,7 @@ public class Ugnis : Elementas
 
     [Header("U 1: ")]
     public float U1_CD;
+    public Sprite U1Paveikslelis;
 
     public float U1Zala;
 
@@ -62,6 +68,7 @@ public class Ugnis : Elementas
 
     [Header("U 3: ")]
     public float U3_CD;
+    public Sprite U3Paveikslelis;
 
     public float U3Zala;
     public float U3SustingdymoLaikas;
@@ -362,51 +369,51 @@ public class Ugnis : Elementas
     {
         switch (Duomenys.B1)
         {
-            case 1: BCD = B1_CD; break;
-            case 2: BCD = B2_CD; break;
-            case 3: BCD = B3_CD; break;
-            case 4: BCD = B4_CD; break;
-            case 5: BCD = B5_CD; break;/*
-            case 6: BCD = B6_CD; break;/*
-            case 7: BCD = B7_CD; break;/*
-            case 8: BCD = B8_CD; break;/*
-            case 9: BCD = B9_CD; break;*/
+            case 1: BCD = B1_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;
+            case 2: BCD = B2_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;
+            case 3: BCD = B3_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;
+            case 4: BCD = B4_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;
+            case 5: BCD = B5_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;/*
+            case 6: BCD = B6_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;/*
+            case 7: BCD = B7_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;/*
+            case 8: BCD = B8_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;/*
+            case 9: BCD = B9_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;*/
         }
         switch (Duomenys.B2)
         {
-            case 1: BBCD = B1_CD; break;
-            case 2: BBCD = B2_CD; break;
-            case 3: BBCD = B3_CD; break;
-            case 4: BBCD = B4_CD; break;
-            case 5: BBCD = B5_CD; break;/*
-            case 6: BBCD = B6_CD; break;/*
-            case 7: BBCD = B7_CD; break;/*
-            case 8: BBCD = B8_CD; break;/*
-            case 9: BBCD = B9_CD; break;*/
+            case 1: BBCD = B1_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;
+            case 2: BBCD = B2_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;
+            case 3: BBCD = B3_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;
+            case 4: BBCD = B4_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;
+            case 5: BBCD = B5_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;/*
+            case 6: BBCD = B6_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;/*
+            case 7: BBCD = B7_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;/*
+            case 8: BBCD = B8_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;/*
+            case 9: BBCD = B9_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;*/
         }
         switch (Duomenys.B3)
         {
-            case 1: BBBCD = B1_CD; break;
-            case 2: BBBCD = B2_CD; break;
-            case 3: BBBCD = B3_CD; break;
-            case 4: BBBCD = B4_CD; break;
-            case 5: BBBCD = B5_CD; break;/*
-            case 6: BBBCD = B6_CD; break;/*
-            case 7: BBBCD = B7_CD; break;/*
-            case 8: BBBCD = B8_CD; break;/*
-            case 9: BBBCD = B9_CD; break;*/
+            case 1: BBBCD = B1_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;
+            case 2: BBBCD = B2_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;
+            case 3: BBBCD = B3_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;
+            case 4: BBBCD = B4_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;
+            case 5: BBBCD = B5_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;/*
+            case 6: BBBCD = B6_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;/*
+            case 7: BBBCD = B7_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;/*
+            case 8: BBBCD = B8_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;/*
+            case 9: BBBCD = B9_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;*/
         }
         switch (Duomenys.U)
         {
-            case 1: UCD = U1_CD; break;
-            //case 2: UCD = U2_CD; break;
-            case 3: UCD = U3_CD; break;/*
-            case 4: UCD = U4_CD; break;/*
-            case 5: UCD = U5_CD; break;/*
-            case 6: UCD = U6_CD; break;/*
-            case 7: UCD = U7_CD; break;/*
-            case 8: UCD = U8_CD; break;/*
-            case 9: UCD = U9_CD; break;*/
+            case 1: UCD = U1_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;/*
+            case 2: UCD = U2_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;*/
+            case 3: UCD = U3_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;/*
+            case 4: UCD = U4_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;/*
+            case 5: UCD = U5_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;/*
+            case 6: UCD = U6_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;/*
+            case 7: UCD = U7_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;/*
+            case 8: UCD = U8_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;/*
+            case 9: UCD = U9_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;*/
         }
     }
 }
