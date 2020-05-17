@@ -41,46 +41,23 @@ public class VanduoU2 : Kulka
         /// Nieko nereikia daryti
     }
 
-    public override void Kontaktas(GameObject go)
-    {
-        /// Nieko nereikia daryti
-    }
-
     void Aktyvavimas()
     {
         Collider[] Kiti = Physics.OverlapSphere(transform.position, Dydis);
         foreach (Collider PataikeKitam in Kiti)
         {
-            if (PataikeKitam.gameObject == Autorius || !Korpusas.bounds.Intersects(PataikeKitam.bounds))
+            if (Korpusas.bounds.Intersects(PataikeKitam.bounds))
             {
-                return;
-            }
-
-            Rigidbody KitoRB = PataikeKitam.GetComponent<Rigidbody>();
-            Zaidejas AukosZaidejoKodas = PataikeKitam.GetComponent<Zaidejas>();
-            if (KitoRB != null)
-            {
-                if (PataikeKitam.CompareTag("Player"))
-                {
-                    if (AukosZaidejoKodas.KomandosNr == KomandosNr && AukosZaidejoKodas.KomandosNr != 0)
-                    {
-                        return;
-                    }
-                }
-
-                AukosZaidejoKodas.GautiZalos(Zala, 2);
-
-                Vector3 SulygintaPagalYJegosVieta = transform.position;
-                SulygintaPagalYJegosVieta.y = KitoRB.position.y;
-                Vector3 JegosVektorius = (SulygintaPagalYJegosVieta - KitoRB.position).normalized * Jega;
-                KitoRB.AddForce(JegosVektorius, ForceMode.Impulse);
-            }
-            
-            
-            else if (PataikeKitam.CompareTag("Skydas"))
-            {
-                PataikeKitam.GetComponent<Skydas>().GautiZalos(Zala);
+                Kontaktas(PataikeKitam.gameObject);
             }
         }
+    }
+
+    public override void FizikosEfektai(Rigidbody rb)
+    {
+        Vector3 SulygintaPagalYJegosVieta = transform.position;
+        SulygintaPagalYJegosVieta.y = rb.position.y;
+        Vector3 JegosVektorius = (SulygintaPagalYJegosVieta - rb.position).normalized * Jega;
+        rb.AddForce(JegosVektorius, ForceMode.Impulse);
     }
 }

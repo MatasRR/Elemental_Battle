@@ -45,8 +45,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 0.55}
-  m_Center: {x: 0, y: 0, z: 0.45}
+  m_Size: {x: 3, y: 3, z: 0.8}
+  m_Center: {x: 0, y: 0, z: 0.65}
 --- !u!114 &1660978212324825625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,7 +81,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gyvybes: 0
+  MaxSugeriamaZala: 0
   Autorius: {fileID: 0}
+  KomandosNr: 0
   IgnoruojaSavoKulkas: 1
 --- !u!1001 &8040410884537014302
 PrefabInstance:
@@ -90,15 +92,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3429274487893480638}
     m_Modifications:
-    - target: {fileID: 7299075209768170415, guid: 8bc4398b845b4b448b7a2dae3f2b17c4,
+    - target: {fileID: 1174104742866406799, guid: 8bc4398b845b4b448b7a2dae3f2b17c4,
         type: 3}
-      propertyPath: m_Name
-      value: Oras B6 forma
+      propertyPath: viewIdField
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7299075209768170415, guid: 8bc4398b845b4b448b7a2dae3f2b17c4,
+    - target: {fileID: 1174104742866406799, guid: 8bc4398b845b4b448b7a2dae3f2b17c4,
         type: 3}
-      propertyPath: m_Layer
-      value: 10
+      propertyPath: InstantiationId
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5985530074122781116, guid: 8bc4398b845b4b448b7a2dae3f2b17c4,
         type: 3}
@@ -155,15 +157,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1174104742866406799, guid: 8bc4398b845b4b448b7a2dae3f2b17c4,
+    - target: {fileID: 7299075209768170415, guid: 8bc4398b845b4b448b7a2dae3f2b17c4,
         type: 3}
-      propertyPath: viewIdField
-      value: 1
+      propertyPath: m_Name
+      value: Oras B6 forma
       objectReference: {fileID: 0}
-    - target: {fileID: 1174104742866406799, guid: 8bc4398b845b4b448b7a2dae3f2b17c4,
+    - target: {fileID: 7299075209768170415, guid: 8bc4398b845b4b448b7a2dae3f2b17c4,
         type: 3}
-      propertyPath: InstantiationId
-      value: 1
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2991606623480237802, guid: 8bc4398b845b4b448b7a2dae3f2b17c4, type: 3}

@@ -8,10 +8,11 @@ ScriptsOnlyBuild:
     - Judejimas
     - KeruNumeriai
     - Kulka
+    - Meniu
     - Oras
     - OrasB5
+    - OrasU1
     - OrasU2
-    - Pasirinkimai
     - PlayFabSharedSettings
     - Pranesimas
     - Prisijungimas
@@ -24,6 +25,7 @@ ScriptsOnlyBuild:
     - TinkloValdymas
     - Ugnis
     - UgnisB3
+    - UgnisU2
     - Vanduo
     - VanduoU1
     - VanduoU2
@@ -31,8 +33,6 @@ ScriptsOnlyBuild:
     - Zaidejas
     - Zeme
     PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PhotonAnimatorViewEditor
-    - Photon.Pun.PhotonViewInspector
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
@@ -109,6 +109,7 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.AspectRatioFitter
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.ContentSizeFitter
@@ -416,6 +417,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12748}
     - Class: 114
+      Script: {instanceID: 12894}
+    - Class: 114
       Script: {instanceID: 13002}
     - Class: 114
       Script: {instanceID: 13350}
@@ -462,6 +465,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17742}
     - Class: 114
+      Script: {instanceID: 17796}
+    - Class: 114
       Script: {instanceID: 17856}
     - Class: 114
       Script: {instanceID: 17904}
@@ -471,6 +476,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 17950}
     - Class: 114
       Script: {instanceID: 18026}
+    - Class: 114
+      Script: {instanceID: 60968}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -558,6 +565,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12716}
     - Class: 114
       Script: {instanceID: 12748}
+    - Class: 114
+      Script: {instanceID: 12894}
     - Class: 114
       Script: {instanceID: 13002}
     - Class: 114
@@ -655,11 +664,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17716}
     - Class: 114
+      Script: {instanceID: 17796}
+    - Class: 114
       Script: {instanceID: 17856}
     - Class: 114
       Script: {instanceID: 17894}
     - Class: 114
       Script: {instanceID: 17898}
+    - Class: 114
+      Script: {instanceID: 17904}
     - Class: 114
       Script: {instanceID: 17942}
     - Class: 114
@@ -674,6 +687,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 18196}
     - Class: 114
       Script: {instanceID: 18202}
+    - Class: 114
+      Script: {instanceID: 60968}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1041,7 +1056,7 @@ ScriptsOnlyBuild:
     className: ContactShadows
   - hash:
       serializedVersion: 2
-      Hash: 1422f4d33531afe675982eef5e750ae2
+      Hash: 9d52ef4eecc7436c1049314a697f99b0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Oras
@@ -1053,7 +1068,7 @@ ScriptsOnlyBuild:
     className: WhiteBalance
   - hash:
       serializedVersion: 2
-      Hash: 5077d82f173ebe4df5c33c3336a0d18b
+      Hash: e3243b2ffb0154bb5d1da241082b89a1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VanduoU3
@@ -1197,7 +1212,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 5b9dd04239ecf00627b95d8c746804ac
+      Hash: da34abda8c8e72b4ba4007cb2eed9ecc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ugnis
@@ -1233,7 +1248,7 @@ ScriptsOnlyBuild:
     className: CullArea
   - hash:
       serializedVersion: 2
-      Hash: 96e7a64751dbf0ef62efd9de2a975ce2
+      Hash: a86c1077a9bce93350f29006cefd6dbc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UgnisB3
@@ -1359,7 +1374,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerToggle
   - hash:
       serializedVersion: 2
-      Hash: f1b3f7191abf15cb8ef1f3771c473e1a
+      Hash: 067e16a765f570b66a3f129c8269da3c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VanduoU1
@@ -1449,13 +1464,13 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 37e18c953f383e0091059094c65819fe
+      Hash: d0ae6bfcc7f1ca6b5dc750b7c5e1cf09
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Zaidejas
   - hash:
       serializedVersion: 2
-      Hash: 3f99076b5c82fae0ce52775c1a922d8d
+      Hash: 93ceffde4e394053fbab7cf5230570ce
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VanduoU2
@@ -1761,10 +1776,10 @@ ScriptsOnlyBuild:
     className: VFXVelocityBinder
   - hash:
       serializedVersion: 2
-      Hash: d09b11c04e4ec68d6d3cf960655ce63e
+      Hash: 488f0b2e2fd050027c8cff5696247284
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Pasirinkimai
+    className: Meniu
   - hash:
       serializedVersion: 2
       Hash: d6a8e9bec3160a152b9b2710593d3caa
@@ -1941,7 +1956,7 @@ ScriptsOnlyBuild:
     className: PunTurnManager
   - hash:
       serializedVersion: 2
-      Hash: 41ad66f8982ea84d8061a71888de1c81
+      Hash: 43c3e2231424d3a98c9b1fc6afeab816
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OrasU2
@@ -2043,7 +2058,7 @@ ScriptsOnlyBuild:
     className: Prisijungimas
   - hash:
       serializedVersion: 2
-      Hash: e298b338c048e0841c1f1f8c616b0e2b
+      Hash: 95f32bb33004fdf0ce2398c65c4f74a3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Zeme
@@ -2157,7 +2172,7 @@ ScriptsOnlyBuild:
     className: VertexShakeB
   - hash:
       serializedVersion: 2
-      Hash: ff0f44f8c446e9f0fe9428b8901eda35
+      Hash: 0405c5185b34aecdf0b5d02b0e996ad4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OrasB5
@@ -2307,7 +2322,7 @@ ScriptsOnlyBuild:
     className: OnEscapeQuit
   - hash:
       serializedVersion: 2
-      Hash: 0edda9b5b450d5c5aa1380c4231e6beb
+      Hash: 397e3e8908a797cb58639af8468e5b97
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Vanduo
@@ -2415,7 +2430,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 53d9119e5e9821b04d7c1d8cb052a9f5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OrasU1
@@ -2541,7 +2556,7 @@ ScriptsOnlyBuild:
     className: VFXPropertyBinder
   - hash:
       serializedVersion: 2
-      Hash: 94d22de86a32cd283e9428517c5b75ff
+      Hash: 41e2a14b91a47dddf875baacc64bfa9b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Kulka
@@ -2617,6 +2632,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualEffectGraph.Runtime.dll
     namespaceName: UnityEngine.VFX.Utility
     className: VFXUISliderBinder
+  - hash:
+      serializedVersion: 2
+      Hash: c7a6f4632cdc4e12cbd8b8ff6320b4d1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UgnisU2
   platform: 19
   scenePathNames:
   - "Assets/Scenos/_Pradin\u0117.unity"

@@ -51,25 +51,11 @@ public class OrasU2 : Kulka
         transform.localScale += new Vector3(Dydis, 0, Dydis);
     }
 
-    public override void Kontaktas(GameObject go)
+    public override void FizikosEfektai(Rigidbody rb)
     {
-        if (Autorius == go.gameObject)
-        {
-            return;
-        }
-
-        if (go.CompareTag("Player"))
-        {
-            Rigidbody RB = go.GetComponent<Rigidbody>();
-            Zaidejas AukosZaidejoKodas = go.GetComponent<Zaidejas>();
-            if (AukosZaidejoKodas.KomandosNr != KomandosNr || AukosZaidejoKodas.KomandosNr == 0)
-            {
-                RB.AddForce(Vector3.up * Jega, ForceMode.Impulse);
-            }            
-        }
-
-        base.Kontaktas(go);
+        rb.AddForce(Vector3.up * Jega, ForceMode.Impulse);
     }
+
 
     public bool ArtiZemyn()
     {

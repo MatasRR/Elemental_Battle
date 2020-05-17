@@ -7,8 +7,8 @@ using Photon.Pun;
 public class Vanduo : Elementas
 {
 	[Header("B 1: ")]
+    public Sprite[] B1Paveiksleliai;
 	public float B1_CD;
-    public Sprite B1Paveikslelis;
 
     public float B1Zala;
     public float B1SuletinimoStipris;
@@ -18,14 +18,15 @@ public class Vanduo : Elementas
 	public GameObject B1Daiktas;
 
 	[Header("B 2: ")]
+    public Sprite[] B2Paveiksleliai;
 	public float B2_CD;
-    public Sprite B2Paveikslelis;
 
     public float B2Gydymas;
+    public float B2GydymosiLaikas;
 
 	[Header("B 3: ")]
+    public Sprite[] B3Paveiksleliai;
 	public float B3_CD;
-    public Sprite B3Paveikslelis;
 
     public float B3Zala;
 
@@ -44,8 +45,8 @@ public class Vanduo : Elementas
     public GameObject B3Laselis;
 
     [Header("B 4: ")]
+    public Sprite[] B4Paveiksleliai;
     public float B4_CD;
-    public Sprite B4Paveikslelis;
 
     public float B4Zala;
 
@@ -54,8 +55,8 @@ public class Vanduo : Elementas
     public GameObject B4Daiktas;
 
     [Header("B 5: ")]
+    public Sprite[] B5Paveiksleliai;
     public float B5_CD;
-    public Sprite B5Paveikslelis;
 
     public float B5Zala;
 
@@ -64,8 +65,8 @@ public class Vanduo : Elementas
     public GameObject B5Daiktas;
 
     [Header("U 1: ")]
+    public Sprite[] U1Paveiksleliai;
 	public float U1_CD;
-    public Sprite U1Paveikslelis;
 
     public float U1Zala;
 
@@ -74,8 +75,8 @@ public class Vanduo : Elementas
 	public GameObject U1Daiktas;
 
     [Header("U 2: ")]
+    public Sprite[] U2Paveiksleliai;
     public float U2_CD;
-    public Sprite U2Paveikslelis;
 
     public float U2Zala;
 
@@ -87,8 +88,8 @@ public class Vanduo : Elementas
     public GameObject U2Daiktas;
 
     [Header("U 3: ")]
+    public Sprite[] U3Paveiksleliai;
     public float U3_CD;
-    public Sprite U3Paveikslelis;
 
     public float U3Zala;
 
@@ -127,18 +128,28 @@ public class Vanduo : Elementas
         KulkosKodas.SuletinimoLaikas = B1SuletinimoLaikas;
         KulkosKodas.SuletinimoStipris = B1SuletinimoStipris;
         KulkosKodas.Autorius = gameObject;
-        //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
-        KulkosKodas.ElementoNr = 2;
 
         Destroy(VanduoB1, 10);
     }
 
-    public override void B2 ()
+    public override void B2()
 	{
-        ZaidejoKodas.Gyvybes += B2Gydymas;
+        StartCoroutine(_B2());
     }
 
-    public override void B3 ()
+    IEnumerator _B2()
+    {
+        ZaidejoKodas.JudejimoLaikoIgnoravimas++;
+        ZaidejoKodas.PuolimoLaikoIgnoravimas++;
+
+        yield return new WaitForSeconds(B2GydymosiLaikas);
+        ZaidejoKodas.Gyvybes += B2Gydymas;
+
+        ZaidejoKodas.JudejimoLaikoIgnoravimas--;
+        ZaidejoKodas.PuolimoLaikoIgnoravimas--;
+    }
+
+    public override void B3()
 	{
         if (Physics.Raycast(Kamera.ScreenPointToRay(Input.mousePosition), out RaycastHit PataikytasObjektas, B3SpindulioIlgis))
         {
@@ -177,8 +188,6 @@ public class Vanduo : Elementas
 
             KulkosKodas.Zala = B3Zala;
             KulkosKodas.Autorius = gameObject;
-            //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
-            KulkosKodas.ElementoNr = 2;
 
             Destroy(Laselis, 10);
         }
@@ -221,8 +230,6 @@ public class Vanduo : Elementas
         KulkosKodas.Greitis = B4DaiktoGreitis;
         KulkosKodas.Zala = B4Zala;
         KulkosKodas.Autorius = gameObject;
-        //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
-        KulkosKodas.ElementoNr = 2;
 
         Destroy(VanduoB4, 10);
     }
@@ -247,8 +254,6 @@ public class Vanduo : Elementas
         KulkosKodas.Zala = B5Zala;
         KulkosKodas.SustingdymoLaikas = B5JudejimoCCLaikas;
         KulkosKodas.Autorius = gameObject;
-        //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
-        KulkosKodas.ElementoNr = 2;
 
         Destroy(VanduoB5, 10);
     }
@@ -269,8 +274,6 @@ public class Vanduo : Elementas
         KulkosKodas.Greitis = U1DaiktoGreitis;
 		KulkosKodas.Zala = U1Zala;
         KulkosKodas.Autorius = gameObject;
-        //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
-        KulkosKodas.ElementoNr = 2;
 
         Destroy (VanduoU1, 10);
 	}
@@ -295,8 +298,6 @@ public class Vanduo : Elementas
 
         KulkosKodas.Zala = U2Zala;
         KulkosKodas.Autorius = gameObject;
-        //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
-        KulkosKodas.ElementoNr = 2;
         KulkosKodas.Jega = U2Jega;
         KulkosKodas.Daznis = U2Daznis;
         KulkosKodas.Dydis = U2SferosDydis;
@@ -341,8 +342,6 @@ public class Vanduo : Elementas
 
         KulkosKodas.Zala = U3Zala;
         KulkosKodas.Autorius = gameObject;
-        //KulkosKodas.KomandosNr = ZaidejoKodas.KomandosNr;
-        KulkosKodas.ElementoNr = 2;
         KulkosKodas.IlgejimoGreitis = U3IlgejimoGreitis;
         KulkosKodas.Jega = U3Jega;
 
@@ -354,51 +353,51 @@ public class Vanduo : Elementas
     {
         switch (Duomenys.B1)
         {
-            case 1: BCD = B1_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;
-            case 2: BCD = B2_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;
-            case 3: BCD = B3_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;
-            case 4: BCD = B4_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;
-            case 5: BCD = B5_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;/*
-            case 6: BCD = B6_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;/*
-            case 7: BCD = B7_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;/*
-            case 8: BCD = B8_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;/*
-            case 9: BCD = B9_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveikslelis; break;*/
+            case 1: BCD = B1_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 2: BCD = B2_CD; ZaidejoKodas.BPaveikslelis.sprite = B2Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 3: BCD = B3_CD; ZaidejoKodas.BPaveikslelis.sprite = B3Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 4: BCD = B4_CD; ZaidejoKodas.BPaveikslelis.sprite = B4Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 5: BCD = B5_CD; ZaidejoKodas.BPaveikslelis.sprite = B5Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 6: BCD = B6_CD; ZaidejoKodas.BPaveikslelis.sprite = B6Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 7: BCD = B7_CD; ZaidejoKodas.BPaveikslelis.sprite = B7Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 8: BCD = B8_CD; ZaidejoKodas.BPaveikslelis.sprite = B8Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 9: BCD = B9_CD; ZaidejoKodas.BPaveikslelis.sprite = B9Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;*/
         }
         switch (Duomenys.B2)
         {
-            case 1: BBCD = B1_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;
-            case 2: BBCD = B2_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;
-            case 3: BBCD = B3_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;
-            case 4: BBCD = B4_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;
-            case 5: BBCD = B5_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;/*
-            case 6: BBCD = B6_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;/*
-            case 7: BBCD = B7_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;/*
-            case 8: BBCD = B8_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;/*
-            case 9: BBCD = B9_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveikslelis; break;*/
+            case 1: BBCD = B1_CD; ZaidejoKodas.BBPaveikslelis.sprite = B1Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 2: BBCD = B2_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 3: BBCD = B3_CD; ZaidejoKodas.BBPaveikslelis.sprite = B3Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 4: BBCD = B4_CD; ZaidejoKodas.BBPaveikslelis.sprite = B4Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 5: BBCD = B5_CD; ZaidejoKodas.BBPaveikslelis.sprite = B5Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 6: BBCD = B6_CD; ZaidejoKodas.BBPaveikslelis.sprite = B6Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 7: BBCD = B7_CD; ZaidejoKodas.BBPaveikslelis.sprite = B7Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 8: BBCD = B8_CD; ZaidejoKodas.BBPaveikslelis.sprite = B8Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 9: BBCD = B9_CD; ZaidejoKodas.BBPaveikslelis.sprite = B9Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;*/
         }
         switch (Duomenys.B3)
         {
-            case 1: BBBCD = B1_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;
-            case 2: BBBCD = B2_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;
-            case 3: BBBCD = B3_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;
-            case 4: BBBCD = B4_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;
-            case 5: BBBCD = B5_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;/*
-            case 6: BBBCD = B6_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;/*
-            case 7: BBBCD = B7_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;/*
-            case 8: BBBCD = B8_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;/*
-            case 9: BBBCD = B9_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveikslelis; break;*/
+            case 1: BBBCD = B1_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B1Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 2: BBBCD = B2_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B2Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 3: BBBCD = B3_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 4: BBBCD = B4_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B4Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 5: BBBCD = B5_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B5Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 6: BBBCD = B6_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B6Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 7: BBBCD = B7_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B7Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 8: BBBCD = B8_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B8Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 9: BBBCD = B9_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B9Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;*/
         }
         switch (Duomenys.U)
         {
-            case 1: UCD = U1_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;
-            case 2: UCD = U2_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;
-            case 3: UCD = U3_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;/*
-            case 4: UCD = U4_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;/*
-            case 5: UCD = U5_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;/*
-            case 6: UCD = U6_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;/*
-            case 7: UCD = U7_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;/*
-            case 8: UCD = U8_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;/*
-            case 9: UCD = U9_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveikslelis; break;*/
+            case 1: UCD = U1_CD; ZaidejoKodas.UPaveikslelis.sprite = U1Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 2: UCD = U2_CD; ZaidejoKodas.UPaveikslelis.sprite = U2Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 3: UCD = U3_CD; ZaidejoKodas.UPaveikslelis.sprite = U3Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 4: UCD = U4_CD; ZaidejoKodas.UPaveikslelis.sprite = U4Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 5: UCD = U5_CD; ZaidejoKodas.UPaveikslelis.sprite = U5Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 6: UCD = U6_CD; ZaidejoKodas.UPaveikslelis.sprite = U6Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 7: UCD = U7_CD; ZaidejoKodas.UPaveikslelis.sprite = U7Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 8: UCD = U8_CD; ZaidejoKodas.UPaveikslelis.sprite = U8Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
+            case 9: UCD = U9_CD; ZaidejoKodas.UPaveikslelis.sprite = U9Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;*/
         }
     }
 }

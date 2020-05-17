@@ -87,10 +87,10 @@ public class Elementas : MonoBehaviourPun
         DabBBBCD = Mathf.Max(DabBBBCD, 0);
         DabUCD = Mathf.Max(DabUCD, 0);
 
-        BCDTekstas.text = Mathf.Ceil(DabBCD).ToString();
-        BBCDTekstas.text = Mathf.Ceil(DabBBCD).ToString();
-        BBBCDTekstas.text = Mathf.Ceil(DabBBBCD).ToString();
-        UCDTekstas.text = Mathf.Ceil(DabUCD).ToString();
+        BCDTekstas.text = (DabBCD > 0 ? Mathf.Ceil(DabBCD).ToString() : "");
+        BBCDTekstas.text = (DabBBCD > 0 ? Mathf.Ceil(DabBBCD).ToString() : "");
+        BBBCDTekstas.text = (DabBBBCD > 0 ? Mathf.Ceil(DabBBBCD).ToString() : "");
+        UCDTekstas.text = (DabUCD > 0 ? Mathf.Ceil(DabUCD).ToString() : "");
 
         BCDFonas.fillAmount = DabBCD / BCD;
         BBCDFonas.fillAmount = DabBBCD / BBCD;

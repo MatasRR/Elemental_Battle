@@ -86,8 +86,8 @@ MonoBehaviour:
   SuletinimoStipris: 0
   SoklumoSilpninimoStipris: 0
   EinaKiaurai: 0
+  TuriFizikosEfektu: 1
   Jega: 0
-  t: {fileID: 0}
 --- !u!1001 &4067487092296478068
 PrefabInstance:
   m_ObjectHideFlags: 0

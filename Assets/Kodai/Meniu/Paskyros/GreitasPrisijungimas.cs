@@ -7,25 +7,24 @@ using PlayFab.ClientModels;
 
 public class GreitasPrisijungimas : MonoBehaviour
 {
-    void Update()
+    public void GreitaiPrisijungti(int Nr)
     {
-        if (Input.GetKeyDown(KeyCode.L) && Input.GetKey(KeyCode.LeftAlt))
-        {
-            LoginWithPlayFabRequest Uzklausa = new LoginWithPlayFabRequest();
+        LoginWithPlayFabRequest Uzklausa = new LoginWithPlayFabRequest();
 
-            Uzklausa.Username = Uzklausa.Password = "player1";
+        string PrisijungimoDuomenys = "player" + Nr.ToString();
 
-            PlayFabClientAPI.LoginWithPlayFab(Uzklausa,
-                result =>
-                {
-                    SceneManager.LoadScene("Meniu");
-                },
-                error =>
-                {
-                    Pranesimai P = new Pranesimai();
-                    StartCoroutine(P.KurtiNaujaKlaida(error.ErrorMessage));
-                }
-            );
-        }
+        Uzklausa.Username = Uzklausa.Password = PrisijungimoDuomenys;
+
+        PlayFabClientAPI.LoginWithPlayFab(Uzklausa,
+            result =>
+            {
+                SceneManager.LoadScene("Meniu");
+            },
+            error =>
+            {
+                Pranesimai P = new Pranesimai();
+                StartCoroutine(P.KurtiNaujaKlaida(error.ErrorMessage));
+            }
+        );
     }
 }

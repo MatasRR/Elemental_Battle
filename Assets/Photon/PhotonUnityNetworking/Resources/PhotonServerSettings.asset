@@ -60,5 +60,9 @@ MonoBehaviour:
   - RPCKurtiZemeU1
   - RPCMirtis
   - RPCPrisikelimas
+  - RPCKurtiUgnisU3ZaibusBangaBeTaikinio
+  - RPCKurtiUgnisU3ZaibuBangaBeTaikinio
+  - RPCKurtiZemeB4
+  - RPCKurtiUgnisU2
   DisableAutoOpenWizard: 1
   ShowSettings: 0

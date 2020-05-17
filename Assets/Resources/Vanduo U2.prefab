@@ -61,7 +61,15 @@ MonoBehaviour:
   Greitis: 0
   Zala: 0
   Autorius: {fileID: 0}
+  KomandosNr: 0
+  ElementoNr: 0
+  SustingdymoLaikas: 0
+  NuginklavimoLaikas: 0
+  SuletinimoLaikas: 0
+  SuletinimoStipris: 0
+  SoklumoSilpninimoStipris: 0
   EinaKiaurai: 1
+  TuriFizikosEfektu: 1
   Jega: 0
   Daznis: 0
   Dydis: 0
@@ -72,11 +80,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4802456841996787833}
     m_Modifications:
-    - target: {fileID: 3920188553468833311, guid: 993f641c15a639741a8d2040b3bc8376,
-        type: 3}
-      propertyPath: m_Name
-      value: Vanduo U2 forma
-      objectReference: {fileID: 0}
     - target: {fileID: 16914203069193228, guid: 993f641c15a639741a8d2040b3bc8376,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -131,6 +134,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920188553468833311, guid: 993f641c15a639741a8d2040b3bc8376,
+        type: 3}
+      propertyPath: m_Name
+      value: Vanduo U2 forma
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 993f641c15a639741a8d2040b3bc8376, type: 3}

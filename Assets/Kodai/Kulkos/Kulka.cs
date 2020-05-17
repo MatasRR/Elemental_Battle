@@ -5,15 +5,24 @@ using UnityEngine;
 public class Kulka : MonoBehaviour
 {
     [HideInInspector]
-    public float Greitis;
-    [HideInInspector]
     public float Zala;
+    [HideInInspector]
+    public float DOTZala;
+    [HideInInspector]
+    public float DOTDaznis;
+    [HideInInspector]
+    public float DOTTrukme;
+
+    [HideInInspector]
+    public float Greitis;
     [HideInInspector]
     public GameObject Autorius;
     [HideInInspector]
     public int KomandosNr;
     [HideInInspector]
     public int ElementoNr;
+    [HideInInspector]
+    public float AtakosMod;
 
     [HideInInspector]
     public float SustingdymoLaikas;
@@ -22,11 +31,12 @@ public class Kulka : MonoBehaviour
     [HideInInspector]
     public float SuletinimoLaikas;
     [HideInInspector]
-    public float SuletinimoStipris;
+    public float SuletinimoStipris = 1f;
     [HideInInspector]
-    public float SoklumoSilpninimoStipris;
+    public float SoklumoSilpninimoStipris = 1f;
 
     public bool EinaKiaurai = false;
+    public bool TuriFizikosEfektu = false;
 
     public virtual void Start()
     {
@@ -34,7 +44,10 @@ public class Kulka : MonoBehaviour
         {
             gameObject.GetComponent<Rigidbody>().velocity = transform.forward * Greitis;
         }
+
+        ElementoNr = Autorius.GetComponent<Zaidejas>().ElementoNr;
         KomandosNr = Autorius.GetComponent<Zaidejas>().KomandosNr;
+        AtakosMod = Autorius.GetComponent<Zaidejas>().AtakosMod;
     }
 
     public virtual void Update()
@@ -47,9 +60,9 @@ public class Kulka : MonoBehaviour
         Kontaktas(c.gameObject);
     }
 
-    public virtual void OnTriggerStay(Collider c)
+    public virtual void OnCollisionEnter(Collision c)
     {
-        
+        Kontaktas(c.collider.gameObject);
     }
 
     public virtual void Kontaktas (GameObject go)
@@ -59,6 +72,14 @@ public class Kulka : MonoBehaviour
             return;
         }
 
+        bool NaikintiKulka = true;
+        Rigidbody AukosRB = null;
+        
+        if (TuriFizikosEfektu)
+        {
+            AukosRB = go.GetComponent<Rigidbody>();
+        }
+
         if (go.CompareTag("Player"))
         {
             Zaidejas ZaidejoKodas = go.GetComponent<Zaidejas>();
@@ -66,9 +87,13 @@ public class Kulka : MonoBehaviour
             if (ZaidejoKodas.KomandosNr != KomandosNr || ZaidejoKodas.KomandosNr == 0)
             {
                 ZaidejoKodas.KeistiPaskutiniZalojusiZaideja(Autorius);
+                ZaidejoKodas.GautiZalos(Zala * AtakosMod, ElementoNr);
+                FizikosEfektai(go.GetComponent<Rigidbody>());
 
-                ZaidejoKodas.GautiZalos(Zala, ElementoNr);
-
+                if (DOTZala != 0)
+                {
+                    ZaidejoKodas.GautiDOTZalos(DOTZala * AtakosMod, DOTDaznis, DOTTrukme, ElementoNr);
+                }
                 if (SustingdymoLaikas != 0)
                 {
                     ZaidejoKodas.JudejimoCCLaikas += SustingdymoLaikas;
@@ -79,40 +104,64 @@ public class Kulka : MonoBehaviour
                 }
                 if (SuletinimoLaikas != 0)
                 {
-                    StartCoroutine(Suletinimas(ZaidejoKodas));
+                    ZaidejoKodas.Suletinti(SuletinimoStipris, SoklumoSilpninimoStipris, SuletinimoLaikas);
                 }
             }
         }
         else if (go.CompareTag("Skydas"))
         {
             Skydas SkydoKodas = go.GetComponent<Skydas>();
-            if (SkydoKodas.Autorius != Autorius || !SkydoKodas.IgnoruojaSavoKulkas)
+            if (SkydoKodas.IgnoruojaSavoKulkas)
             {
-                if (SkydoKodas.KomandosNr != KomandosNr || SkydoKodas.KomandosNr == 0)
+                if ( (Autorius == SkydoKodas.Autorius) || (SkydoKodas.KomandosNr == KomandosNr && SkydoKodas.KomandosNr != 0) )
+                {
+                    NaikintiKulka = false;
+                }
+                else
                 {
                     SkydoKodas.GautiZalos(Zala);
+
+                    if (DOTZala != 0)
+                    {
+                        StartCoroutine(SkydoKodas.GautiDOTZalos(DOTZala * AtakosMod, DOTDaznis, DOTTrukme));
+                    }
+
                     if (Zala < SkydoKodas.MaxSugeriamaZala)
                     {
                         Destroy(gameObject);
                     }
-                }                    
+                    
+                    if (AukosRB != null)
+                    {
+                        FizikosEfektai(go.GetComponent<Rigidbody>());
+                    }
+                }
+            }
+            else
+            {
+                SkydoKodas.GautiZalos(Zala);
+                if (Zala < SkydoKodas.MaxSugeriamaZala)
+                {
+                    Destroy(gameObject);
+                }
+            }
+        }
+        else
+        {
+            if (AukosRB != null)
+            {
+                FizikosEfektai(go.GetComponent<Rigidbody>());
             }
         }
 
-        if (!EinaKiaurai)
+        if (!EinaKiaurai && NaikintiKulka)
         {
             Destroy(gameObject);
         }
     }
 
-    IEnumerator Suletinimas(Zaidejas AukosZaidejoKodas)
+    public virtual void FizikosEfektai(Rigidbody rb)
     {
-        AukosZaidejoKodas.GreicioMod *= SuletinimoStipris;
-        AukosZaidejoKodas.SoklumoMod *= SoklumoSilpninimoStipris;
-        AukosZaidejoKodas.GreicioIrSoklumoPerskaiciavimas();
-        yield return new WaitForSeconds(SuletinimoLaikas);
-        AukosZaidejoKodas.GreicioMod /= SuletinimoStipris;
-        AukosZaidejoKodas.SoklumoMod /= SoklumoSilpninimoStipris;
-        AukosZaidejoKodas.GreicioIrSoklumoPerskaiciavimas();
+
     }
 }

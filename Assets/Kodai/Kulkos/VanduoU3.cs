@@ -44,25 +44,15 @@ public class VanduoU3 : Kulka
         Autorius.GetComponent<Zaidejas>().JudejimoLaikoIgnoravimas--;
         Autorius.GetComponent<Zaidejas>().PuolimoLaikoIgnoravimas--;
 
-        Rigidbody RB = go.GetComponent<Rigidbody>();
-        Zaidejas AukosZaidejoKodas = go.GetComponent<Zaidejas>();
-        if (RB != null)
-        {
-            if (AukosZaidejoKodas != null)
-            {
-                if (AukosZaidejoKodas.KomandosNr == KomandosNr && AukosZaidejoKodas.KomandosNr != 0)
-                {
-                    return;
-                }
-            }
-
-            Vector3 SulygintaPagalYJegosVieta = Autorius.transform.position;
-            SulygintaPagalYJegosVieta.y = go.transform.position.y;
-            Vector3 JegosVektorius = (go.transform.position - SulygintaPagalYJegosVieta).normalized * Jega;
-            RB.AddForce(JegosVektorius, ForceMode.Impulse);
-        }
-
         base.Kontaktas(go);
+    }
+
+    public override void FizikosEfektai(Rigidbody rb)
+    {
+        Vector3 SulygintaPagalYJegosVieta = Autorius.transform.position;
+        SulygintaPagalYJegosVieta.y = rb.position.y;
+        Vector3 JegosVektorius = (rb.position - SulygintaPagalYJegosVieta).normalized * Jega;
+        rb.AddForce(JegosVektorius, ForceMode.Impulse);
     }
 
     public bool ToliZemyn()

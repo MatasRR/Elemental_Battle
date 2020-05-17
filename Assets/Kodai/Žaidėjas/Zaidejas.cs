@@ -9,6 +9,7 @@ using TMPro;
 
 public class Zaidejas : MonoBehaviourPun, IPunObservable
 {
+    public Material[] ZaidejoIsvaizdosMedziagos;
     public Color[] VardoKomanduSpalvos;
     private List <Zaidejas> ZaidejuSarasas = new List<Zaidejas>();
 
@@ -46,7 +47,9 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public float Soklumas;
 
     [HideInInspector]
-    public float ZalosMod;
+    public float AtakosMod;
+    [HideInInspector]
+    public float GynybosMod;
 
     public float PrisikelimoLaikas;
     [HideInInspector]
@@ -96,15 +99,22 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     [HideInInspector]
     public float PaskutinioZalojusioZaidejoLaikmatis;
 
+    public MeshRenderer ZaidejoGrafikosObjektas;
+    [HideInInspector]
+    public int ZaidejoIsvaizdosMedziagosNr;
+    [HideInInspector]
+    public int ZaidejoPaveiksleliuNr;
+
     public GameObject ZalosTekstoObjektas;
-    public Color ZalosTekstoOroSpalva;
-    public Color ZalosTekstoVandensSpalva;
-    public Color ZalosTekstoZemesSpalva;
-    public Color ZalosTekstoUgniesSpalva;
+    public Color OroSpalva;
+    public Color VandensSpalva;
+    public Color ZemesSpalva;
+    public Color UgniesSpalva;
 
     //private bool DuomenysAtnaujinti;
 
     [Header("UI: ")]
+    public Image[] EkranoDrobesLaukeliai;
     public TextMeshProUGUI BCDTekstas;
     public TextMeshProUGUI BBCDTekstas;
     public TextMeshProUGUI BBBCDTekstas;
@@ -128,6 +138,28 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public TextMeshProUGUI MazasisSkydoTekstas;
     public TextMeshProUGUI MazasisVardoTekstas;
 
+    public GameObject PaveiksliukasGreitisPlius;
+    public GameObject PaveiksliukasGreitisMinus;
+    public GameObject PaveiksliukasGreitisNulis;
+    public GameObject PaveiksliukasAtakaPlius;
+    public GameObject PaveiksliukasAtakaMinus;
+    public GameObject PaveiksliukasAtakaNulis;
+    public GameObject PaveiksliukasGynybaPlius;
+    public GameObject PaveiksliukasGynybaMinus;
+    public GameObject PaveiksliukasGynybaNulis;
+    public GameObject PaveiksliukasSkraidymas;
+
+    public GameObject MazasisPaveiksliukasGreitisPlius;
+    public GameObject MazasisPaveiksliukasGreitisMinus;
+    public GameObject MazasisPaveiksliukasGreitisNulis;
+    public GameObject MazasisPaveiksliukasAtakaPlius;
+    public GameObject MazasisPaveiksliukasAtakaMinus;
+    public GameObject MazasisPaveiksliukasAtakaNulis;
+    public GameObject MazasisPaveiksliukasGynybaPlius;
+    public GameObject MazasisPaveiksliukasGynybaMinus;
+    public GameObject MazasisPaveiksliukasGynybaNulis;
+    public GameObject MazasisPaveiksliukasSkraidymas;
+
     public TextMeshProUGUI NuzudymuIrMirciuTekstas;
     public TextMeshProUGUI KomandosTekstas;
     public GameObject MirtiesPranesimuLentele;
@@ -139,6 +171,8 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
 
     public GameObject EkranoDrobe;
     public GameObject ZaidimoDrobe;
+
+    public TextMeshProUGUI TestinisTekstas;
 
     void Start()
     {
@@ -163,14 +197,36 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         Gyvybes = MaxGyvybes;
         Greitis = PradinisGreitis;
         Soklumas = PradinisSoklumas;
-        GreicioMod = SoklumoMod = ZalosMod = 1f;
+        GreicioMod = SoklumoMod = AtakosMod = GynybosMod = 1f;
         SkraidymoCCLaikas = JudejimoCCLaikas = PuolimoCCLaikas = PaskutinioZalojusioZaidejoLaikmatis = 0f;
-        SkraidymoLaikoIgnoravimas = JudejimoLaikoIgnoravimas = PuolimoLaikoIgnoravimas = NuzudymuSk = MirciuSk = 0;
+        SkraidymoLaikoIgnoravimas = JudejimoLaikoIgnoravimas = PuolimoLaikoIgnoravimas = 0;
         KomandosTekstas.text = (KomandosNr == 0) ? "SOLO" : "TEAM " + KomandosNr;
+        ZaidejoIsvaizdosMedziagosNr = Duomenys.IsvaizdosMedziagosNr;
+        ZaidejoPaveiksleliuNr = Duomenys.GebejimuPaveiksleliuNr;
         NuzudymuSk = Duomenys.K;
         MirciuSk = Duomenys.D;
         //DuomenysAtnaujinti = false;
         Gyvas = true;
+
+        foreach (Image i in EkranoDrobesLaukeliai)
+        {
+            switch (ElementoNr)
+            {
+                case 1:
+                    i.color = OroSpalva;
+                    break;
+                case 2:
+                    i.color = VandensSpalva;
+                    break;
+                case 3:
+                    i.color = ZemesSpalva;
+                    break;
+                case 4:
+                    i.color = UgniesSpalva;
+                    break;
+            }
+            i.color = new Color(i.color.r, i.color.g, i.color.b, .75f);
+        }
 
         if (!photonView.IsMine)
         {
@@ -284,26 +340,13 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         }
 
         DuomenysAtnaujinti = true;
+
+        // OnPlayerJoined() {DuomenysAtnaujinti = false};
         */
         MazasisVardoTekstas.text = Vardas;
         MazasisVardoTekstas.color = VardoKomanduSpalvos[KomandosNr];
-        /*
-        switch (ElementoNr)
-        {
-            case 1:
-                gameObject.GetComponent<MeshRenderer>().material.color = Color.grey;
-                break;
-            case 2:
-                gameObject.GetComponent<MeshRenderer>().material.color = Color.blue;
-                break;
-            case 3:
-                gameObject.GetComponent<MeshRenderer>().material.color = Color.green;
-                break;
-            case 4:
-                gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
-                break;
-        }
-        */
+
+        ZaidejoGrafikosObjektas.material = ZaidejoIsvaizdosMedziagos[ZaidejoIsvaizdosMedziagosNr];
     }
 
     void UIValdymas()
@@ -317,12 +360,188 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
 
             NuzudymuIrMirciuTekstas.text = NuzudymuSk.ToString() + " / " + MirciuSk.ToString();
             //PrisikelimoLaikoTekstas.text = LikesPrisikelimoLaikas.ToString();
+
+            if (GaliJudeti)
+            {
+                PaveiksliukasGreitisNulis.SetActive(false);
+                if (Greitis > PradinisGreitis)
+                {
+                    PaveiksliukasGreitisPlius.SetActive(true);
+                    PaveiksliukasGreitisMinus.SetActive(false);
+                }
+                else if (Greitis < PradinisGreitis)
+                {
+                    PaveiksliukasGreitisPlius.SetActive(false);
+                    PaveiksliukasGreitisMinus.SetActive(true);
+                }
+                else
+                {
+                    PaveiksliukasGreitisPlius.SetActive(false);
+                    PaveiksliukasGreitisMinus.SetActive(false);
+                }
+            }
+            else
+            {
+                PaveiksliukasGreitisMinus.SetActive(false);
+                PaveiksliukasGreitisPlius.SetActive(false);
+                PaveiksliukasGreitisNulis.SetActive(true);
+            }
+
+            if (GaliPulti)
+            {
+                PaveiksliukasAtakaNulis.SetActive(false);
+                if (AtakosMod > 1f)
+                {
+                    PaveiksliukasAtakaPlius.SetActive(true);
+                    PaveiksliukasAtakaMinus.SetActive(false);
+                }
+                else if (AtakosMod < 1f)
+                {
+                    PaveiksliukasAtakaPlius.SetActive(false);
+                    PaveiksliukasAtakaMinus.SetActive(true);
+                }
+                else
+                {
+                    PaveiksliukasAtakaPlius.SetActive(false);
+                    PaveiksliukasAtakaMinus.SetActive(false);
+                }
+            }
+            else
+            {
+                PaveiksliukasAtakaPlius.SetActive(false);
+                PaveiksliukasAtakaMinus.SetActive(false);
+                PaveiksliukasAtakaNulis.SetActive(true);
+            }
+
+            if (true)
+            {
+                PaveiksliukasGynybaNulis.SetActive(false);
+                if (GynybosMod < 1f)
+                {
+                    PaveiksliukasGynybaPlius.SetActive(true);
+                    PaveiksliukasGynybaMinus.SetActive(false);
+                }
+                else if (GynybosMod > 1f)
+                {
+                    PaveiksliukasGynybaPlius.SetActive(false);
+                    PaveiksliukasGynybaMinus.SetActive(true);
+                }
+                else
+                {
+                    PaveiksliukasGynybaPlius.SetActive(false);
+                    PaveiksliukasGynybaMinus.SetActive(false);
+                }
+            }
+            else
+            {
+                PaveiksliukasGynybaPlius.SetActive(false);
+                PaveiksliukasGynybaMinus.SetActive(false);
+                PaveiksliukasGynybaNulis.SetActive(true);
+            }
+
+
+            if (GaliSkraidyti)
+            {
+                PaveiksliukasSkraidymas.SetActive(true);
+            }
+            else
+            {
+                PaveiksliukasSkraidymas.SetActive(false);
+            }
         }
 
         MazojiGyvybiuJuostele.fillAmount = Gyvybes / MaxGyvybes;
         MazojiSkydoJuostele.fillAmount = Mathf.Min(Skydas / MaxGyvybes, 1); ;
         MazasisGyvybiuTekstas.text = Mathf.Ceil(Gyvybes).ToString();
         MazasisSkydoTekstas.text = Mathf.Ceil(Skydas).ToString();
+
+        if (GaliJudeti)
+        {
+            MazasisPaveiksliukasGreitisNulis.SetActive(false);
+            if (Greitis > PradinisGreitis)
+            {
+                MazasisPaveiksliukasGreitisPlius.SetActive(true);
+                MazasisPaveiksliukasGreitisMinus.SetActive(false);
+            }
+            else if (Greitis < PradinisGreitis)
+            {
+                MazasisPaveiksliukasGreitisPlius.SetActive(false);
+                MazasisPaveiksliukasGreitisMinus.SetActive(true);
+            }
+            else
+            {
+                MazasisPaveiksliukasGreitisPlius.SetActive(false);
+                MazasisPaveiksliukasGreitisMinus.SetActive(false);
+            }
+        }
+        else
+        {
+            MazasisPaveiksliukasGreitisMinus.SetActive(false);
+            MazasisPaveiksliukasGreitisPlius.SetActive(false);
+            MazasisPaveiksliukasGreitisNulis.SetActive(true);
+        }
+
+        if (GaliPulti)
+        {
+            MazasisPaveiksliukasAtakaNulis.SetActive(false);
+            if (AtakosMod > 1f)
+            {
+                MazasisPaveiksliukasAtakaPlius.SetActive(true);
+                MazasisPaveiksliukasAtakaMinus.SetActive(false);
+            }
+            else if (AtakosMod < 1f)
+            {
+                MazasisPaveiksliukasAtakaPlius.SetActive(false);
+                MazasisPaveiksliukasAtakaMinus.SetActive(true);
+            }
+            else
+            {
+                MazasisPaveiksliukasAtakaPlius.SetActive(false);
+                MazasisPaveiksliukasAtakaMinus.SetActive(false);
+            }
+        }
+        else
+        {
+            MazasisPaveiksliukasAtakaPlius.SetActive(false);
+            MazasisPaveiksliukasAtakaMinus.SetActive(false);
+            MazasisPaveiksliukasAtakaNulis.SetActive(true);
+        }
+
+        if (true)
+        {
+            MazasisPaveiksliukasGynybaNulis.SetActive(false);
+            if (GynybosMod < 1f)
+            {
+                MazasisPaveiksliukasGynybaPlius.SetActive(true);
+                MazasisPaveiksliukasGynybaMinus.SetActive(false);
+            }
+            else if (GynybosMod > 1f)
+            {
+                MazasisPaveiksliukasGynybaPlius.SetActive(false);
+                MazasisPaveiksliukasGynybaMinus.SetActive(true);
+            }
+            else
+            {
+                MazasisPaveiksliukasGynybaPlius.SetActive(false);
+                MazasisPaveiksliukasGynybaMinus.SetActive(false);
+            }
+        }
+        else
+        {
+            MazasisPaveiksliukasGynybaPlius.SetActive(false);
+            MazasisPaveiksliukasGynybaMinus.SetActive(false);
+            MazasisPaveiksliukasGynybaNulis.SetActive(true);
+        }
+
+
+        if (GaliSkraidyti)
+        {
+            MazasisPaveiksliukasSkraidymas.SetActive(true);
+        }
+        else
+        {
+            MazasisPaveiksliukasSkraidymas.SetActive(false);
+        }
     }
 
     void MygtukuValdymas()
@@ -372,18 +591,41 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         PaskutinisZalojesZaidejas = NaujasZaidejas;
     }
 
-    public void GautiZalos (float Zala, int ElementoNr)
+    public void GautiZalos (float Zala, int ZalosElementoNr)
     {
         if (photonView.IsMine)
         {
-            float MofikuotaZala = Zala * ZalosMod;
-            photonView.RPC("RPCGautiZalos", RpcTarget.All, MofikuotaZala, ElementoNr);
+            float ModifikuotaZala = Zala * GynybosMod;
+            photonView.RPC("RPCGautiZalos", RpcTarget.All, ModifikuotaZala, ZalosElementoNr);
         }
     }
 
-    [PunRPC]
-    private void RPCGautiZalos(float Zala, int ElementoNr)
+    public void GautiDOTZalos(float Zala, float Daznis, float Trukme, int ZalosElementoNr)
     {
+        if (photonView.IsMine)
+        {
+            StartCoroutine(_GautiDOTZalos(Zala, Daznis, Trukme, ZalosElementoNr));
+        }
+    }
+
+    private IEnumerator _GautiDOTZalos (float Zala, float Daznis, float Trukme, int ZalosElementoNr)
+    {
+        for (float i = 0; i < Trukme; i += Daznis)
+        {
+            float ModifikuotaZala = Zala * GynybosMod;
+            photonView.RPC("RPCGautiZalos", RpcTarget.All, ModifikuotaZala, ZalosElementoNr);
+            yield return new WaitForSeconds(Daznis);
+        }        
+    }
+
+    [PunRPC]
+    private void RPCGautiZalos(float Zala, int ZalosElementoNr)
+    {
+        if (Zala <= 0)
+        {
+            return;
+        }
+
         Gyvybes -= Mathf.Clamp(Zala - Skydas, 0, Mathf.Infinity);
         Skydas -= Zala;
 
@@ -391,24 +633,57 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         ZalosTekstas.GetComponent<TextMeshPro>().text = Zala.ToString();
         ZalosTekstas.GetComponent<ConstantForce>().force = new Vector3(Random.Range(-1, 1), Random.Range(4, 8), Random.Range(-1, 1));
 
-        if (ElementoNr == 1)
+        if (ZalosElementoNr == 1)
         {
-            ZalosTekstas.GetComponent<TextMeshPro>().color = ZalosTekstoOroSpalva;
+            ZalosTekstas.GetComponent<TextMeshPro>().color = OroSpalva;
         }
-        else if (ElementoNr == 2)
+        else if (ZalosElementoNr == 2)
         {
-            ZalosTekstas.GetComponent<TextMeshPro>().color = ZalosTekstoVandensSpalva;
+            ZalosTekstas.GetComponent<TextMeshPro>().color = VandensSpalva;
         }
-        else if (ElementoNr == 3)
+        else if (ZalosElementoNr == 3)
         {
-            ZalosTekstas.GetComponent<TextMeshPro>().color = ZalosTekstoZemesSpalva;
+            ZalosTekstas.GetComponent<TextMeshPro>().color = ZemesSpalva;
         }
-        else if (ElementoNr == 4)
+        else if (ZalosElementoNr == 4)
         {
-            ZalosTekstas.GetComponent<TextMeshPro>().color = ZalosTekstoUgniesSpalva;
+            ZalosTekstas.GetComponent<TextMeshPro>().color = UgniesSpalva;
         }
 
         Destroy(ZalosTekstas, 2);
+    }
+
+    public void Suletinti (float SuletinimoStipris, float SoklumoSilpninimoStipris, float SuletinimoLaikas)
+    {
+        if (photonView.IsMine)
+        {
+            StartCoroutine(_Suletinti(SuletinimoStipris, SoklumoSilpninimoStipris, SuletinimoLaikas));
+        }
+    }
+
+    private IEnumerator _Suletinti(float SuletinimoStipris, float SoklumoSilpninimoStipris, float SuletinimoLaikas)
+    {
+        GreicioMod *= SuletinimoStipris;
+        SoklumoMod *= SoklumoSilpninimoStipris;
+        GreicioIrSoklumoPerskaiciavimas();
+        yield return new WaitForSeconds(SuletinimoLaikas);
+        GreicioMod /= SuletinimoStipris;
+        SoklumoMod /= SoklumoSilpninimoStipris;
+        GreicioIrSoklumoPerskaiciavimas();
+    }
+
+    public void KeistiAtakaIrGynyba(float AtakosPokytis, float GynybosPokytis, float Trukme)
+    {
+        StartCoroutine(_KeistiAtakaIrGynyba(AtakosPokytis, GynybosPokytis, Trukme));
+    }
+
+    private IEnumerator _KeistiAtakaIrGynyba(float AtakosPokytis, float GynybosPokytis, float Trukme)
+    {
+        AtakosMod *= (AtakosPokytis != 0 ? AtakosPokytis : 1);
+        GynybosMod *= (GynybosPokytis != 0 ? GynybosPokytis : 1);
+        yield return new WaitForSeconds(Trukme);
+        AtakosMod /= (AtakosPokytis != 0 ? AtakosPokytis : 1);
+        GynybosMod /= (GynybosPokytis != 0 ? GynybosPokytis : 1);
     }
 
     public void NuzudeKitaZaideja()
@@ -599,6 +874,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
             stream.SendNext(NuzudymuSk);
             stream.SendNext(MirciuSk);
             stream.SendNext(KomandosNr);
+            stream.SendNext(ZaidejoIsvaizdosMedziagosNr);
         }
         else if (stream.IsReading)
         {
@@ -610,6 +886,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
             NuzudymuSk = (int)stream.ReceiveNext();
             MirciuSk = (int)stream.ReceiveNext();
             KomandosNr = (int)stream.ReceiveNext();
+            ZaidejoIsvaizdosMedziagosNr = (int)stream.ReceiveNext();
         }
     }
 

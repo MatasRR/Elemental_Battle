@@ -40,34 +40,15 @@ public class UgnisB3 : Kulka
         /// Nieko nereikia daryti
     }
 
-    public override void Kontaktas(GameObject go)
-    {
-        /// Nieko nereikia daryti
-    }
-
     void Aktyvavimas()
     {
         Collider[] Kiti = Physics.OverlapSphere(transform.position, TikrinimoSpindulys);
         foreach (Collider PataikeKitam in Kiti)
         {
-            Debug.Log(PataikeKitam.name);
-            if (PataikeKitam.gameObject == Autorius || !Korpusas.bounds.Intersects(PataikeKitam.bounds))
+            if (Korpusas.bounds.Intersects(PataikeKitam.bounds))
             {
-                return;
-            }
-
-            if (PataikeKitam.CompareTag("Player"))
-            {
-                Zaidejas AukosZaidejoKodas = PataikeKitam.GetComponent<Zaidejas>();
-                if (AukosZaidejoKodas.KomandosNr != KomandosNr || AukosZaidejoKodas.KomandosNr == 0)
-                {
-                    AukosZaidejoKodas.GautiZalos(Zala, 4);
-                }
-            }
-            else if (PataikeKitam.CompareTag("Skydas"))
-            {
-                PataikeKitam.GetComponent<Skydas>().GautiZalos(Zala);
-            }
+                Kontaktas(PataikeKitam.gameObject);
+            }            
         }
     }
 }
