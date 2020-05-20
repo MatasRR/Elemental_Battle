@@ -78,7 +78,8 @@ public class Ugnis : Elementas
     public float U2_DOTTrukme;
     public float U2AtakosSumazinimoStipris;
     public float U2AtakosSumazinimoTrukme;
-    public float U2Dydis;
+    public float U2Spindulys;
+    public float U2Aukstis;
     public float U2DidejimoLaikas;
     public GameObject U2Daiktas;
 
@@ -296,8 +297,9 @@ public class Ugnis : Elementas
     [PunRPC]
     void RPCKurtiUgnisU2()
     {
-        GameObject UgnisU2 = Instantiate(U1Daiktas, transform.position, transform.rotation);
+        GameObject UgnisU2 = Instantiate(U2Daiktas, transform.position, /*transform.rotation*/Quaternion.Euler(-90, 0, 0));
         UgnisU2 KulkosKodas = UgnisU2.GetComponent<UgnisU2>();
+        UgnisU2.transform.SetParent(transform);
 
         KulkosKodas.DOTZala = U2_DOTZala;
         KulkosKodas.DOTDaznis = U2_DOTDaznis;
@@ -305,7 +307,8 @@ public class Ugnis : Elementas
         KulkosKodas.Autorius = gameObject;
         KulkosKodas.AtakosSumazinimoStipris = U2AtakosSumazinimoStipris;
         KulkosKodas.AtakosSumazinimoTrukme = U2AtakosSumazinimoTrukme;
-        KulkosKodas.Dydis = U2Dydis;
+        KulkosKodas.Spindulys = U2Spindulys;
+        KulkosKodas.Aukstis = U2Aukstis;
         KulkosKodas.DidejimoLaikas = U2DidejimoLaikas;
 
         Destroy(UgnisU2, U2DidejimoLaikas);

@@ -162,12 +162,13 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
 
     public TextMeshProUGUI NuzudymuIrMirciuTekstas;
     public TextMeshProUGUI KomandosTekstas;
-    public GameObject MirtiesPranesimuLentele;
+    public GameObject MirtiesPranesimuLangas;
     public GameObject MirtiesPranesimoObjektas;
-    public GameObject ZaidejuIrKomanduInformacijosLentele;
+    public GameObject ZaidejuIrKomanduInformacijosLangas;
     public Transform ZaidejuInformacijosLentele;
     public GameObject ZaidejoInformacijosObjektas;
     public GameObject[] KomanduInformacijosLaukeliai;
+    public GameObject ZaidimoUzdarymoLangas;
 
     public GameObject EkranoDrobe;
     public GameObject ZaidimoDrobe;
@@ -550,20 +551,20 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         {
             if(Input.GetKeyDown(KeyCode.Tab))
             {
-                ZaidejuInformacijosLentelesValdymas(true);
+                ZaidejuInformacijosLangoValdymas(true);
             }
             else if (Input.GetKeyUp(KeyCode.Tab))
             {
-                ZaidejuInformacijosLentelesValdymas(false);
+                ZaidejuInformacijosLangoValdymas(false);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                KeistiZaidimoUzdarymoLangoAktyvuma();
             }
 
             if (Input.GetKey(KeyCode.LeftAlt))
             {
-                if (Input.GetKeyDown(KeyCode.M))
-                {
-                    PhotonNetwork.LeaveRoom();
-                    SceneManager.LoadScene("Meniu");
-                }
                 if (Input.GetKeyDown(KeyCode.C))
                 {
                     if (Kamera.gameObject.activeSelf)
@@ -576,10 +577,6 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
                         BendraKamera.gameObject.SetActive(false);
                         Kamera.gameObject.SetActive(true);
                     }
-                }
-                if (Input.GetKeyDown(KeyCode.D))
-                {
-                    GautiZalos(10, 4);
                 }
             }
         }
@@ -630,7 +627,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         Skydas -= Zala;
 
         GameObject ZalosTekstas = Instantiate(ZalosTekstoObjektas, transform.position, transform.rotation);
-        ZalosTekstas.GetComponent<TextMeshPro>().text = Zala.ToString();
+        ZalosTekstas.GetComponent<TextMeshPro>().text = Mathf.Floor(Zala).ToString();
         ZalosTekstas.GetComponent<ConstantForce>().force = new Vector3(Random.Range(-1, 1), Random.Range(4, 8), Random.Range(-1, 1));
 
         if (ZalosElementoNr == 1)
@@ -735,7 +732,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public void MirtiesPranesimas(Zaidejas Zudikas, Zaidejas Mirusysis)
     {
         GameObject MirtiesPranesimas = Instantiate(MirtiesPranesimoObjektas);
-        MirtiesPranesimas.transform.SetParent(MirtiesPranesimuLentele.transform);
+        MirtiesPranesimas.transform.SetParent(MirtiesPranesimuLangas.transform);
         MirtiesPranesimas.transform.SetAsFirstSibling();
         TextMeshProUGUI PranesimoZudikoTekstas = MirtiesPranesimas.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI PranesimoTarpinisTekstas = MirtiesPranesimas.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
@@ -812,11 +809,11 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         }
     }
 
-    private void ZaidejuInformacijosLentelesValdymas(bool ArAktyvinti)
+    private void ZaidejuInformacijosLangoValdymas(bool ArAktyvinti)
     {
         if(ArAktyvinti)
         {
-            ZaidejuIrKomanduInformacijosLentele.SetActive(true);
+            ZaidejuIrKomanduInformacijosLangas.SetActive(true);
             AtnaujintiZaidejuSarasa();
 
             GameObject VirsutineEilute = Instantiate(ZaidejoInformacijosObjektas);
@@ -858,8 +855,24 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
             {
                 Destroy(t.gameObject);
             }
-            ZaidejuIrKomanduInformacijosLentele.SetActive(false);
+            ZaidejuIrKomanduInformacijosLangas.SetActive(false);
         }
+    }
+
+    public void KeistiZaidimoUzdarymoLangoAktyvuma()
+    {
+        ZaidimoUzdarymoLangas.SetActive(!ZaidimoUzdarymoLangas.activeSelf);
+    }
+
+    public void GriztiIMeniu()
+    {
+        PhotonNetwork.LeaveRoom();
+        SceneManager.LoadScene("Meniu");
+    }
+
+    public void IseitiIsZaidimo()
+    {
+        Application.Quit();
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)

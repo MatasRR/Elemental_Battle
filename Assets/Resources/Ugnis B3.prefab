@@ -147,17 +147,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b90564abcfa294a8e8bbf740d0def5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Greitis: 0
   Zala: 0
+  DOTZala: 0
+  DOTDaznis: 0
+  DOTTrukme: 0
+  Greitis: 0
   Autorius: {fileID: 0}
   KomandosNr: 0
   ElementoNr: 0
+  AtakosMod: 0
   SustingdymoLaikas: 0
   NuginklavimoLaikas: 0
   SuletinimoLaikas: 0
   SuletinimoStipris: 0
   SoklumoSilpninimoStipris: 0
   EinaKiaurai: 1
+  TuriFizikosEfektu: 0
+  GaliVeiktiAukaKelisKartus: 1
   Daznis: 0
   TikrinimoSpindulys: 0
 --- !u!1 &4303306841505334682

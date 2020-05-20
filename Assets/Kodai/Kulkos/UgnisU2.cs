@@ -7,7 +7,9 @@ public class UgnisU2 : Kulka
     [HideInInspector]
     public float Jega;
     [HideInInspector]
-    public float Dydis;
+    public float Spindulys;
+    [HideInInspector]
+    public float Aukstis;
     [HideInInspector]
     public float DidejimoLaikas;
     [HideInInspector]
@@ -33,7 +35,7 @@ public class UgnisU2 : Kulka
         base.Update();
 
         Laikas += Time.deltaTime;
-        transform.localScale = PradinisDydis + (new Vector3(Dydis, Dydis, Dydis) - PradinisDydis) * (Laikas / DidejimoLaikas);
+        transform.localScale = PradinisDydis + (new Vector3(Spindulys, /*Aukstis*/Spindulys, /*Spindulys*/Aukstis) - PradinisDydis) * (Laikas / DidejimoLaikas);
     }
 
     public override void OnTriggerEnter(Collider c)

@@ -7,7 +7,7 @@ public class OrasU1 : Kulka
     [HideInInspector]
     public float Jega;
     [HideInInspector]
-    public float Dydis;
+    public float Skersmuo;
     [HideInInspector]
     public float LaukimoLaikas;
     [HideInInspector]
@@ -19,7 +19,6 @@ public class OrasU1 : Kulka
     private Vector3 PradinisDydis;
     private Zaidejas AutoriausZaidejoKodas;
     //private Material Medziaga;
-    private List<GameObject> PaveiktiObjektai = new List<GameObject>();
 
     public override void Start()
     {
@@ -28,7 +27,6 @@ public class OrasU1 : Kulka
         //Medziaga = gameObject.GetComponent<MeshRenderer>().material;
         //Medziaga.color = new Color(Medziaga.color.r, Medziaga.color.g, Medziaga.color.b, 0);
         PradinisDydis = transform.localScale;
-        PaveiktiObjektai.Add(Autorius);
         Laikas = -LaukimoLaikas;
     }
 
@@ -46,7 +44,7 @@ public class OrasU1 : Kulka
         }
         else
         {
-            transform.localScale = PradinisDydis + (new Vector3(Dydis, Dydis, Dydis) - PradinisDydis) * (Laikas / DidejimoLaikas);
+            transform.localScale = PradinisDydis + (new Vector3(Skersmuo, Skersmuo, Skersmuo) - PradinisDydis) * (Laikas / DidejimoLaikas);
         }
     }
 
@@ -57,25 +55,11 @@ public class OrasU1 : Kulka
             return;
         }
 
-        bool DarNepaveiktas = true;
-        foreach (GameObject go in PaveiktiObjektai)
-        {
-            if (c.gameObject == go)
-            {
-                DarNepaveiktas = false;
-            }
-        }
-
-        if (DarNepaveiktas)
-        {
-            PaveiktiObjektai.Add(c.gameObject);
-
-            Kontaktas(c.gameObject);
-        }
+        Kontaktas(c.gameObject);
     }
 
     public override void FizikosEfektai(Rigidbody rb)
     {
-        rb.AddExplosionForce(Jega, transform.position, Dydis, 0f, ForceMode.Impulse);
+        rb.AddExplosionForce(Jega, transform.position, Skersmuo, 0f, ForceMode.Impulse);
     }
 }

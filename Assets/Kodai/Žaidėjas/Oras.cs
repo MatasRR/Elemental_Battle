@@ -64,7 +64,7 @@ public class Oras : Elementas
     public float U1Zala;
     public float U1Skydas;
 	public float U1Jega;
-	public float U1Dydis;
+	public float U1Skersmuo;
     public float U1LaukimoLaikas;
     public float U1DidejimoLaikas;
 	public GameObject U1Daiktas;
@@ -222,7 +222,7 @@ public class Oras : Elementas
         KulkosKodas.Zala = U1Zala;
         KulkosKodas.Autorius = gameObject;
         KulkosKodas.Jega = U1Jega;
-        KulkosKodas.Dydis = U1Dydis;
+        KulkosKodas.Skersmuo = U1Skersmuo;
         KulkosKodas.LaukimoLaikas = U1LaukimoLaikas;
         KulkosKodas.DidejimoLaikas = U1DidejimoLaikas;
 
@@ -246,7 +246,6 @@ public class Oras : Elementas
         KulkosKodas.Greitis = U2DaiktoGreitis;
         KulkosKodas.Zala = U2Zala;
         KulkosKodas.Autorius = gameObject;
-        //KulkosKodas.KomandosNr = KomandosNr;
         KulkosKodas.Jega = U2Jega;
 
         Destroy(OrasU2, 10);

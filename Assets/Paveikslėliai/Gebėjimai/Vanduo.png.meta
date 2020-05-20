@@ -4,40 +4,40 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 5440383051347964880
-    second: Vanduo_0
+    second: Vanduo B1
   - first:
       213: -5743747592032278642
-    second: Vanduo_1
+    second: Vanduo B2
   - first:
       213: 7786669806396728236
-    second: Vanduo_2
+    second: Vanduo B3
   - first:
       213: 9124956075641640099
-    second: Vanduo_3
+    second: Vanduo B4
   - first:
       213: -7367550411476601871
-    second: Vanduo_4
+    second: Vanduo B5
   - first:
       213: 3305052709229899211
-    second: Vanduo_5
+    second: Vanduo U1
   - first:
       213: 3176147833427285841
-    second: Vanduo_6
+    second: Vanduo U2
   - first:
       213: -1047809262911794270
-    second: Vanduo_7
+    second: Vanduo U3
   - first:
       213: 6299645801449036512
-    second: Vanduo_0
+    second: Vanduo B1
   - first:
       213: 437759675576273270
-    second: Vanduo_1
+    second: Vanduo B2
   - first:
       213: -47865724002161091
-    second: Vanduo_2
+    second: Vanduo B3
   - first:
       213: 5872830277161125490
-    second: Vanduo_3
+    second: Vanduo B4
   - first:
       213: 8147904260371138434
     second: Vanduo_8
@@ -170,7 +170,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vanduo_4
+      name: Vanduo B5
       rect:
         serializedVersion: 2
         x: 128
@@ -178,7 +178,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vanduo_5
+      name: Vanduo U1
       rect:
         serializedVersion: 2
         x: 160
@@ -199,7 +199,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vanduo_6
+      name: Vanduo U2
       rect:
         serializedVersion: 2
         x: 192
@@ -220,7 +220,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vanduo_7
+      name: Vanduo U3
       rect:
         serializedVersion: 2
         x: 224
@@ -241,7 +241,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vanduo_0
+      name: Vanduo B1
       rect:
         serializedVersion: 2
         x: 0
@@ -262,7 +262,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vanduo_1
+      name: Vanduo B2
       rect:
         serializedVersion: 2
         x: 32
@@ -283,7 +283,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,7 +296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vanduo_2
+      name: Vanduo B3
       rect:
         serializedVersion: 2
         x: 64
@@ -304,7 +304,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -317,7 +317,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vanduo_3
+      name: Vanduo B4
       rect:
         serializedVersion: 2
         x: 96
@@ -325,7 +325,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

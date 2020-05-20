@@ -37,6 +37,9 @@ public class Kulka : MonoBehaviour
 
     public bool EinaKiaurai = false;
     public bool TuriFizikosEfektu = false;
+    public bool GaliVeiktiAukaKelisKartus = false;
+
+    private List<GameObject> PaveiktiObjektai = new List<GameObject>();
 
     public virtual void Start()
     {
@@ -48,6 +51,7 @@ public class Kulka : MonoBehaviour
         ElementoNr = Autorius.GetComponent<Zaidejas>().ElementoNr;
         KomandosNr = Autorius.GetComponent<Zaidejas>().KomandosNr;
         AtakosMod = Autorius.GetComponent<Zaidejas>().AtakosMod;
+        PaveiktiObjektai.Add(Autorius);
     }
 
     public virtual void Update()
@@ -67,10 +71,27 @@ public class Kulka : MonoBehaviour
 
     public virtual void Kontaktas (GameObject go)
     {
-        if (Autorius == go)
+        bool DarNepaveiktas = true;
+
+        foreach (GameObject Paveiktas in PaveiktiObjektai)
         {
+            if (go == Paveiktas)
+            {
+                DarNepaveiktas = false;
+            }
+        }
+
+        if (!DarNepaveiktas)
+        {
+            if (!GaliVeiktiAukaKelisKartus)
+            {
+                PaveiktiObjektai.Add(gameObject);
+            }
+            
             return;
         }
+
+
 
         bool NaikintiKulka = true;
         Rigidbody AukosRB = null;

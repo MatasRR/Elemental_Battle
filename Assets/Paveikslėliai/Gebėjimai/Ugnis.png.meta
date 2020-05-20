@@ -4,43 +4,49 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -7315708012620326660
-    second: Ugnis_0
+    second: Ugnis B1
   - first:
       213: 8299108026921251768
-    second: Ugnis_1
+    second: Ugnis B2
   - first:
       213: -1353091155833961976
-    second: Ugnis_2
+    second: Ugnis B3
   - first:
       213: -803647795874563138
-    second: Ugnis_3
+    second: Ugnis B4
   - first:
       213: 2357085652342355180
-    second: Ugnis_4
+    second: Ugnis B5
   - first:
       213: -821889487691996630
-    second: Ugnis_5
+    second: Ugnis U1
   - first:
       213: -4147713601359979753
-    second: Ugnis_0
+    second: Ugnis B1
   - first:
       213: 1369815647967517132
-    second: Ugnis_1
+    second: Ugnis B2
   - first:
       213: -5382147296016988537
-    second: Ugnis_2
+    second: Ugnis B3
   - first:
       213: -6221883350163376828
-    second: Ugnis_3
+    second: Ugnis B4
   - first:
       213: -4795735902440019778
-    second: Ugnis_4
+    second: Ugnis B5
   - first:
       213: 8595041102053583779
-    second: Ugnis_5
+    second: Ugnis U1
   - first:
       213: -9149307372125377311
-    second: Ugnis_6
+    second: Ugnis U2
+  - first:
+      213: -1425405249973041133
+    second: Ugnis U2
+  - first:
+      213: -5222918429030051791
+    second: Ugnis U3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -137,7 +143,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ugnis_0
+      name: Ugnis B1
       rect:
         serializedVersion: 2
         x: 0
@@ -158,7 +164,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ugnis_1
+      name: Ugnis B2
       rect:
         serializedVersion: 2
         x: 32
@@ -179,7 +185,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ugnis_2
+      name: Ugnis B3
       rect:
         serializedVersion: 2
         x: 64
@@ -200,7 +206,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ugnis_3
+      name: Ugnis B4
       rect:
         serializedVersion: 2
         x: 96
@@ -221,7 +227,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ugnis_4
+      name: Ugnis B5
       rect:
         serializedVersion: 2
         x: 128
@@ -242,7 +248,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ugnis_5
+      name: Ugnis U1
       rect:
         serializedVersion: 2
         x: 160
@@ -263,7 +269,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ugnis_6
+      name: Ugnis U2
       rect:
         serializedVersion: 2
         x: 192
@@ -277,8 +283,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ecaa9f8b61270180800000000000000
-      internalID: -9149307372125377311
+      spriteID: 318416e2a71f73ce0800000000000000
+      internalID: -1425405249973041133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ugnis U3
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13092da6c577487b0800000000000000
+      internalID: -5222918429030051791
       vertices: []
       indices: 
       edges: []
