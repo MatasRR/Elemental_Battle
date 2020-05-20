@@ -121,8 +121,9 @@ MonoBehaviour:
   SuletinimoStipris: 0
   SoklumoSilpninimoStipris: 0
   EinaKiaurai: 1
-  TuriFizikosEfektu: 0
+  TuriFizikosEfektu: 1
+  GaliVeiktiAukaKelisKartus: 0
   Jega: 0
-  Dydis: 0
+  Skersmuo: 0
   LaukimoLaikas: 0
   DidejimoLaikas: 0

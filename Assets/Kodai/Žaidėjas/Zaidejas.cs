@@ -861,7 +861,18 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
 
     public void KeistiZaidimoUzdarymoLangoAktyvuma()
     {
-        ZaidimoUzdarymoLangas.SetActive(!ZaidimoUzdarymoLangas.activeSelf);
+        if (ZaidimoUzdarymoLangas.activeSelf)
+        {
+            ZaidimoUzdarymoLangas.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            ZaidimoUzdarymoLangas.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
     public void GriztiIMeniu()

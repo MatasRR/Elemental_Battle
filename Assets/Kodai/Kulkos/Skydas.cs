@@ -26,12 +26,12 @@ public class Skydas : MonoBehaviourPun
     {
         if (Gyvybes < 0)
         {
-            photonView.RPC("NaikintiSkyda", RpcTarget.All);
+            photonView.RPC("RPCNaikintiSkyda", RpcTarget.All);
         }
     }
 
     [PunRPC]
-    private void NaikintiSkyda()
+    private void RPCNaikintiSkyda()
     {
         Destroy(gameObject);
     }

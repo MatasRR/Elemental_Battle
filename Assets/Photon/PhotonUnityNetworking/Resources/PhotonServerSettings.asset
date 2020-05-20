@@ -42,9 +42,10 @@ MonoBehaviour:
   - RPCKurtiUgnisB4
   - RPCKurtiUgnisB5
   - RPCKurtiUgnisU1
+  - RPCKurtiUgnisU2
   - RPCKurtiUgnisU3
-  - RPCKurtiUgnisU3ZaibaBeTaikinio
   - RPCKurtiUgnisU3ZaibaSuTaikiniu
+  - RPCKurtiUgnisU3ZaibuBangaBeTaikinio
   - RPCKurtiVanduoB1
   - RPCKurtiVanduoB3
   - RPCKurtiVanduoB3Laseli
@@ -57,12 +58,10 @@ MonoBehaviour:
   - RPCKurtiZemeB1
   - RPCKurtiZemeB2
   - RPCKurtiZemeB3
+  - RPCKurtiZemeB4
   - RPCKurtiZemeU1
   - RPCMirtis
   - RPCPrisikelimas
-  - RPCKurtiUgnisU3ZaibusBangaBeTaikinio
-  - RPCKurtiUgnisU3ZaibuBangaBeTaikinio
-  - RPCKurtiZemeB4
-  - RPCKurtiUgnisU2
+  - RPCNaikintiSkyda
   DisableAutoOpenWizard: 1
   ShowSettings: 0

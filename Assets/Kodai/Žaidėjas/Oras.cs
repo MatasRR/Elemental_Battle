@@ -153,7 +153,7 @@ public class Oras : Elementas
     [PunRPC]
     void RPCKurtiOrasB5(Vector3 ZiurimasTaskas)
     {
-        GameObject OrasB5 = Instantiate(B5Daiktas, transform.position, transform.rotation);
+        GameObject OrasB5 = Instantiate(B5Daiktas, KulkosAtsiradimoVieta.position, KulkosAtsiradimoVieta.rotation);
         OrasB5 KulkosKodas = OrasB5.GetComponent<OrasB5>();
 
         OrasB5.transform.LookAt(ZiurimasTaskas);

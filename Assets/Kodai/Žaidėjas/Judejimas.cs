@@ -6,13 +6,15 @@ using Photon.Pun;
 
 public class Judejimas : MonoBehaviourPun
 {
-    private Rigidbody RB;
     private Zaidejas ZaidejoKodas;
     private Camera Kamera;
-
+    private Rigidbody RB;
     private float KamerosPersisukimas = 0f;
+
     public float PelesJautrumas;
     public float NuotolisIkiZemes;
+    public float KritimoDaugiklis;
+    public float ZemoSuolioDaugiklis;
 
     void Start()
     {
@@ -36,7 +38,6 @@ public class Judejimas : MonoBehaviourPun
             ZaidejoJudejimas();
         }
         ZaidejoSukimasis();
-        KursoriausValdymas();
     }
 
 
@@ -55,6 +56,18 @@ public class Judejimas : MonoBehaviourPun
         else if (Input.GetKey(KeyCode.LeftShift) && ZaidejoKodas.GaliSkraidyti)
         {
             RB.AddForce(-Vector3.up * ZaidejoKodas.Soklumas * 0.5f, ForceMode.Impulse);
+        }
+
+        if (!ZaidejoKodas.GaliSkraidyti)
+        {
+            if (RB.velocity.y < 0)
+            {
+                RB.velocity += Vector3.up * Physics.gravity.y * (KritimoDaugiklis - 1) * Time.fixedDeltaTime;
+            }
+            else if (RB.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
+            {
+                RB.velocity += Vector3.up * Physics.gravity.y * (ZemoSuolioDaugiklis - 1) * Time.fixedDeltaTime;
+            }
         }
     }
 
@@ -86,15 +99,6 @@ public class Judejimas : MonoBehaviourPun
             Vector3 Pasisukimas = Kamera.transform.eulerAngles;
             Pasisukimas.x = 90f;
             Kamera.transform.eulerAngles = Pasisukimas;
-        }
-    }
-
-    void KursoriausValdymas()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 

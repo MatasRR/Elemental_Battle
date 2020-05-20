@@ -1056,7 +1056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6953256541536699173
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5920,10 +5920,10 @@ RectTransform:
   m_Father: {fileID: 6953256541536699173}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 251.86002, y: -143.79993}
+  m_SizeDelta: {x: 439.72003, y: 223.59985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2522173327252834525
 CanvasRenderer:
@@ -6593,10 +6593,10 @@ MonoBehaviour:
   MazasisPaveiksliukasSkraidymas: {fileID: 4934622958269898930}
   NuzudymuIrMirciuTekstas: {fileID: 8258121126121493279}
   KomandosTekstas: {fileID: 1481035201551496729}
-  MirtiesPranesimuLangas: {fileID: 0}
+  MirtiesPranesimuLangas: {fileID: 1232187791607602308}
   MirtiesPranesimoObjektas: {fileID: 376975418024952722, guid: cb259bd3724a63b44b35c8953cffe448,
     type: 3}
-  ZaidejuIrKomanduInformacijosLangas: {fileID: 0}
+  ZaidejuIrKomanduInformacijosLangas: {fileID: 4804902925513201010}
   ZaidejuInformacijosLentele: {fileID: 2594940922454269217}
   ZaidejoInformacijosObjektas: {fileID: 1351604391451303358, guid: 8190e23a795d8794391d8934246f8f7f,
     type: 3}
@@ -6606,7 +6606,7 @@ MonoBehaviour:
   - {fileID: 4056406677481198621}
   - {fileID: 8136985286654583694}
   - {fileID: 3528453444993171388}
-  ZaidimoUzdarymoLangas: {fileID: 0}
+  ZaidimoUzdarymoLangas: {fileID: 1177674310126466796}
   EkranoDrobe: {fileID: 2571462676663346594}
   ZaidimoDrobe: {fileID: 1751134572156918263}
   TestinisTekstas: {fileID: 1070541583084234199}
@@ -6624,6 +6624,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PelesJautrumas: 1
   NuotolisIkiZemes: 0.6
+  KritimoDaugiklis: 3
+  ZemoSuolioDaugiklis: 2
 --- !u!114 &7068804283211152902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6894,6 +6896,7 @@ MonoBehaviour:
   B3_CD: 7
   B3Zala: 50
   B3DaiktoGreitis: 35
+  B3AtsiradimoNuotolis: 1
   B3SukimosiGreitis: 360
   B3Daiktas: {fileID: 110388908982238787, guid: c713d3aa04458b84b805dddd72d6309b,
     type: 3}
@@ -7838,10 +7841,10 @@ RectTransform:
   m_Father: {fileID: 6953256541536699173}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 707.5801, y: -143.79993}
+  m_SizeDelta: {x: 439.72003, y: 223.59985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3342969891352728963
 CanvasRenderer:

@@ -43,6 +43,8 @@ public class Kulka : MonoBehaviour
 
     public virtual void Start()
     {
+        PaveiktiObjektai.Add(Autorius);
+
         if (gameObject.GetComponent<Rigidbody>() != null && Greitis != 0)
         {
             gameObject.GetComponent<Rigidbody>().velocity = transform.forward * Greitis;
@@ -51,7 +53,6 @@ public class Kulka : MonoBehaviour
         ElementoNr = Autorius.GetComponent<Zaidejas>().ElementoNr;
         KomandosNr = Autorius.GetComponent<Zaidejas>().KomandosNr;
         AtakosMod = Autorius.GetComponent<Zaidejas>().AtakosMod;
-        PaveiktiObjektai.Add(Autorius);
     }
 
     public virtual void Update()
@@ -82,16 +83,16 @@ public class Kulka : MonoBehaviour
         }
 
         if (!DarNepaveiktas)
-        {
-            if (!GaliVeiktiAukaKelisKartus)
-            {
-                PaveiktiObjektai.Add(gameObject);
-            }
-            
+        {                     
             return;
         }
 
 
+
+        if (!GaliVeiktiAukaKelisKartus)
+        {
+            PaveiktiObjektai.Add(go);
+        }
 
         bool NaikintiKulka = true;
         Rigidbody AukosRB = null;
@@ -99,6 +100,7 @@ public class Kulka : MonoBehaviour
         if (TuriFizikosEfektu)
         {
             AukosRB = go.GetComponent<Rigidbody>();
+            Debug.Log(go.name);
         }
 
         if (go.CompareTag("Player"))
@@ -109,7 +111,11 @@ public class Kulka : MonoBehaviour
             {
                 ZaidejoKodas.KeistiPaskutiniZalojusiZaideja(Autorius);
                 ZaidejoKodas.GautiZalos(Zala * AtakosMod, ElementoNr);
-                FizikosEfektai(go.GetComponent<Rigidbody>());
+
+                if (TuriFizikosEfektu)
+                {
+                    FizikosEfektai(go.GetComponent<Rigidbody>());
+                }
 
                 if (DOTZala != 0)
                 {
@@ -181,8 +187,5 @@ public class Kulka : MonoBehaviour
         }
     }
 
-    public virtual void FizikosEfektai(Rigidbody rb)
-    {
-
-    }
+    public virtual void FizikosEfektai(Rigidbody rb) { }
 }

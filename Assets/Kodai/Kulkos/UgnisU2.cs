@@ -20,14 +20,12 @@ public class UgnisU2 : Kulka
     private float Laikas;
     private Vector3 PradinisDydis;
     private Zaidejas AutoriausZaidejoKodas;
-    private List<GameObject> PaveiktiObjektai = new List<GameObject>();
 
     public override void Start()
     {
         base.Start();
         AutoriausZaidejoKodas = Autorius.GetComponent<Zaidejas>();
         PradinisDydis = transform.localScale;
-        PaveiktiObjektai.Add(Autorius);
     }
 
     public override void Update()
@@ -36,24 +34,6 @@ public class UgnisU2 : Kulka
 
         Laikas += Time.deltaTime;
         transform.localScale = PradinisDydis + (new Vector3(Spindulys, /*Aukstis*/Spindulys, /*Spindulys*/Aukstis) - PradinisDydis) * (Laikas / DidejimoLaikas);
-    }
-
-    public override void OnTriggerEnter(Collider c)
-    {
-        bool DarNepaveiktas = true;
-        foreach (GameObject go in PaveiktiObjektai)
-        {
-            if (c.gameObject == go)
-            {
-                DarNepaveiktas = false;
-            }
-        }
-
-        if (DarNepaveiktas)
-        {
-            PaveiktiObjektai.Add(c.gameObject);
-            Kontaktas(c.gameObject);
-        }
     }
 
     public override void Kontaktas(GameObject go)

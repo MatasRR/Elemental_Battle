@@ -50,12 +50,10 @@ public class OrasU1 : Kulka
 
     public override void OnTriggerEnter(Collider c)
     {
-        if (Laikas < 0)
+        if (Laikas >= 0)
         {
-            return;
-        }
-
-        Kontaktas(c.gameObject);
+            Kontaktas(c.gameObject);
+        }        
     }
 
     public override void FizikosEfektai(Rigidbody rb)

@@ -33,6 +33,7 @@ public class Zeme : Elementas
     public float B3Zala;
 
     public float B3DaiktoGreitis;
+    public float B3AtsiradimoNuotolis;
     public float B3SukimosiGreitis;
     public GameObject B3Daiktas;
 
@@ -114,7 +115,8 @@ public class Zeme : Elementas
     [PunRPC]
     void RPCKurtiZemeB3(Vector3 ZiurimasTaskas)
     {
-        GameObject ZemeB3 = Instantiate(B3Daiktas, KulkosAtsiradimoVieta.position, KulkosAtsiradimoVieta.rotation);
+        Vector3 AtsiradimoVieta = KulkosAtsiradimoVieta.position + (transform.forward * B3AtsiradimoNuotolis);
+        GameObject ZemeB3 = Instantiate(B3Daiktas, AtsiradimoVieta, KulkosAtsiradimoVieta.rotation);
         Kulka KulkosKodas = ZemeB3.GetComponent<Kulka>();
 
         ZemeB3.transform.LookAt(ZiurimasTaskas);
