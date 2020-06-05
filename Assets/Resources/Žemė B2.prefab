@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3479311114505999116}
   - component: {fileID: 3823383964115134811}
   - component: {fileID: 477278979265030872}
-  - component: {fileID: 6134473125843141756}
+  - component: {fileID: 4261271318206879278}
   m_Layer: 0
   m_Name: "\u017Dem\u0117 B2"
   m_TagString: Skydas
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3479311114505999219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 3, z: 0.3}
+  m_LocalScale: {x: 4, y: 0, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,6 +58,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -69,6 +70,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -132,7 +134,7 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &6134473125843141756
+--- !u!114 &4261271318206879278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,10 +143,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3479311114505999219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c23a847bc25a7549b3dcd439f76a458, type: 3}
+  m_Script: {fileID: 11500000, guid: f12348bdea5d0a24a93c47e7e04f9448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Gyvybes: 0
   MaxSugeriamaZala: 0
   Autorius: {fileID: 0}
+  KomandosNr: 0
   IgnoruojaSavoKulkas: 0
+  Aukstis: 0
+  DidejimoLaikas: 0

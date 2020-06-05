@@ -45,7 +45,6 @@ public class Ugnis : Elementas
     public float SoklumoKompensacija;
     public float B4VFXAtsiradimoDaznis;
     private float LikesB4VFXLaikas;
-    public Transform B4VFXAtsiradimoVieta;
     public GameObject B4VFX;
 
     [Header("B 5: ")]
@@ -66,6 +65,7 @@ public class Ugnis : Elementas
     public float U1Zala;
 
     public float U1DaiktoGreitis;
+    public float U1SunaikinimoLaikasPoKontakto;
     public float U1SpindulioIlgis;
     public GameObject U1Daiktas;
 
@@ -129,7 +129,7 @@ public class Ugnis : Elementas
     [PunRPC]
     void RPCKurtiUgnisB1(Vector3 ZiurimasTaskas)
     {
-        GameObject UgnisB1 = Instantiate(B1Daiktas, KulkosAtsiradimoVieta.position, KulkosAtsiradimoVieta.rotation);
+        GameObject UgnisB1 = Instantiate(B1Daiktas, KulkuAtsiradimoVieta.position, KulkuAtsiradimoVieta.rotation);
         Kulka KulkosKodas = UgnisB1.GetComponent<Kulka>();
 
         UgnisB1.transform.LookAt(ZiurimasTaskas);
@@ -176,7 +176,7 @@ public class Ugnis : Elementas
     void RPCKurtiUgnisB3()
     {
         Vector3 AtsiradimoVieta = transform.position + transform.forward * B3Nuotolis;
-        GameObject UgnisB3 = Instantiate(B3Daiktas, AtsiradimoVieta, KulkosAtsiradimoVieta.rotation);
+        GameObject UgnisB3 = Instantiate(B3Daiktas, AtsiradimoVieta, KulkuAtsiradimoVieta.rotation);
         UgnisB3 KulkosKodas = UgnisB3.GetComponent<UgnisB3>();
 
         KulkosKodas.Daznis = B3ZalojimoDaznis;
@@ -214,7 +214,7 @@ public class Ugnis : Elementas
     [PunRPC]
     void RPCKurtiUgnisB4()
     {
-        Vector3 AtsiradimoVieta = B4VFXAtsiradimoVieta.position;
+        Vector3 AtsiradimoVieta = KojuVieta.position;
         AtsiradimoVieta.x += Random.Range(-0.5f, 0.5f);
         AtsiradimoVieta.z += Random.Range(-0.5f, 0.5f);
 
@@ -234,7 +234,7 @@ public class Ugnis : Elementas
     [PunRPC]
     void RPCKurtiUgnisB5(Vector3 ZiurimasTaskas)
     {
-        GameObject UgnisB5 = Instantiate(B5Daiktas, KulkosAtsiradimoVieta.position, KulkosAtsiradimoVieta.rotation);
+        GameObject UgnisB5 = Instantiate(B5Daiktas, KulkuAtsiradimoVieta.position, KulkuAtsiradimoVieta.rotation);
         Kulka KulkosKodas = UgnisB5.GetComponent<Kulka>();
 
         UgnisB5.transform.LookAt(ZiurimasTaskas);
@@ -266,12 +266,13 @@ public class Ugnis : Elementas
         Vector3 AtsiradimoVieta = ZiurimasTaskas + new Vector3(Random.Range(-100f, 100f), 100, Random.Range(-100f, 100f));
         Quaternion AtsiradimoPosukis = transform.rotation * Quaternion.identity;
         GameObject UgnisU1 = Instantiate(U1Daiktas, AtsiradimoVieta, AtsiradimoPosukis);
-        Kulka KulkosKodas = UgnisU1.GetComponent<Kulka>();
+        UgnisU1 KulkosKodas = UgnisU1.GetComponent<UgnisU1>();
 
         UgnisU1.transform.LookAt(ZiurimasTaskas);
         KulkosKodas.Greitis = U1DaiktoGreitis;
         KulkosKodas.Zala = U1Zala;
         KulkosKodas.Autorius = gameObject;
+        KulkosKodas.SunaikinimoLaikasPoKontakto = U1SunaikinimoLaikasPoKontakto;
 
         Destroy(UgnisU1, 10);
     }

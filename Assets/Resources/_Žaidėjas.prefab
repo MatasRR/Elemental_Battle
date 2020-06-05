@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 33.52658, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3880339407632255657
 CanvasRenderer:
@@ -125,7 +125,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 33.52658, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9050832811437839305
 CanvasRenderer:
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 66.15
+  m_fontSize: 38.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -526,7 +526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7433504506195126701}
   m_Layer: 0
-  m_Name: "Koj\u0173 efekt\u0173 atsiradimo vieta"
+  m_Name: "Koj\u0173 vieta"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -752,7 +752,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5474342400645769618
 CanvasRenderer:
@@ -986,7 +986,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6568906264671806823
 CanvasRenderer:
@@ -1245,7 +1245,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7270222786325554469
 CanvasRenderer:
@@ -1334,7 +1334,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 33.52658, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1424846982021751342
 CanvasRenderer:
@@ -1603,7 +1603,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 66.15
+  m_fontSize: 38.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1814,7 +1814,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4258474297093636359
 CanvasRenderer:
@@ -1958,7 +1958,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 64.4
+  m_fontSize: 48.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2058,7 +2058,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6673991248903983054
 CanvasRenderer:
@@ -2546,7 +2546,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 33.52658, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4250530150660610284
 CanvasRenderer:
@@ -3164,7 +3164,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 30.65
+  m_fontSize: 20.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3264,7 +3264,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 33.52658, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5560305958063221420
 CanvasRenderer:
@@ -3409,7 +3409,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 41.4
+  m_fontSize: 28.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3483,7 +3483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8275047595295359957}
   m_Layer: 0
-  m_Name: Kulkos atsiradimo vieta
+  m_Name: "Kulk\u0173 atsiradimo vieta"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3759,7 +3759,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7628693171398563579
 CanvasRenderer:
@@ -4512,7 +4512,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 66.15
+  m_fontSize: 38.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4612,7 +4612,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4221864588543720415
 CanvasRenderer:
@@ -5151,7 +5151,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3216554297467467137
 CanvasRenderer:
@@ -5822,7 +5822,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 66.15
+  m_fontSize: 38.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6195,7 +6195,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 33.52658, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4107640665986138086
 CanvasRenderer:
@@ -6518,7 +6518,8 @@ MonoBehaviour:
   PrisikelimoLaikas: 3
   LikesPrisikelimoLaikas: 0
   Kamera: {fileID: 7237864272925953803}
-  KulkosAtsiradimoVieta: {fileID: 8275047595295359957}
+  KulkuAtsiradimoVieta: {fileID: 8275047595295359957}
+  KojuVieta: {fileID: 7433504506195126701}
   OroKodas: {fileID: 7068804283211152902}
   VandensKodas: {fileID: 499039281050283188}
   ZemesKodas: {fileID: 6250847368081593826}
@@ -6641,7 +6642,8 @@ MonoBehaviour:
   ZaidejoKodas: {fileID: 0}
   JudejimoKodas: {fileID: 0}
   Kamera: {fileID: 7237864272925953803}
-  KulkosAtsiradimoVieta: {fileID: 8275047595295359957}
+  KulkuAtsiradimoVieta: {fileID: 0}
+  KojuVieta: {fileID: 0}
   BCD: 0
   BBCD: 0
   BBBCD: 0
@@ -6740,7 +6742,8 @@ MonoBehaviour:
   ZaidejoKodas: {fileID: 0}
   JudejimoKodas: {fileID: 0}
   Kamera: {fileID: 7237864272925953803}
-  KulkosAtsiradimoVieta: {fileID: 8275047595295359957}
+  KulkuAtsiradimoVieta: {fileID: 0}
+  KojuVieta: {fileID: 0}
   BCD: 0
   BBCD: 0
   BBBCD: 0
@@ -6855,7 +6858,8 @@ MonoBehaviour:
   ZaidejoKodas: {fileID: 0}
   JudejimoKodas: {fileID: 0}
   Kamera: {fileID: 7237864272925953803}
-  KulkosAtsiradimoVieta: {fileID: 8275047595295359957}
+  KulkuAtsiradimoVieta: {fileID: 0}
+  KojuVieta: {fileID: 0}
   BCD: 0
   BBCD: 0
   BBBCD: 0
@@ -6887,6 +6891,9 @@ MonoBehaviour:
   B2Gyvybes: 50
   B2MaxSugeriamaZala: 70
   B2Nuotolis: 3
+  B2Aukstis: 5
+  B2DidejimoLaikas: 0.4
+  B2Spindulys: 50
   B2Trukme: 40
   B2Daiktas: {fileID: 3479311114505999219, guid: 4333e17d21c29434f9ad50beb31a125a,
     type: 3}
@@ -6905,6 +6912,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B4_CD: 8
   B4Zala: 50
+  B4Aukstis: 100
+  B4DidejimoLaikas: 0.3
   B4SpygliuSkaicius: 15
   B4SpygliuTrukme: 2
   B4AtstumasTarpSpygliu: 2
@@ -6913,14 +6922,39 @@ MonoBehaviour:
   B4TikrinimoAukstis: 10
   B4Daiktas: {fileID: 2927126028304125698, guid: b525e5245853eab45a05adad728f70b3,
     type: 3}
+  B5Paveiksleliai:
+  - {fileID: 4861217598361001852, guid: dd25b187627f949409d70fc1db2386c2, type: 3}
+  - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
+  B5_CD: 5
+  B5Gyvybes: 150
+  B5MaxSugeriamaZala: 150
+  B5Aukstis: 7
+  B5DidejimoLaikas: 1
+  B5Trukme: 30
+  B5Daiktas: {fileID: 3479311114505999219, guid: 276b9dbdc8b4f8843b3200f5276402b7,
+    type: 3}
   U1Paveiksleliai:
   - {fileID: 4861217598361001852, guid: dd25b187627f949409d70fc1db2386c2, type: 3}
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
-  U1_CD: 60
+  U1_CD: 5
   U1Zala: 200
-  U1Dydis: 20
-  U1Delsimas: 2
-  U1JudejimoCCLaikas: 5
+  U1Delsimas: 1
+  U1JudejimoCCLaikas: 4
+  U1Daiktas: {fileID: 3479311114505999219, guid: f0489759b014be3468b6e6fa96706174,
+    type: 3}
+  U2Paveiksleliai:
+  - {fileID: 4861217598361001852, guid: dd25b187627f949409d70fc1db2386c2, type: 3}
+  - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
+  U2_CD: 5
+  U2Zala: 300
+  U2ZalaPoKontakto: 200
+  U2SpindulioIlgis: 100
+  U2SkrydzioAukstis: 5
+  U2AtsiradimoNuotolis: 7
+  U2DaiktoGreitis: 1
+  U2SunaikinimoLaikasPoKontakto: 3
+  U2Daiktas: {fileID: 4321634927597242044, guid: 2f6a66331a849cf42b96f64c242fbfba,
+    type: 3}
 --- !u!114 &8222169536811221728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6936,7 +6970,8 @@ MonoBehaviour:
   ZaidejoKodas: {fileID: 0}
   JudejimoKodas: {fileID: 0}
   Kamera: {fileID: 7237864272925953803}
-  KulkosAtsiradimoVieta: {fileID: 8275047595295359957}
+  KulkuAtsiradimoVieta: {fileID: 0}
+  KojuVieta: {fileID: 0}
   BCD: 0
   BBCD: 0
   BBBCD: 0
@@ -6989,7 +7024,6 @@ MonoBehaviour:
   B4Trukme: 6
   SoklumoKompensacija: 0.1
   B4VFXAtsiradimoDaznis: 0.05
-  B4VFXAtsiradimoVieta: {fileID: 7433504506195126701}
   B4VFX: {fileID: 8166246280830311476, guid: 10b5b6c0f9b3df640be518c367723790, type: 3}
   B5Paveiksleliai:
   - {fileID: 2357085652342355180, guid: ce0ce2d674a824c479ddcb0a6fd29c70, type: 3}
@@ -7007,7 +7041,8 @@ MonoBehaviour:
   U1_CD: 35
   U1Zala: 300
   U1DaiktoGreitis: 65
-  U1SpindulioIlgis: 50
+  U1SunaikinimoLaikasPoKontakto: 3
+  U1SpindulioIlgis: 150
   U1Daiktas: {fileID: 2692523196379564093, guid: 27a17794338409e46af60c5a127bb8bb,
     type: 3}
   U2Paveiksleliai:
@@ -8101,7 +8136,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 64.4
+  m_fontSize: 48.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8275,7 +8310,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 33.52658, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3814306852612648610
 CanvasRenderer:
@@ -8453,7 +8488,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 33.52658, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2433837933215475992
 CanvasRenderer:
@@ -8615,7 +8650,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 33.52658, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5227771043172168561
 CanvasRenderer:
@@ -8777,7 +8812,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2581677814698392158
 CanvasRenderer:
@@ -8866,7 +8901,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 33.52658, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3848208010646483285
 CanvasRenderer:
@@ -8955,7 +8990,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2242757299598937158
 CanvasRenderer:

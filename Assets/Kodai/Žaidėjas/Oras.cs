@@ -92,7 +92,7 @@ public class Oras : Elementas
 	[PunRPC]
 	void RPCKurtiOrasB1 (Vector3 ZiurimasTaskas)
 	{
-		GameObject OrasB1 = Instantiate (B1Daiktas, KulkosAtsiradimoVieta.position, KulkosAtsiradimoVieta.rotation);
+		GameObject OrasB1 = Instantiate (B1Daiktas, KulkuAtsiradimoVieta.position, KulkuAtsiradimoVieta.rotation);
 		Kulka KulkosKodas = OrasB1.GetComponent<Kulka> ();
 
         OrasB1.transform.LookAt (ZiurimasTaskas);
@@ -153,7 +153,7 @@ public class Oras : Elementas
     [PunRPC]
     void RPCKurtiOrasB5(Vector3 ZiurimasTaskas)
     {
-        GameObject OrasB5 = Instantiate(B5Daiktas, KulkosAtsiradimoVieta.position, KulkosAtsiradimoVieta.rotation);
+        GameObject OrasB5 = Instantiate(B5Daiktas, KulkuAtsiradimoVieta.position, KulkuAtsiradimoVieta.rotation);
         OrasB5 KulkosKodas = OrasB5.GetComponent<OrasB5>();
 
         OrasB5.transform.LookAt(ZiurimasTaskas);
@@ -179,7 +179,7 @@ public class Oras : Elementas
     {
         Vector3 Kryptis = (transform.position - ZiurimasTaskas).normalized;
         Vector3 AtsiradimoVieta = transform.position + transform.forward * B6Nuotolis;
-        GameObject OrasB6 = Instantiate(B6Daiktas, AtsiradimoVieta, KulkosAtsiradimoVieta.rotation);
+        GameObject OrasB6 = Instantiate(B6Daiktas, AtsiradimoVieta, KulkuAtsiradimoVieta.rotation);
         Skydas SkydoKodas = OrasB6.GetComponent<Skydas>();
 
         OrasB6.transform.SetParent(gameObject.transform);
@@ -237,7 +237,7 @@ public class Oras : Elementas
     [PunRPC]
     void RPCKurtiOrasU2()
     {
-        Vector3 AtsiradimoVieta = KulkosAtsiradimoVieta.position;
+        Vector3 AtsiradimoVieta = KulkuAtsiradimoVieta.position;
         AtsiradimoVieta.y = U2AtsiradimoAukstis;
         Quaternion AtsiradimoPosukis = Quaternion.Euler(0, transform.eulerAngles.y, 0);
         GameObject OrasU2 = Instantiate(U2Daiktas, AtsiradimoVieta, AtsiradimoPosukis);

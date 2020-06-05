@@ -29,7 +29,6 @@ MonoBehaviour:
   EnableSupportLogger: 0
   RunInBackground: 1
   RpcList:
-  - NaikintiSkyda
   - RPCGautiZalos
   - RPCKurtiOrasB1
   - RPCKurtiOrasB5
@@ -61,7 +60,9 @@ MonoBehaviour:
   - RPCKurtiZemeB4
   - RPCKurtiZemeU1
   - RPCMirtis
-  - RPCPrisikelimas
   - RPCNaikintiSkyda
+  - RPCPrisikelimas
+  - RPCKurtiZemeU2
+  - RPCKurtiZemeB5
   DisableAutoOpenWizard: 1
   ShowSettings: 0

@@ -118,7 +118,7 @@ public class Vanduo : Elementas
     [PunRPC]
     void RPCKurtiVanduoB1(Vector3 ZiurimasTaskas)
     {
-        GameObject VanduoB1 = Instantiate(B1Daiktas, KulkosAtsiradimoVieta.position, KulkosAtsiradimoVieta.rotation);
+        GameObject VanduoB1 = Instantiate(B1Daiktas, KulkuAtsiradimoVieta.position, KulkuAtsiradimoVieta.rotation);
         Kulka KulkosKodas = VanduoB1.GetComponent<Kulka>();
 
         VanduoB1.transform.LookAt(ZiurimasTaskas);
@@ -221,8 +221,8 @@ public class Vanduo : Elementas
     [PunRPC]
     void RPCKurtiVanduoB4(Vector3 ZiurimasTaskas)
     {
-        Vector3 AtsiradimoVieta = KulkosAtsiradimoVieta.position + (transform.forward * B4AtsiradimoNuotolis);
-        GameObject VanduoB4 = Instantiate(B4Daiktas, AtsiradimoVieta, KulkosAtsiradimoVieta.rotation);
+        Vector3 AtsiradimoVieta = KulkuAtsiradimoVieta.position + (transform.forward * B4AtsiradimoNuotolis);
+        GameObject VanduoB4 = Instantiate(B4Daiktas, AtsiradimoVieta, KulkuAtsiradimoVieta.rotation);
         Kulka KulkosKodas = VanduoB4.GetComponent<Kulka>();
 
         VanduoB4.transform.LookAt(ZiurimasTaskas);
@@ -245,7 +245,7 @@ public class Vanduo : Elementas
     [PunRPC]
     void RPCKurtiVanduoB5(Vector3 ZiurimasTaskas)
     {
-        GameObject VanduoB5 = Instantiate(B5Daiktas, KulkosAtsiradimoVieta.position, KulkosAtsiradimoVieta.rotation);
+        GameObject VanduoB5 = Instantiate(B5Daiktas, KulkuAtsiradimoVieta.position, KulkuAtsiradimoVieta.rotation);
         Kulka KulkosKodas = VanduoB5.GetComponent<Kulka>();
 
         VanduoB5.transform.LookAt(ZiurimasTaskas);
@@ -266,7 +266,7 @@ public class Vanduo : Elementas
 	[PunRPC]
 	void RPCKurtiVanduoU1()
     {
-        Vector3 AtsiradimoVieta = KulkosAtsiradimoVieta.position + (transform.forward * U1AtsiradimoNuotolis) - (transform.up * transform.localScale.y / 2);
+        Vector3 AtsiradimoVieta = KulkuAtsiradimoVieta.position + (transform.forward * U1AtsiradimoNuotolis) - (transform.up * transform.localScale.y / 2);
         Quaternion AtsiradimoPosukis = Quaternion.Euler(0, transform.eulerAngles.y, 0);
         GameObject VanduoU1 = Instantiate (U1Daiktas, AtsiradimoVieta, AtsiradimoPosukis);
 		VanduoU1 KulkosKodas = VanduoU1.GetComponent<VanduoU1>();
@@ -293,7 +293,7 @@ public class Vanduo : Elementas
     [PunRPC]
     void RPCKurtiVanduoU2(Vector3 ZiurimasTaskas)
     {
-        GameObject VanduoU2 = Instantiate(U2Daiktas, ZiurimasTaskas, KulkosAtsiradimoVieta.rotation);
+        GameObject VanduoU2 = Instantiate(U2Daiktas, ZiurimasTaskas, KulkuAtsiradimoVieta.rotation);
         VanduoU2 KulkosKodas = VanduoU2.GetComponent<VanduoU2>();
 
         KulkosKodas.Zala = U2Zala;
@@ -326,16 +326,16 @@ public class Vanduo : Elementas
     [PunRPC]
     void RPCKurtiVanduoU3Saltini(Vector3 ZiurimasTaskas)
     {
-        Vector3 AtsiradimoVieta = KulkosAtsiradimoVieta.position + (transform.forward * U3AtsiradimoNuotolis);
-        GameObject VanduoU3Saltinis = Instantiate(U3SaltinioDaiktas, AtsiradimoVieta, KulkosAtsiradimoVieta.rotation);
+        Vector3 AtsiradimoVieta = KulkuAtsiradimoVieta.position + (transform.forward * U3AtsiradimoNuotolis);
+        GameObject VanduoU3Saltinis = Instantiate(U3SaltinioDaiktas, AtsiradimoVieta, KulkuAtsiradimoVieta.rotation);
         Destroy(VanduoU3Saltinis, U3Delsimas + 0.1f);
     }
 
     [PunRPC]
     void RPCKurtiVanduoU3(Vector3 ZiurimasTaskas)
     {
-        Vector3 AtsiradimoVieta = KulkosAtsiradimoVieta.position + (transform.forward * U3AtsiradimoNuotolis);
-        GameObject VanduoU3 = Instantiate(U3Daiktas, AtsiradimoVieta, KulkosAtsiradimoVieta.rotation);
+        Vector3 AtsiradimoVieta = KulkuAtsiradimoVieta.position + (transform.forward * U3AtsiradimoNuotolis);
+        GameObject VanduoU3 = Instantiate(U3Daiktas, AtsiradimoVieta, KulkuAtsiradimoVieta.rotation);
         VanduoU3 KulkosKodas = VanduoU3.GetComponent<VanduoU3>();
 
         VanduoU3.transform.LookAt(ZiurimasTaskas);

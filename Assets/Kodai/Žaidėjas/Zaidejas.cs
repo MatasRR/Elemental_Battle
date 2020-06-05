@@ -60,7 +60,8 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
 
     private SavarankiskoValdymas ZaidimoValdymoKodas; /// Negerai, jei atsiras daugiau zaidimo rezimu
 
-    public Transform KulkosAtsiradimoVieta;
+    public Transform KulkuAtsiradimoVieta;
+    public Transform KojuVieta;
 
     public Oras OroKodas;
     public Vanduo VandensKodas;

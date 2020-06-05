@@ -17,12 +17,12 @@ public class Skydas : MonoBehaviourPun
 
     public bool IgnoruojaSavoKulkas;
 
-    private void Start()
+    public virtual void Start()
     {
         KomandosNr = Autorius.GetComponent<Zaidejas>().KomandosNr;
     }
 
-    void Update()
+    public virtual void Update()
     {
         if (Gyvybes < 0)
         {
