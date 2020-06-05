@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
   AppSettings:
-    AppIdRealtime: 83428fc7-1365-424c-a8ee-dabe6f485548
+    AppIdRealtime: 
     AppIdChat: 
     AppIdVoice: 
     AppVersion: 
@@ -58,11 +58,11 @@ MonoBehaviour:
   - RPCKurtiZemeB2
   - RPCKurtiZemeB3
   - RPCKurtiZemeB4
+  - RPCKurtiZemeB5
   - RPCKurtiZemeU1
+  - RPCKurtiZemeU2
   - RPCMirtis
   - RPCNaikintiSkyda
   - RPCPrisikelimas
-  - RPCKurtiZemeU2
-  - RPCKurtiZemeB5
   DisableAutoOpenWizard: 1
   ShowSettings: 0
