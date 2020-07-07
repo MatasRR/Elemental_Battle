@@ -9,9 +9,9 @@ using TMPro;
 
 public class Zaidejas : MonoBehaviourPun, IPunObservable
 {
+    #region Kintamieji
     public Material[] ZaidejoIsvaizdosMedziagos;
     public Color[] VardoKomanduSpalvos;
-    private List <Zaidejas> ZaidejuSarasas = new List<Zaidejas>();
 
     [HideInInspector]
     public string Vardas;
@@ -58,7 +58,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public Camera Kamera;
     private Camera BendraKamera;
 
-    private SavarankiskoValdymas ZaidimoValdymoKodas; /// Negerai, jei atsiras daugiau zaidimo rezimu
+    private ZaidimoValdymas ZaidimoValdymoKodas; /// Negerai, jei atsiras daugiau zaidimo rezimu
 
     public Transform KulkuAtsiradimoVieta;
     public Transform KojuVieta;
@@ -88,6 +88,10 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public float JudejimoCCLaikas;
     [HideInInspector]
     public float PuolimoCCLaikas;
+    [HideInInspector]
+    public float GebejimuAktyvinimoLaikas;
+    [HideInInspector]
+    public float LikesGebejimuAktyvinimoLaikas;
 
     [HideInInspector]
     public int NuzudymuSk;
@@ -96,7 +100,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
 
     public float PaskutinioZalojusioZaidejoLaikas;
     [HideInInspector]
-    public GameObject PaskutinisZalojesZaidejas;
+    public Zaidejas PaskutinisZalojesZaidejas;
     [HideInInspector]
     public float PaskutinioZalojusioZaidejoLaikmatis;
 
@@ -131,8 +135,10 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
 
     public Image GyvybiuJuostele;
     public Image SkydoJuostele;
+    public Image GebejimuAktyvinimoJuostele;
     public TextMeshProUGUI GyvybiuTekstas;
     public TextMeshProUGUI SkydoTekstas;
+    public TextMeshProUGUI GebejimuAktyvinimoLaikoTekstas;
     public Image MazojiGyvybiuJuostele;
     public Image MazojiSkydoJuostele;
     public TextMeshProUGUI MazasisGyvybiuTekstas;
@@ -161,6 +167,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public GameObject MazasisPaveiksliukasGynybaNulis;
     public GameObject MazasisPaveiksliukasSkraidymas;
 
+    public GameObject GebejimuAktyvinimoLangas;
     public TextMeshProUGUI NuzudymuIrMirciuTekstas;
     public TextMeshProUGUI KomandosTekstas;
     public GameObject MirtiesPranesimuLangas;
@@ -175,10 +182,11 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public GameObject ZaidimoDrobe;
 
     public TextMeshProUGUI TestinisTekstas;
+    #endregion
 
     void Start()
     {
-        ZaidimoValdymoKodas = GameObject.FindGameObjectWithTag("GameController").GetComponent<SavarankiskoValdymas>();
+        ZaidimoValdymoKodas = GameObject.FindGameObjectWithTag("GameController").GetComponent<ZaidimoValdymas>();
         BendraKamera = ZaidimoValdymoKodas.BendraKamera;
 
         ZaidejoPasirinkimai();
@@ -205,6 +213,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         KomandosTekstas.text = (KomandosNr == 0) ? "SOLO" : "TEAM " + KomandosNr;
         ZaidejoIsvaizdosMedziagosNr = Duomenys.IsvaizdosMedziagosNr;
         ZaidejoPaveiksleliuNr = Duomenys.GebejimuPaveiksleliuNr;
+        ZaidejoGrafikosObjektas.enabled = true;
         NuzudymuSk = Duomenys.K;
         MirciuSk = Duomenys.D;
         //DuomenysAtnaujinti = false;
@@ -363,6 +372,27 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
             NuzudymuIrMirciuTekstas.text = NuzudymuSk.ToString() + " / " + MirciuSk.ToString();
             //PrisikelimoLaikoTekstas.text = LikesPrisikelimoLaikas.ToString();
 
+            if (LikesGebejimuAktyvinimoLaikas > 0 && !GebejimuAktyvinimoLangas.activeSelf)
+            {
+                GebejimuAktyvinimoLangas.SetActive(true);
+            }
+            
+
+            if (LikesGebejimuAktyvinimoLaikas > 0)
+            {
+                GebejimuAktyvinimoJuostele.fillAmount = LikesGebejimuAktyvinimoLaikas / GebejimuAktyvinimoLaikas;
+                GebejimuAktyvinimoLaikoTekstas.text = LikesGebejimuAktyvinimoLaikas.ToString("0.0");
+                LikesGebejimuAktyvinimoLaikas -= Time.deltaTime;
+            }
+            else if (LikesGebejimuAktyvinimoLaikas < 0)
+            {
+                GebejimuAktyvinimoLaikas = 0;
+                GebejimuAktyvinimoLangas.SetActive(false);
+            }
+
+            ////////////////////////////////////////////////////
+            /// Sitie duomenys nera perduodami kitiems zaidejams
+            ////////////////////////////////////////////////////
             if (GaliJudeti)
             {
                 PaveiksliukasGreitisNulis.SetActive(false);
@@ -583,7 +613,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         }
     }
 
-    public void KeistiPaskutiniZalojusiZaideja (GameObject NaujasZaidejas)
+    public void KeistiPaskutiniZalojusiZaideja (Zaidejas NaujasZaidejas)
     {
         PaskutinioZalojusioZaidejoLaikmatis = PaskutinioZalojusioZaidejoLaikas;
         PaskutinisZalojesZaidejas = NaujasZaidejas;
@@ -684,33 +714,23 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         GynybosMod /= (GynybosPokytis != 0 ? GynybosPokytis : 1);
     }
 
-    public void NuzudeKitaZaideja()
+    public void NuzudeArbaMire(bool Nuzude)
     {
-        NuzudymuSk++;
-        Duomenys.K++;
+        if (Nuzude)
+        {
+            NuzudymuSk++;
+            Duomenys.K++;
+        }
+        else
+        {
+            MirciuSk++;
+            Duomenys.D++;
+        }
     }
 
     private void Mirtis()
     {
-        MirciuSk++;
-        Duomenys.D++;
-        if (PaskutinisZalojesZaidejas != null)
-        {
-            PaskutinisZalojesZaidejas.GetComponent<Zaidejas>().NuzudeKitaZaideja();
-        }
-
-        AtnaujintiZaidejuSarasa();
-        foreach (Zaidejas z in ZaidejuSarasas)
-        {
-            if (PaskutinisZalojesZaidejas != null)
-            {
-                z.MirtiesPranesimas(PaskutinisZalojesZaidejas.GetComponent<Zaidejas>(), this);
-            }
-            else
-            {
-                z.MirtiesPranesimas(null, this);
-            }
-        }
+        // UI?
 
         photonView.RPC("RPCMirtis", RpcTarget.All);
     }
@@ -720,12 +740,15 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     {
         Gyvybes = 0;
         Gyvas = false;
+        ZaidejoGrafikosObjektas.enabled = false;
         gameObject.GetComponent<CapsuleCollider>().enabled = false;
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
         gameObject.GetComponent<Judejimas>().enabled = false;
         ZaidimoDrobe.SetActive(false);
         PuolimoLaikoIgnoravimas++;
+
+        Zaidejas Zudikas = (PaskutinisZalojesZaidejas == null) ? gameObject.GetComponent<Zaidejas>() : PaskutinisZalojesZaidejas;
+        ZaidimoValdymoKodas.Mirtis(Zudikas, gameObject.GetComponent<Zaidejas>());
 
         LikesPrisikelimoLaikas = PrisikelimoLaikas;
     }
@@ -739,31 +762,24 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         TextMeshProUGUI PranesimoTarpinisTekstas = MirtiesPranesimas.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI PranesimoMirusiojoTekstas = MirtiesPranesimas.transform.GetChild(2).GetComponent<TextMeshProUGUI>();
 
-        if (Zudikas != null)
-        {
-            PranesimoZudikoTekstas.text = Zudikas.Vardas;
-            PranesimoZudikoTekstas.color = VardoKomanduSpalvos[Zudikas.KomandosNr];
+        PranesimoZudikoTekstas.text = Zudikas.Vardas;
+        PranesimoZudikoTekstas.color = VardoKomanduSpalvos[Zudikas.KomandosNr];
+
+        if (Zudikas != Mirusysis)
+        {            
             PranesimoTarpinisTekstas.text = " has slain ";
             PranesimoMirusiojoTekstas.text = Mirusysis.Vardas;
             PranesimoMirusiojoTekstas.color = VardoKomanduSpalvos[Mirusysis.KomandosNr];
         }
         else
         {
-            PranesimoZudikoTekstas.text = Mirusysis.Vardas;
-            PranesimoZudikoTekstas.color = VardoKomanduSpalvos[Mirusysis.KomandosNr];
             PranesimoTarpinisTekstas.text = " has commited suicide";
             PranesimoMirusiojoTekstas.gameObject.SetActive(false);
         }
 
         Destroy(MirtiesPranesimas, 10);
     }
-    /*
-    [PunRPC]
-    public void RPCMirtiesPranesimas (Zaidejas Zudikas, Zaidejas Mirusysis)
-    {
-        
-    }
-    */
+    
     [PunRPC]
     public void RPCPrisikelimas()
     {
@@ -776,8 +792,8 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         int Nr = Random.Range(0, ZaidimoValdymoKodas.AtsiradimoVietos.Length);
         transform.position = ZaidimoValdymoKodas.AtsiradimoVietos[Nr].position;
         transform.rotation = ZaidimoValdymoKodas.AtsiradimoVietos[Nr].rotation;
+        ZaidejoGrafikosObjektas.enabled = true;
         gameObject.GetComponent<CapsuleCollider>().enabled = true;
-        gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<Rigidbody>().isKinematic = false;
         gameObject.GetComponent<Judejimas>().enabled = true;
         PuolimoLaikoIgnoravimas = 0;//
@@ -799,7 +815,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         Greitis = PradinisGreitis * GreicioMod;
         Soklumas = PradinisSoklumas * SoklumoMod;
     }
-
+    /*
     private void AtnaujintiZaidejuSarasa()
     {
         GameObject[] VisuZaidejuObjektai = GameObject.FindGameObjectsWithTag("Player");
@@ -809,13 +825,13 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
             ZaidejuSarasas.Add(go.GetComponent<Zaidejas>());
         }
     }
-
+    */
     private void ZaidejuInformacijosLangoValdymas(bool ArAktyvinti)
     {
         if(ArAktyvinti)
         {
             ZaidejuIrKomanduInformacijosLangas.SetActive(true);
-            AtnaujintiZaidejuSarasa();
+            //AtnaujintiZaidejuSarasa();
 
             GameObject VirsutineEilute = Instantiate(ZaidejoInformacijosObjektas);
             VirsutineEilute.transform.SetParent(ZaidejuInformacijosLentele);
@@ -827,7 +843,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
             int[] KomanduNuzudymai = new int[5];
             int[] KomanduMirtys = new int[5];
 
-            foreach (Zaidejas z in ZaidejuSarasas)
+            foreach (Zaidejas z in ZaidimoValdymoKodas.ZaidejuSarasas)
             {
                 GameObject Eilute = Instantiate(ZaidejoInformacijosObjektas);
                 Eilute.transform.SetParent(ZaidejuInformacijosLentele);

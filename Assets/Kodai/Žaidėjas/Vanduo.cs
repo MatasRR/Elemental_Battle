@@ -22,7 +22,7 @@ public class Vanduo : Elementas
 	public float B2_CD;
 
     public float B2Gydymas;
-    public float B2GydymosiLaikas;
+    public float B2GydymoLaikas;
 
 	[Header("B 3: ")]
     public Sprite[] B3Paveiksleliai;
@@ -139,14 +139,9 @@ public class Vanduo : Elementas
 
     IEnumerator _B2()
     {
-        ZaidejoKodas.JudejimoLaikoIgnoravimas++;
-        ZaidejoKodas.PuolimoLaikoIgnoravimas++;
-
-        yield return new WaitForSeconds(B2GydymosiLaikas);
+        ZaidejoKodas.GebejimuAktyvinimoLaikas = ZaidejoKodas.LikesGebejimuAktyvinimoLaikas = B2GydymoLaikas;
+        yield return new WaitForSeconds(B2GydymoLaikas);
         ZaidejoKodas.Gyvybes += B2Gydymas;
-
-        ZaidejoKodas.JudejimoLaikoIgnoravimas--;
-        ZaidejoKodas.PuolimoLaikoIgnoravimas--;
     }
 
     public override void B3()

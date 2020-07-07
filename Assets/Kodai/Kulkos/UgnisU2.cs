@@ -19,12 +19,10 @@ public class UgnisU2 : Kulka
 
     private float Laikas;
     private Vector3 PradinisDydis;
-    private Zaidejas AutoriausZaidejoKodas;
 
     public override void Start()
     {
         base.Start();
-        AutoriausZaidejoKodas = Autorius.GetComponent<Zaidejas>();
         PradinisDydis = transform.localScale;
     }
 

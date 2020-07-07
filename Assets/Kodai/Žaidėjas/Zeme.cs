@@ -186,8 +186,7 @@ public class Zeme : Elementas
 
         int AplinkosSluoksnis = LayerMask.GetMask("Aplinka");
 
-        ZaidejoKodas.JudejimoLaikoIgnoravimas++;
-        ZaidejoKodas.PuolimoLaikoIgnoravimas++;
+        ZaidejoKodas.GebejimuAktyvinimoLaikas = ZaidejoKodas.LikesGebejimuAktyvinimoLaikas = B4LaikasTarpSpygliuSukurimo * B4SpygliuSkaicius;
 
         for (int i = 0; i < B4SpygliuSkaicius; i++)
         {
@@ -197,9 +196,6 @@ public class Zeme : Elementas
             }
             yield return new WaitForSeconds(B4LaikasTarpSpygliuSukurimo);
         }
-
-        ZaidejoKodas.JudejimoLaikoIgnoravimas--;
-        ZaidejoKodas.PuolimoLaikoIgnoravimas--;
     }
 
     [PunRPC]

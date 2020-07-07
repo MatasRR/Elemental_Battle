@@ -17,13 +17,11 @@ public class OrasU1 : Kulka
 
     private float Laikas;
     private Vector3 PradinisDydis;
-    private Zaidejas AutoriausZaidejoKodas;
     //private Material Medziaga;
 
     public override void Start()
     {
         base.Start();
-        AutoriausZaidejoKodas = Autorius.GetComponent<Zaidejas>();
         //Medziaga = gameObject.GetComponent<MeshRenderer>().material;
         //Medziaga.color = new Color(Medziaga.color.r, Medziaga.color.g, Medziaga.color.b, 0);
         PradinisDydis = transform.localScale;

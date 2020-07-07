@@ -39,7 +39,7 @@ public class Elementas : MonoBehaviourPun
     public float DabBBBCD = 0;
     [HideInInspector]
     public float DabUCD = 0;
-    
+
     [HideInInspector]
     public TextMeshProUGUI BCDTekstas;
     [HideInInspector]
@@ -104,7 +104,7 @@ public class Elementas : MonoBehaviourPun
 
     public virtual void FixedUpdate()
     {
-        if (!photonView.IsMine || !ZaidejoKodas.GaliPulti)
+        if (!photonView.IsMine || !ZaidejoKodas.GaliPulti || ZaidejoKodas.LikesGebejimuAktyvinimoLaikas > 0)
         {
             return;
         }

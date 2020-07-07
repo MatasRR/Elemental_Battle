@@ -33,7 +33,7 @@ public class Judejimas : MonoBehaviourPun
             return;
         }
 
-        if (ZaidejoKodas.GaliJudeti)
+        if (ZaidejoKodas.GaliJudeti || ZaidejoKodas.LikesGebejimuAktyvinimoLaikas > 0)
         {
             ZaidejoJudejimas();
         }

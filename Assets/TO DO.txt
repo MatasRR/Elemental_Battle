@@ -1,21 +1,55 @@
-﻿Kill count
-SFX
-Debesies mesh
-Žemės drebėjimo VFX
-Skydo kodas??
-Fire DOT effect?
-Jei yra OrasB1 : Kulka, ar ieškant Kulkos kodo randamas OroB1 kodas (tas pats su skydais)
-Thunderstorm
-Vortex atsiradimas (dabar counter-intuitive)
-OroU1 reagavimas į uždangas (Physics.RayCast)
-Ice field?
-Dviguba žala su U (oras, žemė)?
+﻿BUGS:
+Spyglių spinduliai turėtų ignoruoti žaidėjus
 Cunamis eina kiauriai objektus
 Mirus neatsistato greitis
 
+
+
+QUALITY OF LIFE:
+SFX
+Debesies mesh
+Žemės drebėjimo VFX
+Vortex atsiradimas (dabar counter-intuitive)
+Channel UI
+Atnaujinti duomenis (vardai, skin'ai ir t.t.) tik atsiradus naujam žaidėjui
+
+
+
+NEW IDEAS:
+Skills:
+Ice field
+Octopus form
+Water whip
+Earth wave ride
+Metal ropes
+Stone skin
+Mud/Sand
+Lava field
+Combustion
+Fire puch/kick
+
+Other:
+Knockback resistance icon
+
+
+ETC:
+Jei yra OrasB1 : Kulka, ar ieškant Kulkos kodo randamas OroB1 kodas (tas pats su skydais)
+OroU1 reagavimas į uždangas (Physics.RayCast)
+
+
+
 List<DOT> DamageOverTimeEffects;
-struct DOT
+	struct DOT
+	{
+		float Damage;
+		float Duration;
+	}
+
+if (Channeling)
 {
-	float Damage;
-	float Duration;
+	return;
 }
+
+ChannelSlider.TotalAmount = Trukme;
+ChannelSlider.Amount -= Time.deltaTime;
+ChannelText.text = Trukme.ToString();

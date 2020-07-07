@@ -200,16 +200,13 @@ public class Oras : Elementas
 	{
 		Rigidbody RB = GetComponent<Rigidbody> ();
 		RB.isKinematic = true;
-		ZaidejoKodas.JudejimoLaikoIgnoravimas++;
-        ZaidejoKodas.PuolimoLaikoIgnoravimas++;
+        ZaidejoKodas.GebejimuAktyvinimoLaikas = ZaidejoKodas.LikesGebejimuAktyvinimoLaikas = U1LaukimoLaikas + U1DidejimoLaikas;
 
         ZaidejoKodas.Skydas += U1Skydas;
         photonView.RPC("RPCKurtiOrasU1", RpcTarget.All);
 
         yield return new WaitForSeconds (U1LaukimoLaikas + U1DidejimoLaikas);
 
-        ZaidejoKodas.JudejimoLaikoIgnoravimas--;
-        ZaidejoKodas.PuolimoLaikoIgnoravimas--;
         RB.isKinematic = false;
 	}
 

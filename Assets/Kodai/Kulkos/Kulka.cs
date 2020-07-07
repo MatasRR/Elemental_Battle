@@ -18,6 +18,8 @@ public class Kulka : MonoBehaviour
     [HideInInspector]
     public GameObject Autorius;
     [HideInInspector]
+    public Zaidejas AutoriausZaidejoKodas;
+    [HideInInspector]
     public int KomandosNr;
     [HideInInspector]
     public int ElementoNr;
@@ -50,9 +52,10 @@ public class Kulka : MonoBehaviour
             gameObject.GetComponent<Rigidbody>().velocity = transform.forward * Greitis;
         }
 
-        ElementoNr = Autorius.GetComponent<Zaidejas>().ElementoNr;
-        KomandosNr = Autorius.GetComponent<Zaidejas>().KomandosNr;
-        AtakosMod = Autorius.GetComponent<Zaidejas>().AtakosMod;
+        AutoriausZaidejoKodas = Autorius.GetComponent<Zaidejas>();
+        ElementoNr = AutoriausZaidejoKodas.ElementoNr;
+        KomandosNr = AutoriausZaidejoKodas.KomandosNr;
+        AtakosMod = AutoriausZaidejoKodas.AtakosMod;
     }
 
     public virtual void Update()
@@ -109,7 +112,7 @@ public class Kulka : MonoBehaviour
 
             if (ZaidejoKodas.KomandosNr != KomandosNr || ZaidejoKodas.KomandosNr == 0)
             {
-                ZaidejoKodas.KeistiPaskutiniZalojusiZaideja(Autorius);
+                ZaidejoKodas.KeistiPaskutiniZalojusiZaideja(AutoriausZaidejoKodas);
                 ZaidejoKodas.GautiZalos(Zala * AtakosMod, ElementoNr);
 
                 if (TuriFizikosEfektu)
