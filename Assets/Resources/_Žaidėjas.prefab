@@ -6645,9 +6645,13 @@ GameObject:
   - component: {fileID: 1163023556272560202}
   - component: {fileID: 3661684111199473086}
   - component: {fileID: 7068804283211152902}
+  - component: {fileID: 3236484560143061065}
   - component: {fileID: 499039281050283188}
+  - component: {fileID: 860056698959673939}
   - component: {fileID: 6250847368081593826}
+  - component: {fileID: -4050993328128279519}
   - component: {fileID: 8222169536811221728}
+  - component: {fileID: -5748319132091700726}
   m_Layer: 0
   m_Name: "_\u017Daid\u0117jas"
   m_TagString: Player
@@ -7038,6 +7042,18 @@ MonoBehaviour:
   U2AtsiradimoAukstis: 30
   U2Daiktas: {fileID: 4197086117908579420, guid: 09ee4fd2de90f084cb6f98ee78627620,
     type: 3}
+--- !u!114 &3236484560143061065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377286029893353149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56a62c0f12bc5b4cb1d87ebe2f27196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &499039281050283188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7076,8 +7092,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B1_CD: 4
   B1Zala: 25
-  B1SuletinimoStipris: 0.6
-  B1SuletinimoLaikas: 1
+  B1SuletinimoStipris: 1
+  B1SuletinimoLaikas: 0
+  B1SustingdymoLaikas: 0
   B1DaiktoGreitis: 30
   B1Daiktas: {fileID: 4490117974554063683, guid: 60a7378dfe9d2f94f88d47b9b1b07f74,
     type: 3}
@@ -7085,8 +7102,8 @@ MonoBehaviour:
   - {fileID: -5743747592032278642, guid: 6a8c7691f500527428d6752a33094a6b, type: 3}
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B2_CD: 20
-  B2Gydymas: 20
-  B2GydymoLaikas: 1
+  B2Gydymas: 15
+  B2GydymoLaikas: 2
   B3Paveiksleliai:
   - {fileID: 7786669806396728236, guid: 6a8c7691f500527428d6752a33094a6b, type: 3}
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
@@ -7108,25 +7125,19 @@ MonoBehaviour:
   B4_CD: 5
   B4Zala: 30
   B4AtsiradimoNuotolis: 1
+  B4DaiktuSkaicius: 0
   B4DaiktoGreitis: 35
   B4Daiktas: {fileID: 7932892824698481269, guid: 7f754857065d1b149a3d79043782347e,
-    type: 3}
-  B5Paveiksleliai:
-  - {fileID: -7367550411476601871, guid: 6a8c7691f500527428d6752a33094a6b, type: 3}
-  - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
-  B5_CD: 10
-  B5Zala: 20
-  B5JudejimoCCLaikas: 2
-  B5DaiktoGreitis: 30
-  B5Daiktas: {fileID: 4490117974554063683, guid: ee4948e6e4d889443b4530cbba540981,
     type: 3}
   U1Paveiksleliai:
   - {fileID: 3305052709229899211, guid: 6a8c7691f500527428d6752a33094a6b, type: 3}
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
-  U1_CD: 30
+  U1_CD: 25
   U1Zala: 300
   U1AtsiradimoNuotolis: 7
-  U1DaiktoGreitis: 12
+  U1DaiktoGreitis: 13
+  U1GreitejimoKoeficientas: 0
+  U1PlatejimoKoeficientas: 0
   U1Daiktas: {fileID: 3674144607275421254, guid: 08fd2be960b05394d8673eeae4c58d96,
     type: 3}
   U2Paveiksleliai:
@@ -7134,7 +7145,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   U2_CD: 35
   U2Zala: 5
-  U2Jega: 2.5
+  U2Jega: 1
   U2Daznis: 0.25
   U2SferosDydis: 7.5
   U2SpindulioIlgis: 50
@@ -7154,6 +7165,38 @@ MonoBehaviour:
     type: 3}
   U3Daiktas: {fileID: 4860511043683355936, guid: a04236c996901564a8cca8da20bc154a,
     type: 3}
+--- !u!114 &860056698959673939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377286029893353149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539c3140ee2784a49bf1bfa12936dd38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  B1SuletinimoLaikas: 2
+  B1SuletinimoStipris: 0.6
+  B1SuletinimoKaina: 0
+  B1SustingdymoLaikas: 1
+  B1IkalinimoKaina: 0
+  B2AktyvinimoLaikas: 0.5
+  B2GreitesnioGydymoKaina: 0
+  B2Gydymas: 40
+  B2StipresnioGydymoKaina: 0
+  B3: 0
+  B4IeciuSkaicius: 3
+  B4KeliuIeciuKaina: 0
+  U1GreitejimoKoeficientas: 0.07
+  U1GreitejimoKaina: 0
+  U1PlatejimoKoeficientas: 0.04
+  U1PlatejimoKaina: 0
+  U2Jega: 2.5
+  U2DidesnesJegosKaina: 0
+  U3IlgejimoGreitis: 1
+  U3IlgejimoGreicioDidejimoKaina: 0
 --- !u!114 &6250847368081593826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7266,6 +7309,18 @@ MonoBehaviour:
   U2SunaikinimoLaikasPoKontakto: 3
   U2Daiktas: {fileID: 4321634927597242044, guid: 2f6a66331a849cf42b96f64c242fbfba,
     type: 3}
+--- !u!114 &-4050993328128279519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377286029893353149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8f1bd69fa51d049afbb9d81d34d224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8222169536811221728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7389,6 +7444,18 @@ MonoBehaviour:
     type: 3}
   U3Zaibas: {fileID: 8162213766306360664, guid: c9d2ff0084e26d743aee9c24d27ce802,
     type: 3}
+--- !u!114 &-5748319132091700726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377286029893353149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d3d04398172bc546a44fd53fc5f0d13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6409721391276612109
 GameObject:
   m_ObjectHideFlags: 0
@@ -9744,15 +9811,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e33481087d5d547439c81114ae6421e9, type: 3}
---- !u!4 &3290492255805634126 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
-    type: 3}
-  m_PrefabInstance: {fileID: 7552705398905396564}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &274053898165235841 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -1504981713932161579, guid: e33481087d5d547439c81114ae6421e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7552705398905396564}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3290492255805634126 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
     type: 3}
   m_PrefabInstance: {fileID: 7552705398905396564}
   m_PrefabAsset: {fileID: 0}

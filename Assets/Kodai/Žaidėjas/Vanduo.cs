@@ -13,6 +13,7 @@ public class Vanduo : Elementas
     public float B1Zala;
     public float B1SuletinimoStipris;
     public float B1SuletinimoLaikas;
+    public float B1SustingdymoLaikas;
 
     public float B1DaiktoGreitis;
 	public GameObject B1Daiktas;
@@ -51,9 +52,10 @@ public class Vanduo : Elementas
     public float B4Zala;
 
     public float B4AtsiradimoNuotolis;
+    public float B4DaiktuSkaicius;
     public float B4DaiktoGreitis;
     public GameObject B4Daiktas;
-
+    /*
     [Header("B 5: ")]
     public Sprite[] B5Paveiksleliai;
     public float B5_CD;
@@ -63,7 +65,7 @@ public class Vanduo : Elementas
     public float B5JudejimoCCLaikas;
     public float B5DaiktoGreitis;
     public GameObject B5Daiktas;
-
+    */
     [Header("U 1: ")]
     public Sprite[] U1Paveiksleliai;
 	public float U1_CD;
@@ -72,6 +74,8 @@ public class Vanduo : Elementas
 
     public float U1AtsiradimoNuotolis;
     public float U1DaiktoGreitis;
+    public float U1GreitejimoKoeficientas;
+    public float U1PlatejimoKoeficientas;
 	public GameObject U1Daiktas;
 
     [Header("U 2: ")]
@@ -127,6 +131,7 @@ public class Vanduo : Elementas
         KulkosKodas.Zala = B1Zala;
         KulkosKodas.SuletinimoLaikas = B1SuletinimoLaikas;
         KulkosKodas.SuletinimoStipris = B1SuletinimoStipris;
+        KulkosKodas.SustingdymoLaikas = B1SustingdymoLaikas;
         KulkosKodas.Autorius = gameObject;
 
         Destroy(VanduoB1, 10);
@@ -236,7 +241,7 @@ public class Vanduo : Elementas
             photonView.RPC("RPCKurtiVanduoB5", RpcTarget.All, PataikytasObjektas.point);
         }
     }
-
+    /*
     [PunRPC]
     void RPCKurtiVanduoB5(Vector3 ZiurimasTaskas)
     {
@@ -252,7 +257,7 @@ public class Vanduo : Elementas
 
         Destroy(VanduoB5, 10);
     }
-
+    */
     public override void U1 ()
 	{
         photonView.RPC("RPCKurtiVanduoU1", RpcTarget.All);
@@ -269,6 +274,8 @@ public class Vanduo : Elementas
         KulkosKodas.Greitis = U1DaiktoGreitis;
 		KulkosKodas.Zala = U1Zala;
         KulkosKodas.Autorius = gameObject;
+        KulkosKodas.GreitejimoProcentas = U1GreitejimoKoeficientas;
+        KulkosKodas.PlatejimoProcentas = U1PlatejimoKoeficientas;
 
         Destroy (VanduoU1, 10);
 	}
@@ -351,7 +358,7 @@ public class Vanduo : Elementas
             case 1: BCD = B1_CD; ZaidejoKodas.BPaveikslelis.sprite = B1Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
             case 2: BCD = B2_CD; ZaidejoKodas.BPaveikslelis.sprite = B2Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
             case 3: BCD = B3_CD; ZaidejoKodas.BPaveikslelis.sprite = B3Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
-            case 4: BCD = B4_CD; ZaidejoKodas.BPaveikslelis.sprite = B4Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 4: BCD = B4_CD; ZaidejoKodas.BPaveikslelis.sprite = B4Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
             case 5: BCD = B5_CD; ZaidejoKodas.BPaveikslelis.sprite = B5Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
             case 6: BCD = B6_CD; ZaidejoKodas.BPaveikslelis.sprite = B6Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
             case 7: BCD = B7_CD; ZaidejoKodas.BPaveikslelis.sprite = B7Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
@@ -363,7 +370,7 @@ public class Vanduo : Elementas
             case 1: BBCD = B1_CD; ZaidejoKodas.BBPaveikslelis.sprite = B1Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
             case 2: BBCD = B2_CD; ZaidejoKodas.BBPaveikslelis.sprite = B2Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
             case 3: BBCD = B3_CD; ZaidejoKodas.BBPaveikslelis.sprite = B3Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
-            case 4: BBCD = B4_CD; ZaidejoKodas.BBPaveikslelis.sprite = B4Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 4: BBCD = B4_CD; ZaidejoKodas.BBPaveikslelis.sprite = B4Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
             case 5: BBCD = B5_CD; ZaidejoKodas.BBPaveikslelis.sprite = B5Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
             case 6: BBCD = B6_CD; ZaidejoKodas.BBPaveikslelis.sprite = B6Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
             case 7: BBCD = B7_CD; ZaidejoKodas.BBPaveikslelis.sprite = B7Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
@@ -375,7 +382,7 @@ public class Vanduo : Elementas
             case 1: BBBCD = B1_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B1Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
             case 2: BBBCD = B2_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B2Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
             case 3: BBBCD = B3_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B3Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
-            case 4: BBBCD = B4_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B4Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;
+            case 4: BBBCD = B4_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B4Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
             case 5: BBBCD = B5_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B5Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
             case 6: BBBCD = B6_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B6Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
             case 7: BBBCD = B7_CD; ZaidejoKodas.BBBPaveikslelis.sprite = B7Paveiksleliai[ZaidejoKodas.ZaidejoPaveiksleliuNr]; break;/*
