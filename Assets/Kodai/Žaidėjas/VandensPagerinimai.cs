@@ -122,7 +122,7 @@ public class VandensPagerinimai : MonoBehaviour
     {
         if (VandensKodas.Patirtis >= B4KeliuIeciuKaina && !B4KeliosIetysPagerinta)
         {
-            VandensKodas.B4DaiktuSkaicius = B4IeciuSkaicius;
+            VandensKodas.B4IeciuSkaicius = B4IeciuSkaicius;
             VandensKodas.Patirtis -= B4KeliuIeciuKaina;
             B4KeliosIetysPagerinta = true;
         }
