@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class VanduoU1 : Kulka
 {
-    [HideInInspector]
     public float GreitejimoProcentas;
-    [HideInInspector]
     public float PlatejimoProcentas;
     public float NuotolisIkiZemes;
     public float NaikinimoRiba;

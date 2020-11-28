@@ -20,8 +20,6 @@ public class Kulka : MonoBehaviour
     [HideInInspector]
     public Zaidejas AutoriausZaidejoKodas;
     [HideInInspector]
-    public Elementas AutoriausElementoKodas;
-    [HideInInspector]
     public int KomandosNr;
     [HideInInspector]
     public int ElementoNr;
@@ -55,8 +53,6 @@ public class Kulka : MonoBehaviour
         }
 
         AutoriausZaidejoKodas = Autorius.GetComponent<Zaidejas>();
-        AutoriausElementoKodas = Autorius.GetComponent<Elementas>();
-
         ElementoNr = AutoriausZaidejoKodas.ElementoNr;
         KomandosNr = AutoriausZaidejoKodas.KomandosNr;
         AtakosMod = AutoriausZaidejoKodas.AtakosMod;
@@ -118,8 +114,6 @@ public class Kulka : MonoBehaviour
             {
                 ZaidejoKodas.KeistiPaskutiniZalojusiZaideja(AutoriausZaidejoKodas);
                 ZaidejoKodas.GautiZalos(Zala * AtakosMod, ElementoNr);
-
-                AutoriausElementoKodas.Patirtis += Zala;
 
                 if (TuriFizikosEfektu)
                 {

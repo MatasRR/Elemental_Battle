@@ -23,10 +23,6 @@ public class Elementas : MonoBehaviourPun
     [HideInInspector]
     public Transform KojuVieta;
 
-
-    [HideInInspector]
-    public float Patirtis;
-
     [HideInInspector]
     public float BCD = 0;
     [HideInInspector]
@@ -85,8 +81,6 @@ public class Elementas : MonoBehaviourPun
 
     public virtual void Update()
     {
-        Patirtis += Time.deltaTime;
-
         DabBCD -= Time.deltaTime;
         DabBBCD -= Time.deltaTime;
         DabBBBCD -= Time.deltaTime;
