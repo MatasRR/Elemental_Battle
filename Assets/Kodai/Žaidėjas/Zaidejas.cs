@@ -177,6 +177,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public GameObject ZaidejoInformacijosObjektas;
     public GameObject[] KomanduInformacijosLaukeliai;
     public GameObject ZaidimoUzdarymoLangas;
+    public GameObject PagerinimuLangas;
 
     public GameObject EkranoDrobe;
     public GameObject ZaidimoDrobe;
@@ -594,6 +595,11 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
                 KeistiZaidimoUzdarymoLangoAktyvuma();
             }
 
+            if (Input.GetKeyDown(KeyCode.U))
+            {
+                KeistiPagerinimuLangoAktyvuma();
+            }
+
             if (Input.GetKey(KeyCode.LeftAlt))
             {
                 if (Input.GetKeyDown(KeyCode.C))
@@ -608,6 +614,11 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
                         BendraKamera.gameObject.SetActive(false);
                         Kamera.gameObject.SetActive(true);
                     }
+                }
+
+                if (Input.GetKeyDown(KeyCode.D))
+                {
+                    GautiZalos(10, 1);
                 }
             }
         }
@@ -815,17 +826,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         Greitis = PradinisGreitis * GreicioMod;
         Soklumas = PradinisSoklumas * SoklumoMod;
     }
-    /*
-    private void AtnaujintiZaidejuSarasa()
-    {
-        GameObject[] VisuZaidejuObjektai = GameObject.FindGameObjectsWithTag("Player");
-        ZaidejuSarasas.Clear();
-        foreach (GameObject go in VisuZaidejuObjektai)
-        {
-            ZaidejuSarasas.Add(go.GetComponent<Zaidejas>());
-        }
-    }
-    */
+
     private void ZaidejuInformacijosLangoValdymas(bool ArAktyvinti)
     {
         if(ArAktyvinti)
@@ -887,6 +888,22 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         else
         {
             ZaidimoUzdarymoLangas.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
+
+    public void KeistiPagerinimuLangoAktyvuma()
+    {
+        if (PagerinimuLangas.activeSelf)
+        {
+            PagerinimuLangas.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            PagerinimuLangas.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
