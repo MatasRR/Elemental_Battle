@@ -26,8 +26,6 @@ public class Elementas : MonoBehaviourPun
 
     [HideInInspector]
     public float Patirtis;
-    [HideInInspector]
-    public TextMeshProUGUI PatirtiesTekstas;
 
     [HideInInspector]
     public float BCD = 0;
@@ -82,15 +80,12 @@ public class Elementas : MonoBehaviourPun
         BBBCDFonas = ZaidejoKodas.BBBCDFonas;
         UCDFonas = ZaidejoKodas.UCDFonas;
 
-        PatirtiesTekstas = ZaidejoKodas.TestinisTekstas;
-
         CDNustatymas();
     }
 
     public virtual void Update()
     {
         Patirtis += Time.deltaTime;
-        PatirtiesTekstas.text = Mathf.Floor(Patirtis).ToString();
 
         DabBCD -= Time.deltaTime;
         DabBBCD -= Time.deltaTime;
