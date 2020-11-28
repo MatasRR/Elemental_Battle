@@ -52,11 +52,20 @@ public class Vanduo : Elementas
     public float B4Zala;
 
     public float B4AtsiradimoNuotolis;
-    public float B4IeciuSkaicius;
-    public float B4LaikasTarpIeciu;
+    public float B4DaiktuSkaicius;
     public float B4DaiktoGreitis;
     public GameObject B4Daiktas;
+    /*
+    [Header("B 5: ")]
+    public Sprite[] B5Paveiksleliai;
+    public float B5_CD;
 
+    public float B5Zala;
+
+    public float B5JudejimoCCLaikas;
+    public float B5DaiktoGreitis;
+    public GameObject B5Daiktas;
+    */
     [Header("U 1: ")]
     public Sprite[] U1Paveiksleliai;
 	public float U1_CD;
@@ -203,20 +212,9 @@ public class Vanduo : Elementas
 
     public override void B4()
     {
-        StartCoroutine(_B4());
-    }
-
-    IEnumerator _B4()
-    {
-        ZaidejoKodas.GebejimuAktyvinimoLaikas = ZaidejoKodas.LikesGebejimuAktyvinimoLaikas = B4LaikasTarpIeciu * (B4IeciuSkaicius - 1);
-
-        for (int i = 0; i < B4IeciuSkaicius; i++)
+        if (Physics.Raycast(Kamera.ScreenPointToRay(Input.mousePosition), out RaycastHit PataikytasObjektas))
         {
-            if (Physics.Raycast(Kamera.ScreenPointToRay(Input.mousePosition), out RaycastHit PataikytasObjektas))
-            {
-                photonView.RPC("RPCKurtiVanduoB4", RpcTarget.All, PataikytasObjektas.point);
-            }
-            yield return new WaitForSeconds(B4LaikasTarpIeciu);
+            photonView.RPC("RPCKurtiVanduoB4", RpcTarget.All, PataikytasObjektas.point);
         }
     }
 
