@@ -2,6 +2,8 @@
 Spyglių spinduliai turėtų ignoruoti žaidėjus
 Cunamis eina kiauriai objektus
 Mirus neatsistato greitis
+Įlindimas į sienas
+Root rašo visada
 
 
 
@@ -10,8 +12,10 @@ SFX
 Debesies mesh
 Žemės drebėjimo VFX
 Vortex atsiradimas (dabar counter-intuitive)
-Channel UI
 Atnaujinti duomenis (vardai, skin'ai ir t.t.) tik atsiradus naujam žaidėjui
+Pagerinimų UI (Tekstas ir nerodyti negalimų)
+Pelės jautrumo valdymas
+Reljefas
 
 
 
@@ -44,12 +48,3 @@ List<DOT> DamageOverTimeEffects;
 		float Damage;
 		float Duration;
 	}
-
-if (Channeling)
-{
-	return;
-}
-
-ChannelSlider.TotalAmount = Trukme;
-ChannelSlider.Amount -= Time.deltaTime;
-ChannelText.text = Trukme.ToString();

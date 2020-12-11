@@ -11,6 +11,8 @@ public class Ugnis : Elementas
     public float B1_CD;
 
     public float B1Zala;
+    public float B1Nuotolis;
+
     public float B1_DOTZala;
     public float B1_DOTDaznis;
     public float B1_DOTTrukme;
@@ -31,8 +33,9 @@ public class Ugnis : Elementas
     public float B3_CD;
 
     public float B3Zala;
-    public float B3ZalojimoDaznis;
     public float B3Nuotolis;
+
+    public float B3ZalojimoDaznis;
     public float B3Trukme;
     
     public GameObject B3Daiktas;
@@ -52,6 +55,8 @@ public class Ugnis : Elementas
     public float B5_CD;
 
     public float B5Zala;
+    public float B5Nuotolis;
+
     public float B5StingdymoLaikas;
     public float B5NuginklavimoLaikas;
 
@@ -64,6 +69,7 @@ public class Ugnis : Elementas
 
     public float U1Zala;
 
+    public float U1AtsiradimoAukstis;
     public float U1DaiktoGreitis;
     public float U1SunaikinimoLaikasPoKontakto;
     public float U1SpindulioIlgis;
@@ -109,7 +115,7 @@ public class Ugnis : Elementas
     public GameObject U3Daiktas;
     public GameObject U3Zaibas;
 
-
+    
     public override void Update()
     {
         base.Update();
@@ -117,7 +123,7 @@ public class Ugnis : Elementas
         B4Liepsnos();
         U3ZaibuLaikmatis();
     }
-
+    
     public override void B1()
     {
         if (Physics.Raycast(Kamera.ScreenPointToRay(Input.mousePosition), out RaycastHit PataikytasObjektas))
@@ -129,7 +135,7 @@ public class Ugnis : Elementas
     [PunRPC]
     void RPCKurtiUgnisB1(Vector3 ZiurimasTaskas)
     {
-        GameObject UgnisB1 = Instantiate(B1Daiktas, KulkuAtsiradimoVieta.position, KulkuAtsiradimoVieta.rotation);
+        GameObject UgnisB1 = Instantiate(B1Daiktas, KulkosVieta(B1Nuotolis), transform.rotation);
         Kulka KulkosKodas = UgnisB1.GetComponent<Kulka>();
 
         UgnisB1.transform.LookAt(ZiurimasTaskas);
@@ -175,8 +181,7 @@ public class Ugnis : Elementas
     [PunRPC]
     void RPCKurtiUgnisB3()
     {
-        Vector3 AtsiradimoVieta = transform.position + transform.forward * B3Nuotolis;
-        GameObject UgnisB3 = Instantiate(B3Daiktas, AtsiradimoVieta, KulkuAtsiradimoVieta.rotation);
+        GameObject UgnisB3 = Instantiate(B3Daiktas, KulkosVieta(B3Nuotolis, -transform.localScale.y / 2), transform.rotation);
         UgnisB3 KulkosKodas = UgnisB3.GetComponent<UgnisB3>();
 
         KulkosKodas.Daznis = B3ZalojimoDaznis;
@@ -214,7 +219,7 @@ public class Ugnis : Elementas
     [PunRPC]
     void RPCKurtiUgnisB4()
     {
-        Vector3 AtsiradimoVieta = KojuVieta.position;
+        Vector3 AtsiradimoVieta = KulkosVieta(0, -1);
         AtsiradimoVieta.x += Random.Range(-0.5f, 0.5f);
         AtsiradimoVieta.z += Random.Range(-0.5f, 0.5f);
 
@@ -234,7 +239,7 @@ public class Ugnis : Elementas
     [PunRPC]
     void RPCKurtiUgnisB5(Vector3 ZiurimasTaskas)
     {
-        GameObject UgnisB5 = Instantiate(B5Daiktas, KulkuAtsiradimoVieta.position, KulkuAtsiradimoVieta.rotation);
+        GameObject UgnisB5 = Instantiate(B5Daiktas, KulkosVieta(B5Nuotolis), transform.rotation);
         Kulka KulkosKodas = UgnisB5.GetComponent<Kulka>();
 
         UgnisB5.transform.LookAt(ZiurimasTaskas);
@@ -263,9 +268,8 @@ public class Ugnis : Elementas
     [PunRPC]
     void RPCKurtiUgnisU1(Vector3 ZiurimasTaskas)
     {
-        Vector3 AtsiradimoVieta = ZiurimasTaskas + new Vector3(Random.Range(-100f, 100f), 100, Random.Range(-100f, 100f));
-        Quaternion AtsiradimoPosukis = transform.rotation * Quaternion.identity;
-        GameObject UgnisU1 = Instantiate(U1Daiktas, AtsiradimoVieta, AtsiradimoPosukis);
+        Vector3 AtsiradimoVieta = ZiurimasTaskas + new Vector3(Random.Range(-100f, 100f), U1AtsiradimoAukstis, Random.Range(-100f, 100f));
+        GameObject UgnisU1 = Instantiate(U1Daiktas, AtsiradimoVieta, transform.rotation);
         UgnisU1 KulkosKodas = UgnisU1.GetComponent<UgnisU1>();
 
         UgnisU1.transform.LookAt(ZiurimasTaskas);

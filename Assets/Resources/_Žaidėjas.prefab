@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 47.907135, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3880339407632255657
 CanvasRenderer:
@@ -127,7 +127,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 47.907135, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9050832811437839305
 CanvasRenderer:
@@ -723,7 +723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2106455543211015903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -952,7 +952,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5474342400645769618
 CanvasRenderer:
@@ -1562,7 +1562,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6568906264671806823
 CanvasRenderer:
@@ -1898,7 +1898,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7270222786325554469
 CanvasRenderer:
@@ -2123,7 +2123,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 47.907135, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1424846982021751342
 CanvasRenderer:
@@ -2852,7 +2852,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4258474297093636359
 CanvasRenderer:
@@ -3077,7 +3077,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6673991248903983054
 CanvasRenderer:
@@ -3552,7 +3552,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 47.907135, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4250530150660610284
 CanvasRenderer:
@@ -4213,7 +4213,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 47.907135, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5560305958063221420
 CanvasRenderer:
@@ -5130,7 +5130,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7628693171398563579
 CanvasRenderer:
@@ -6399,7 +6399,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4221864588543720415
 CanvasRenderer:
@@ -6939,7 +6939,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3216554297467467137
 CanvasRenderer:
@@ -8558,7 +8558,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 47.907135, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4107640665986138086
 CanvasRenderer:
@@ -9247,8 +9247,9 @@ MonoBehaviour:
   SkraidymoCCLaikas: 0
   JudejimoCCLaikas: 0
   PuolimoCCLaikas: 0
-  GebejimuAktyvinimoLaikas: 0
-  LikesGebejimuAktyvinimoLaikas: 0
+  GebejimuAktyvavimoLaikas: 0
+  LikesGebejimuAktyvavimoLaikas: 0
+  StiprusGebejimoAktyvavimas: 0
   NuzudymuSk: 0
   MirciuSk: 0
   PaskutinioZalojusioZaidejoLaikas: 20
@@ -9267,6 +9268,7 @@ MonoBehaviour:
   - {fileID: 6755474113927048382}
   - {fileID: 4066796887454504155}
   - {fileID: 1710943335512633495}
+  - {fileID: 4992153099038504698}
   BCDTekstas: {fileID: 24096470749924342}
   BBCDTekstas: {fileID: 5448765574176775626}
   BBBCDTekstas: {fileID: 568098463529593192}
@@ -9328,6 +9330,8 @@ MonoBehaviour:
   - {fileID: 3528453444993171388}
   ZaidimoUzdarymoLangas: {fileID: 1177674310126466796}
   PagerinimuLangas: {fileID: 6346841578713646509}
+  PatirtiesLangas: {fileID: 529063368748496754}
+  PatirtiesTekstas: {fileID: 6802495624248606645}
   EkranoDrobe: {fileID: 2571462676663346594}
   ZaidimoDrobe: {fileID: 1751134572156918263}
   TestinisTekstas: {fileID: 1070541583084234199}
@@ -9343,7 +9347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6202be9aa62854a469868a9e6c2e8fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PelesJautrumas: 2
+  PelesJautrumas: 5
   NuotolisIkiZemes: 0.6
   KritimoDaugiklis: 3
   ZemoSuolioDaugiklis: 2
@@ -9387,6 +9391,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B1_CD: 2
   B1Zala: 20
+  B1Nuotolis: 2
   B1Daiktas: {fileID: 9053628130273458566, guid: 52bb6cf560eaaab41b7395ee0ef668f0,
     type: 3}
   B1DaiktoGreitis: 40
@@ -9413,6 +9418,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B5_CD: 8
   B5Zala: 20
+  B5Nuotolis: 2
   B5Jega: 15
   B5DaiktoGreitis: 30
   B5Daiktas: {fileID: 2826960234985867226, guid: f914616c86243974c9370737e5b3b5b0,
@@ -9421,10 +9427,10 @@ MonoBehaviour:
   - {fileID: -8698522231862436985, guid: b387d83d74857bf4abe57403b2d1f800, type: 3}
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B6_CD: 5
+  B6Nuotolis: 3
   B6SkydoGyvybes: 0
   B6MaxSugeriamaZala: 50
   B6Trukme: 1.5
-  B6Nuotolis: 3
   B6Daiktas: {fileID: 5287862160645362979, guid: 4046526d01e0ed049a6d26b45524ec9c,
     type: 3}
   U1Paveiksleliai:
@@ -9444,6 +9450,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   U2_CD: 30
   U2Zala: 250
+  U2Nuotolis: 0
   U2Jega: 25
   U2DaiktoGreitis: 10
   U2AtsiradimoAukstis: 30
@@ -9501,6 +9508,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B1_CD: 4
   B1Zala: 25
+  B1Nuotolis: 2
   B1SuletinimoStipris: 1
   B1SuletinimoLaikas: 0
   B1SustingdymoLaikas: 0
@@ -9533,7 +9541,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B4_CD: 5
   B4Zala: 30
-  B4AtsiradimoNuotolis: 1
+  B4Nuotolis: 3
   B4IeciuSkaicius: 1
   B4LaikasTarpIeciu: 0.25
   B4DaiktoGreitis: 35
@@ -9544,7 +9552,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   U1_CD: 25
   U1Zala: 300
-  U1AtsiradimoNuotolis: 7
+  U1Nuotolis: 9
   U1DaiktoGreitis: 13
   U1GreitejimoKoeficientas: 0
   U1PlatejimoKoeficientas: 0
@@ -9555,7 +9563,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   U2_CD: 35
   U2Zala: 5
-  U2Jega: 1
+  U2Jega: 2
   U2Daznis: 0.25
   U2SferosDydis: 7.5
   U2SpindulioIlgis: 50
@@ -9567,9 +9575,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   U3_CD: 40
   U3Zala: 250
+  U3Nuotolis: 3
   U3Jega: 25
   U3IlgejimoGreitis: 0.75
-  U3AtsiradimoNuotolis: 1
   U3Delsimas: 0.5
   U3SaltinioDaiktas: {fileID: 5775546076910143857, guid: 9566f2d996ec7f948b7c93296665a1ff,
     type: 3}
@@ -9603,7 +9611,7 @@ MonoBehaviour:
   U1GreitejimoKaina: 0
   U1PlatejimoKoeficientas: 0.04
   U1PlatejimoKaina: 0
-  U2Jega: 2.5
+  U2Jega: 3
   U2DidesnesJegosKaina: 0
   U3IlgejimoGreitis: 1
   U3DelsimoLaikas: 0.25
@@ -9648,6 +9656,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B1_CD: 3
   B1Zala: 35
+  B1Nuotolis: 0
   B1DaiktoGreitis: 30
   B1Daiktas: {fileID: 4321634927597242044, guid: 6e96c287d5e07554a89c1fddaf83052e,
     type: 3}
@@ -9655,9 +9664,9 @@ MonoBehaviour:
   - {fileID: -6661798910550815772, guid: dd25b187627f949409d70fc1db2386c2, type: 3}
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B2_CD: 9
+  B2Nuotolis: 3
   B2Gyvybes: 50
   B2MaxSugeriamaZala: 70
-  B2Nuotolis: 3
   B2Aukstis: 5
   B2DidejimoLaikas: 0.4
   B2Spindulys: 50
@@ -9669,8 +9678,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B3_CD: 7
   B3Zala: 50
+  B3Nuotolis: 5
   B3DaiktoGreitis: 35
-  B3AtsiradimoNuotolis: 1
   B3SukimosiGreitis: 360
   B3Daiktas: {fileID: 110388908982238787, guid: c713d3aa04458b84b805dddd72d6309b,
     type: 3}
@@ -9679,12 +9688,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B4_CD: 8
   B4Zala: 50
+  B4Nuotolis: 5
   B4Aukstis: 100
   B4DidejimoLaikas: 0.3
   B4SpygliuSkaicius: 15
   B4SpygliuTrukme: 2
   B4AtstumasTarpSpygliu: 2
-  B4AtstumasIkiPirmoSpyglio: 3
   B4LaikasTarpSpygliuSukurimo: 0.03
   B4TikrinimoAukstis: 10
   B4Daiktas: {fileID: 2927126028304125698, guid: b525e5245853eab45a05adad728f70b3,
@@ -9712,12 +9721,12 @@ MonoBehaviour:
   U2Paveiksleliai:
   - {fileID: 4861217598361001852, guid: dd25b187627f949409d70fc1db2386c2, type: 3}
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
-  U2_CD: 5
+  U2_CD: 30
   U2Zala: 300
   U2ZalaPoKontakto: 200
+  U2Nuotolis: 4
   U2SpindulioIlgis: 100
   U2SkrydzioAukstis: 5
-  U2AtsiradimoNuotolis: 7
   U2DaiktoGreitis: 1
   U2SunaikinimoLaikasPoKontakto: 3
   U2Daiktas: {fileID: 4321634927597242044, guid: 2f6a66331a849cf42b96f64c242fbfba,
@@ -9774,6 +9783,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B1_CD: 5
   B1Zala: 20
+  B1Nuotolis: 2
   B1_DOTZala: 5
   B1_DOTDaznis: 0.4
   B1_DOTTrukme: 2
@@ -9793,8 +9803,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B3_CD: 14
   B3Zala: 10
+  B3Nuotolis: 15
   B3ZalojimoDaznis: 0.25
-  B3Nuotolis: 12
   B3Trukme: 5
   B3Daiktas: {fileID: 3479311114505999219, guid: 3f899e9975c7a6148876af604cab33bb,
     type: 3}
@@ -9811,6 +9821,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   B5_CD: 16
   B5Zala: 40
+  B5Nuotolis: 2
   B5StingdymoLaikas: 2
   B5NuginklavimoLaikas: 2
   B5DaiktoGreitis: 100
@@ -9821,6 +9832,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31a93ace12062334490648d51ab9efe6, type: 3}
   U1_CD: 35
   U1Zala: 300
+  U1AtsiradimoAukstis: 100
   U1DaiktoGreitis: 65
   U1SunaikinimoLaikasPoKontakto: 3
   U1SpindulioIlgis: 150
@@ -11626,7 +11638,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 47.907135, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3814306852612648610
 CanvasRenderer:
@@ -11808,7 +11820,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 47.907135, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2433837933215475992
 CanvasRenderer:
@@ -12719,7 +12731,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 47.907135, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5227771043172168561
 CanvasRenderer:
@@ -12885,7 +12897,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2581677814698392158
 CanvasRenderer:
@@ -12976,7 +12988,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 47.907135, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3848208010646483285
 CanvasRenderer:
@@ -13067,7 +13079,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.16219181, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2242757299598937158
 CanvasRenderer:
@@ -13131,6 +13143,26 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -13143,6 +13175,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
         type: 3}
@@ -13161,16 +13198,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
         type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
-        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
@@ -13183,21 +13210,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: e33481087d5d547439c81114ae6421e9,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: e33481087d5d547439c81114ae6421e9,
         type: 3}

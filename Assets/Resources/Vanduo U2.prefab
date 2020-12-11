@@ -64,6 +64,8 @@ MonoBehaviour:
   DOTTrukme: 0
   Greitis: 0
   Autorius: {fileID: 0}
+  AutoriausZaidejoKodas: {fileID: 0}
+  AutoriausElementoKodas: {fileID: 0}
   KomandosNr: 0
   ElementoNr: 0
   AtakosMod: 0
@@ -74,7 +76,7 @@ MonoBehaviour:
   SoklumoSilpninimoStipris: 0
   EinaKiaurai: 1
   TuriFizikosEfektu: 1
-  GaliVeiktiAukaKelisKartus: 0
+  GaliVeiktiAukaKelisKartus: 1
   Jega: 0
   Daznis: 0
   Dydis: 0
@@ -85,6 +87,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4802456841996787833}
     m_Modifications:
+    - target: {fileID: 16914203069193228, guid: 993f641c15a639741a8d2040b3bc8376,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 16914203069193228, guid: 993f641c15a639741a8d2040b3bc8376,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -102,6 +109,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 16914203069193228, guid: 993f641c15a639741a8d2040b3bc8376,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 16914203069193228, guid: 993f641c15a639741a8d2040b3bc8376,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.7071068
       objectReference: {fileID: 0}
@@ -113,16 +125,6 @@ PrefabInstance:
     - target: {fileID: 16914203069193228, guid: 993f641c15a639741a8d2040b3bc8376,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 16914203069193228, guid: 993f641c15a639741a8d2040b3bc8376,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 16914203069193228, guid: 993f641c15a639741a8d2040b3bc8376,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 16914203069193228, guid: 993f641c15a639741a8d2040b3bc8376,

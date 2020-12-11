@@ -23,7 +23,8 @@ public class Meniu : MonoBehaviour
     public GameObject KeruMygtukuAntrojiLentele;
     public GameObject KeruLentele;
     public GameObject[] KeruLenteles;
-    
+
+    public Button[] KeruNumeriuMygtukai;
     public Button[] PaprastujuKeruMygtukai;
     public Button[] GalingujuKeruMygtukai;
 
@@ -89,20 +90,16 @@ public class Meniu : MonoBehaviour
                 break;
         }
 
-        KeruMygtukuAntrojiLentele.SetActive(true);
         Duomenys.B1 = Duomenys.B2 = Duomenys.B3 = Duomenys.U = 0;
-
-        if (DabMygtukas != 0)
-        {
-            RodytiKerus(Duomenys.Elementas);
-        }
+        KeruMygtukuAntrojiLentele.SetActive(true);
+        RodytiKerus(Duomenys.Elementas);
+        KeruMygtukas(1);
     }
 
     public void KeruMygtukas (int Nr)
     {
         DabMygtukas = Nr;
-
-        RodytiKerus(Duomenys.Elementas);
+        KeistiNumeriuMygtukuSpalvas();
 
         if (Nr < 4)
         {
@@ -134,17 +131,21 @@ public class Meniu : MonoBehaviour
         {
             case 1:
                 Duomenys.B1 = Nr;
+                DabMygtukas++;
                 break;
             case 2:
                 Duomenys.B2 = Nr;
+                DabMygtukas++;
                 break;
             case 3:
                 Duomenys.B3 = Nr;
+                DabMygtukas++;
                 break;
             case 4:
                 Duomenys.U = Nr;
                 break;
         }
+        KeruMygtukas(DabMygtukas);
     }
 
     public void RodytiPasirinktuKeruNr (Text Tekstas)
@@ -163,29 +164,28 @@ public class Meniu : MonoBehaviour
             Lentele.GetComponent<Image>().color = Spalva;
         }
     }
+    void KeistiNumeriuMygtukuSpalvas()
+    {
+        foreach (Button Mygtukas in KeruNumeriuMygtukai)
+        {
+            Color Spalva = Mygtukas.GetComponent<Image>().color;
+            Spalva.a = 0.5f;
+            Mygtukas.GetComponent<Image>().color = Spalva;
+        }
+
+        Color RyskiSpalva = KeruNumeriuMygtukai[DabMygtukas - 1].GetComponent<Image>().color;
+        RyskiSpalva.a = 1f;
+        KeruNumeriuMygtukai[DabMygtukas - 1].GetComponent<Image>().color = RyskiSpalva;
+    }
 
     void RodytiKerus (int Elementas)
     {
         foreach (GameObject Lentele in KeruLenteles)
         {
-            Lentele.SetActive (false);
+            Lentele.SetActive(false);
         }
 
-        switch (Elementas)
-        {
-            case 1:
-                KeruLenteles[0].SetActive(true);
-                break;
-            case 2:
-                KeruLenteles[1].SetActive(true);
-                break;
-            case 3:
-                KeruLenteles[2].SetActive(true);
-                break;
-            case 4:
-                KeruLenteles[3].SetActive(true);
-                break;
-        }
+        KeruLenteles[Elementas-1].SetActive(true);
     }
 
     public void PasirinktiKomanda(int Nr)

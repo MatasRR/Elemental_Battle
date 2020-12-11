@@ -11,6 +11,8 @@ public class Vanduo : Elementas
 	public float B1_CD;
 
     public float B1Zala;
+    public float B1Nuotolis;
+
     public float B1SuletinimoStipris;
     public float B1SuletinimoLaikas;
     public float B1SustingdymoLaikas;
@@ -50,8 +52,8 @@ public class Vanduo : Elementas
     public float B4_CD;
 
     public float B4Zala;
+    public float B4Nuotolis;
 
-    public float B4AtsiradimoNuotolis;
     public float B4IeciuSkaicius;
     public float B4LaikasTarpIeciu;
     public float B4DaiktoGreitis;
@@ -62,8 +64,8 @@ public class Vanduo : Elementas
 	public float U1_CD;
 
     public float U1Zala;
+    public float U1Nuotolis;
 
-    public float U1AtsiradimoNuotolis;
     public float U1DaiktoGreitis;
     public float U1GreitejimoKoeficientas;
     public float U1PlatejimoKoeficientas;
@@ -87,10 +89,10 @@ public class Vanduo : Elementas
     public float U3_CD;
 
     public float U3Zala;
+    public float U3Nuotolis;
 
     public float U3Jega;
     public float U3IlgejimoGreitis;
-    public float U3AtsiradimoNuotolis;
     public float U3Delsimas;
     public GameObject U3SaltinioDaiktas;
     public GameObject U3Daiktas;
@@ -104,6 +106,11 @@ public class Vanduo : Elementas
 
     public override void B1()
     {
+        _B1();
+    }
+
+    void _B1()
+    {
         if (Physics.Raycast(Kamera.ScreenPointToRay(Input.mousePosition), out RaycastHit PataikytasObjektas))
         {
             photonView.RPC("RPCKurtiVanduoB1", RpcTarget.All, PataikytasObjektas.point);
@@ -113,7 +120,7 @@ public class Vanduo : Elementas
     [PunRPC]
     void RPCKurtiVanduoB1(Vector3 ZiurimasTaskas)
     {
-        GameObject VanduoB1 = Instantiate(B1Daiktas, KulkuAtsiradimoVieta.position, KulkuAtsiradimoVieta.rotation);
+        GameObject VanduoB1 = Instantiate(B1Daiktas, KulkosVieta(B1Nuotolis), transform.rotation);
         Kulka KulkosKodas = VanduoB1.GetComponent<Kulka>();
 
         VanduoB1.transform.LookAt(ZiurimasTaskas);
@@ -135,7 +142,7 @@ public class Vanduo : Elementas
 
     IEnumerator _B2()
     {
-        ZaidejoKodas.GebejimuAktyvinimoLaikas = ZaidejoKodas.LikesGebejimuAktyvinimoLaikas = B2GydymoLaikas;
+        ZaidejoKodas.PradetiGebejimoAktyvavimoLaukima(B2GydymoLaikas, true);
         yield return new WaitForSeconds(B2GydymoLaikas);
         ZaidejoKodas.Gyvybes += B2Gydymas;
     }
@@ -208,7 +215,7 @@ public class Vanduo : Elementas
 
     IEnumerator _B4()
     {
-        ZaidejoKodas.GebejimuAktyvinimoLaikas = ZaidejoKodas.LikesGebejimuAktyvinimoLaikas = B4LaikasTarpIeciu * (B4IeciuSkaicius - 1);
+        ZaidejoKodas.GebejimuAktyvavimoLaikas = ZaidejoKodas.LikesGebejimuAktyvavimoLaikas = B4LaikasTarpIeciu * (B4IeciuSkaicius - 1);
 
         for (int i = 0; i < B4IeciuSkaicius; i++)
         {
@@ -223,8 +230,7 @@ public class Vanduo : Elementas
     [PunRPC]
     void RPCKurtiVanduoB4(Vector3 ZiurimasTaskas)
     {
-        Vector3 AtsiradimoVieta = KulkuAtsiradimoVieta.position + (transform.forward * B4AtsiradimoNuotolis);
-        GameObject VanduoB4 = Instantiate(B4Daiktas, AtsiradimoVieta, KulkuAtsiradimoVieta.rotation);
+        GameObject VanduoB4 = Instantiate(B4Daiktas, KulkosVieta(B4Nuotolis), transform.rotation);
         Kulka KulkosKodas = VanduoB4.GetComponent<Kulka>();
 
         VanduoB4.transform.LookAt(ZiurimasTaskas);
@@ -268,9 +274,7 @@ public class Vanduo : Elementas
 	[PunRPC]
 	void RPCKurtiVanduoU1()
     {
-        Vector3 AtsiradimoVieta = KulkuAtsiradimoVieta.position + (transform.forward * U1AtsiradimoNuotolis) - (transform.up * transform.localScale.y / 2);
-        Quaternion AtsiradimoPosukis = Quaternion.Euler(0, transform.eulerAngles.y, 0);
-        GameObject VanduoU1 = Instantiate (U1Daiktas, AtsiradimoVieta, AtsiradimoPosukis);
+        GameObject VanduoU1 = Instantiate (U1Daiktas, KulkosVieta(U1Nuotolis, U1Daiktas.transform.localScale.y / 2), transform.rotation);
 		VanduoU1 KulkosKodas = VanduoU1.GetComponent<VanduoU1>();
 
         KulkosKodas.Greitis = U1DaiktoGreitis;
@@ -297,7 +301,7 @@ public class Vanduo : Elementas
     [PunRPC]
     void RPCKurtiVanduoU2(Vector3 ZiurimasTaskas)
     {
-        GameObject VanduoU2 = Instantiate(U2Daiktas, ZiurimasTaskas, KulkuAtsiradimoVieta.rotation);
+        GameObject VanduoU2 = Instantiate(U2Daiktas, ZiurimasTaskas, transform.rotation);
         VanduoU2 KulkosKodas = VanduoU2.GetComponent<VanduoU2>();
 
         KulkosKodas.Zala = U2Zala;
@@ -319,8 +323,7 @@ public class Vanduo : Elementas
 
     IEnumerator U3Aktyvavimas(Vector3 ZiurimasTaskas)
     {
-        ZaidejoKodas.JudejimoLaikoIgnoravimas++;
-        ZaidejoKodas.PuolimoLaikoIgnoravimas++;
+        ZaidejoKodas.PradetiGebejimoAktyvavimoLaukima(U3Delsimas, true);
 
         photonView.RPC("RPCKurtiVanduoU3Saltini", RpcTarget.All, ZiurimasTaskas);
         yield return new WaitForSeconds(U3Delsimas);
@@ -330,16 +333,14 @@ public class Vanduo : Elementas
     [PunRPC]
     void RPCKurtiVanduoU3Saltini(Vector3 ZiurimasTaskas)
     {
-        Vector3 AtsiradimoVieta = KulkuAtsiradimoVieta.position + (transform.forward * U3AtsiradimoNuotolis);
-        GameObject VanduoU3Saltinis = Instantiate(U3SaltinioDaiktas, AtsiradimoVieta, KulkuAtsiradimoVieta.rotation);
+        GameObject VanduoU3Saltinis = Instantiate(U3SaltinioDaiktas, KulkosVieta(U3Nuotolis), transform.rotation);
         Destroy(VanduoU3Saltinis, U3Delsimas + 0.1f);
     }
 
     [PunRPC]
     void RPCKurtiVanduoU3(Vector3 ZiurimasTaskas)
     {
-        Vector3 AtsiradimoVieta = KulkuAtsiradimoVieta.position + (transform.forward * U3AtsiradimoNuotolis);
-        GameObject VanduoU3 = Instantiate(U3Daiktas, AtsiradimoVieta, KulkuAtsiradimoVieta.rotation);
+        GameObject VanduoU3 = Instantiate(U3Daiktas, KulkosVieta(U3Nuotolis), transform.rotation);
         VanduoU3 KulkosKodas = VanduoU3.GetComponent<VanduoU3>();
 
         VanduoU3.transform.LookAt(ZiurimasTaskas);

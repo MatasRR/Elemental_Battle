@@ -12,6 +12,7 @@ public class Zeme : Elementas
     public float B1_CD;
 
     public float B1Zala;
+    public float B1Nuotolis;
 
     public float B1DaiktoGreitis;
     public GameObject B1Daiktas;
@@ -20,9 +21,10 @@ public class Zeme : Elementas
     public Sprite[] B2Paveiksleliai;
     public float B2_CD;
 
+    public float B2Nuotolis;
+
     public float B2Gyvybes;
     public float B2MaxSugeriamaZala;
-    public float B2Nuotolis;
     public float B2Aukstis;
     public float B2DidejimoLaikas;
     public float B2Spindulys;
@@ -34,9 +36,9 @@ public class Zeme : Elementas
     public float B3_CD;
 
     public float B3Zala;
+    public float B3Nuotolis;
 
     public float B3DaiktoGreitis;
-    public float B3AtsiradimoNuotolis;
     public float B3SukimosiGreitis;
     public GameObject B3Daiktas;
 
@@ -45,6 +47,7 @@ public class Zeme : Elementas
     public float B4_CD;
 
     public float B4Zala;
+    public float B4Nuotolis;
 
     public float B4Aukstis;
     public float B4DidejimoLaikas;
@@ -52,7 +55,6 @@ public class Zeme : Elementas
     public int B4SpygliuSkaicius;
     public float B4SpygliuTrukme;
     public float B4AtstumasTarpSpygliu;
-    public float B4AtstumasIkiPirmoSpyglio;
     public float B4LaikasTarpSpygliuSukurimo;
     public float B4TikrinimoAukstis;
     public GameObject B4Daiktas;
@@ -84,10 +86,10 @@ public class Zeme : Elementas
 
     public float U2Zala;
     public float U2ZalaPoKontakto;
+    public float U2Nuotolis;
 
     public float U2SpindulioIlgis;
     public float U2SkrydzioAukstis;
-    public float U2AtsiradimoNuotolis;
     public float U2DaiktoGreitis;
     public float U2SunaikinimoLaikasPoKontakto;
     public GameObject U2Daiktas;
@@ -104,7 +106,7 @@ public class Zeme : Elementas
     [PunRPC]
     void RPCKurtiZemeB1(Vector3 ZiurimasTaskas)
     {
-        GameObject ZemeB1 = Instantiate(B1Daiktas, KulkuAtsiradimoVieta.position, KulkuAtsiradimoVieta.rotation);
+        GameObject ZemeB1 = Instantiate(B1Daiktas, KulkosVieta(B1Nuotolis), transform.rotation);
         Kulka KulkosKodas = ZemeB1.GetComponent<Kulka>();
 
         ZemeB1.transform.LookAt(ZiurimasTaskas);
@@ -131,11 +133,11 @@ public class Zeme : Elementas
         }
         else
         {
-            AtsiradimoVieta = transform.position + transform.forward * B2Nuotolis;
+            AtsiradimoVieta = KulkosVieta(B2Nuotolis);
             AtsiradimoVieta.y = KojuVieta.position.y;
         }
         
-        GameObject ZemeB2 = Instantiate(B2Daiktas, AtsiradimoVieta, KulkuAtsiradimoVieta.rotation);
+        GameObject ZemeB2 = Instantiate(B2Daiktas, AtsiradimoVieta, transform.rotation);
         ZemeB2irB5 SkydoKodas = ZemeB2.GetComponent<ZemeB2irB5>();
 
         SkydoKodas.Gyvybes = B2Gyvybes;
@@ -158,8 +160,7 @@ public class Zeme : Elementas
     [PunRPC]
     void RPCKurtiZemeB3(Vector3 ZiurimasTaskas)
     {
-        Vector3 AtsiradimoVieta = KulkuAtsiradimoVieta.position + (transform.forward * B3AtsiradimoNuotolis);
-        GameObject ZemeB3 = Instantiate(B3Daiktas, AtsiradimoVieta, KulkuAtsiradimoVieta.rotation);
+        GameObject ZemeB3 = Instantiate(B3Daiktas, KulkosVieta(B3Nuotolis), transform.rotation);
         Kulka KulkosKodas = ZemeB3.GetComponent<Kulka>();
 
         ZemeB3.transform.LookAt(ZiurimasTaskas);
@@ -179,14 +180,12 @@ public class Zeme : Elementas
 
     IEnumerator _B4()
     {
-        Vector3 Kryptis = Kamera.ScreenPointToRay(Input.mousePosition).direction;
-        Kryptis.y = 0;
-        Vector3.Normalize(Kryptis);
-        Vector3 SpindulioSaltinis = transform.position + new Vector3(0, B4TikrinimoAukstis, 0) + Kryptis * B4AtstumasIkiPirmoSpyglio;
+        Vector3 Kryptis = transform.forward;
+        Vector3 SpindulioSaltinis = transform.position + new Vector3(0, B4TikrinimoAukstis, 0) + Kryptis * B4Nuotolis;
 
         int AplinkosSluoksnis = LayerMask.GetMask("Aplinka");
 
-        ZaidejoKodas.GebejimuAktyvinimoLaikas = ZaidejoKodas.LikesGebejimuAktyvinimoLaikas = B4LaikasTarpSpygliuSukurimo * B4SpygliuSkaicius;
+        ZaidejoKodas.PradetiGebejimoAktyvavimoLaukima(B4LaikasTarpSpygliuSukurimo * B4SpygliuSkaicius);
 
         for (int i = 0; i < B4SpygliuSkaicius; i++)
         {
@@ -219,7 +218,7 @@ public class Zeme : Elementas
     [PunRPC]
     void RPCKurtiZemeB5()
     {
-        GameObject ZemeB5 = Instantiate(B5Daiktas, KojuVieta.position, KojuVieta.rotation);
+        GameObject ZemeB5 = Instantiate(B5Daiktas, KulkosVieta(0, -1), transform.rotation);
         ZemeB2irB5 SkydoKodas = ZemeB5.GetComponent<ZemeB2irB5>();
 
         SkydoKodas.Gyvybes = B5Gyvybes;
@@ -277,8 +276,7 @@ public class Zeme : Elementas
     [PunRPC]
     void RPCKurtiZemeU2(Vector3 ZiurimasTaskas)
     {
-        Vector3 AtsiradimoVieta = KulkuAtsiradimoVieta.position + (transform.forward * U2AtsiradimoNuotolis);
-        GameObject ZemeU2 = Instantiate(U2Daiktas, AtsiradimoVieta, KulkuAtsiradimoVieta.rotation);
+        GameObject ZemeU2 = Instantiate(U2Daiktas, KulkosVieta(U2Nuotolis), transform.rotation);
         ZemeU2 KulkosKodas = ZemeU2.GetComponent<ZemeU2>();
         
         KulkosKodas.Zala = U2Zala;

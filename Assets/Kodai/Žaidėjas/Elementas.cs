@@ -82,7 +82,7 @@ public class Elementas : MonoBehaviourPun
         BBBCDFonas = ZaidejoKodas.BBBCDFonas;
         UCDFonas = ZaidejoKodas.UCDFonas;
 
-        PatirtiesTekstas = ZaidejoKodas.TestinisTekstas;
+        PatirtiesTekstas = ZaidejoKodas.PatirtiesTekstas;
 
         CDNustatymas();
     }
@@ -113,9 +113,14 @@ public class Elementas : MonoBehaviourPun
         UCDFonas.fillAmount = DabUCD / UCD;
     }
 
+    public Vector3 KulkosVieta(float Nuotolis, float Aukstis = 0)
+    {
+        return transform.position + transform.forward * Nuotolis + Vector3.up * (transform.localScale.y / 2 + Aukstis);
+    }
+
     public virtual void FixedUpdate()
     {
-        if (!photonView.IsMine || !ZaidejoKodas.GaliPulti || ZaidejoKodas.LikesGebejimuAktyvinimoLaikas > 0)
+        if (!photonView.IsMine || !ZaidejoKodas.GaliPulti || ZaidejoKodas.LikesGebejimuAktyvavimoLaikas > 0)
         {
             return;
         }

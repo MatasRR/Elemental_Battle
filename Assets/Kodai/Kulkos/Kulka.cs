@@ -55,11 +55,26 @@ public class Kulka : MonoBehaviour
         }
 
         AutoriausZaidejoKodas = Autorius.GetComponent<Zaidejas>();
-        AutoriausElementoKodas = Autorius.GetComponent<Elementas>();
 
         ElementoNr = AutoriausZaidejoKodas.ElementoNr;
         KomandosNr = AutoriausZaidejoKodas.KomandosNr;
         AtakosMod = AutoriausZaidejoKodas.AtakosMod;
+
+        switch(ElementoNr)
+        {
+            case 1:
+                AutoriausElementoKodas = Autorius.GetComponent<Oras>();
+                break;
+            case 2:
+                AutoriausElementoKodas = Autorius.GetComponent<Vanduo>();
+                break;
+            case 3:
+                AutoriausElementoKodas = Autorius.GetComponent<Zeme>();
+                break;
+            case 4:
+                AutoriausElementoKodas = Autorius.GetComponent<Ugnis>();
+                break;
+        }
     }
 
     public virtual void Update()

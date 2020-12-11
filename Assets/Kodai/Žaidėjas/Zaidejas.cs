@@ -89,9 +89,11 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     [HideInInspector]
     public float PuolimoCCLaikas;
     [HideInInspector]
-    public float GebejimuAktyvinimoLaikas;
+    public float GebejimuAktyvavimoLaikas;
     [HideInInspector]
-    public float LikesGebejimuAktyvinimoLaikas;
+    public float LikesGebejimuAktyvavimoLaikas;
+    [HideInInspector]
+    public bool StiprusGebejimoAktyvavimas;
 
     [HideInInspector]
     public int NuzudymuSk;
@@ -178,6 +180,8 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public GameObject[] KomanduInformacijosLaukeliai;
     public GameObject ZaidimoUzdarymoLangas;
     public GameObject PagerinimuLangas;
+    public GameObject PatirtiesLangas;
+    public TextMeshProUGUI PatirtiesTekstas;
 
     public GameObject EkranoDrobe;
     public GameObject ZaidimoDrobe;
@@ -373,21 +377,21 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
             NuzudymuIrMirciuTekstas.text = NuzudymuSk.ToString() + " / " + MirciuSk.ToString();
             //PrisikelimoLaikoTekstas.text = LikesPrisikelimoLaikas.ToString();
 
-            if (LikesGebejimuAktyvinimoLaikas > 0 && !GebejimuAktyvinimoLangas.activeSelf)
+            if (LikesGebejimuAktyvavimoLaikas > 0 && !GebejimuAktyvinimoLangas.activeSelf)
             {
                 GebejimuAktyvinimoLangas.SetActive(true);
             }
             
 
-            if (LikesGebejimuAktyvinimoLaikas > 0)
+            if (LikesGebejimuAktyvavimoLaikas > 0)
             {
-                GebejimuAktyvinimoJuostele.fillAmount = LikesGebejimuAktyvinimoLaikas / GebejimuAktyvinimoLaikas;
-                GebejimuAktyvinimoLaikoTekstas.text = LikesGebejimuAktyvinimoLaikas.ToString("0.0");
-                LikesGebejimuAktyvinimoLaikas -= Time.deltaTime;
+                GebejimuAktyvinimoJuostele.fillAmount = LikesGebejimuAktyvavimoLaikas / GebejimuAktyvavimoLaikas;
+                GebejimuAktyvinimoLaikoTekstas.text = LikesGebejimuAktyvavimoLaikas.ToString("0.0") + (StiprusGebejimoAktyvavimas ? " + ROOT" : "");
+                LikesGebejimuAktyvavimoLaikas -= Time.deltaTime;
             }
-            else if (LikesGebejimuAktyvinimoLaikas < 0)
+            else if (LikesGebejimuAktyvavimoLaikas < 0)
             {
-                GebejimuAktyvinimoLaikas = 0;
+                GebejimuAktyvavimoLaikas = 0;
                 GebejimuAktyvinimoLangas.SetActive(false);
             }
 
@@ -622,6 +626,17 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
                 }
             }
         }
+    }
+
+    public void PapildytiTestiniTeksta (string Papildymas)
+    {
+        TestinisTekstas.text += Papildymas;
+    }
+
+    public void PradetiGebejimoAktyvavimoLaukima (float Laikas, bool Stiprus = false)
+    {
+        GebejimuAktyvavimoLaikas = LikesGebejimuAktyvavimoLaikas = Laikas;
+        StiprusGebejimoAktyvavimas = Stiprus;
     }
 
     public void KeistiPaskutiniZalojusiZaideja (Zaidejas NaujasZaidejas)

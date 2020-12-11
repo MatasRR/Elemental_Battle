@@ -30,7 +30,7 @@ public class VanduoU1 : Kulka
         
         if ((VirsAukstyn() && VirsZemyn()) || (!ToliAukstyn() && !ToliZemyn()))
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
         else if (VirsZemyn())
         {
