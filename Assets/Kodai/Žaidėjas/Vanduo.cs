@@ -215,7 +215,7 @@ public class Vanduo : Elementas
 
     IEnumerator _B4()
     {
-        ZaidejoKodas.GebejimuAktyvavimoLaikas = ZaidejoKodas.LikesGebejimuAktyvavimoLaikas = B4LaikasTarpIeciu * (B4IeciuSkaicius - 1);
+        ZaidejoKodas.PradetiGebejimoAktyvavimoLaukima(B4LaikasTarpIeciu * (B4IeciuSkaicius - 1));
 
         for (int i = 0; i < B4IeciuSkaicius; i++)
         {

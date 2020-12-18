@@ -67,6 +67,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public Vanduo VandensKodas;
     public Zeme ZemesKodas;
     public Ugnis UgniesKodas;
+    private Judejimas JudejimoKodas;
 
     [HideInInspector]
     public bool GaliSkraidyti;
@@ -178,7 +179,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public Transform ZaidejuInformacijosLentele;
     public GameObject ZaidejoInformacijosObjektas;
     public GameObject[] KomanduInformacijosLaukeliai;
-    public GameObject ZaidimoUzdarymoLangas;
+    public GameObject NustatymuLangas;
     public GameObject PagerinimuLangas;
     public GameObject PatirtiesLangas;
     public TextMeshProUGUI PatirtiesTekstas;
@@ -192,6 +193,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     void Start()
     {
         ZaidimoValdymoKodas = GameObject.FindGameObjectWithTag("GameController").GetComponent<ZaidimoValdymas>();
+        JudejimoKodas = GetComponent<Judejimas>();
         BendraKamera = ZaidimoValdymoKodas.BendraKamera;
 
         ZaidejoPasirinkimai();
@@ -596,7 +598,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                KeistiZaidimoUzdarymoLangoAktyvuma();
+                KeistiNustatymuLangoAktyvuma();
             }
 
             if (Input.GetKeyDown(KeyCode.U))
@@ -892,19 +894,22 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         }
     }
 
-    public void KeistiZaidimoUzdarymoLangoAktyvuma()
+    public void KeistiNustatymuLangoAktyvuma()
     {
-        if (ZaidimoUzdarymoLangas.activeSelf)
+        if (PagerinimuLangas.activeSelf)
         {
-            ZaidimoUzdarymoLangas.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            PagerinimuLangas.SetActive(false);
+            JudejimoKodas.KeistiUILanguAtidarymoBusena(false);
+        }
+        else if (NustatymuLangas.activeSelf)
+        {
+            NustatymuLangas.SetActive(false);
+            JudejimoKodas.KeistiUILanguAtidarymoBusena(false);
         }
         else
         {
-            ZaidimoUzdarymoLangas.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            NustatymuLangas.SetActive(true);
+            JudejimoKodas.KeistiUILanguAtidarymoBusena(true);
         }
     }
 
@@ -913,14 +918,13 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         if (PagerinimuLangas.activeSelf)
         {
             PagerinimuLangas.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            JudejimoKodas.KeistiUILanguAtidarymoBusena(false);
         }
         else
         {
             PagerinimuLangas.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            NustatymuLangas.SetActive(false);
+            JudejimoKodas.KeistiUILanguAtidarymoBusena(true);
         }
     }
 

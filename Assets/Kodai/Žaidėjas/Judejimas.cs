@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon;
 using Photon.Pun;
 
@@ -11,10 +12,15 @@ public class Judejimas : MonoBehaviourPun
     private Rigidbody RB;
     private float KamerosPersisukimas = 0f;
 
+    public Slider PelesJautrumoSlankiklis;
     public float PelesJautrumas;
+
     public float NuotolisIkiZemes;
     public float KritimoDaugiklis;
     public float ZemoSuolioDaugiklis;
+
+    [HideInInspector]
+    public bool AtidarytasUILangas = false;
 
     void Start()
     {
@@ -24,6 +30,7 @@ public class Judejimas : MonoBehaviourPun
         RB = gameObject.GetComponent<Rigidbody>();
         ZaidejoKodas = gameObject.GetComponent<Zaidejas>();
         Kamera = ZaidejoKodas.Kamera;
+        PelesJautrumoSlankiklis.value = PelesJautrumas;
     }
 
     void FixedUpdate()
@@ -37,7 +44,11 @@ public class Judejimas : MonoBehaviourPun
         {
             ZaidejoJudejimas();
         }
-        ZaidejoSukimasis();
+        
+        if (!AtidarytasUILangas)
+        {
+            ZaidejoSukimasis();
+        }
     }
 
 
@@ -105,5 +116,26 @@ public class Judejimas : MonoBehaviourPun
     public bool AntZemes()
     {
         return Physics.Raycast(transform.position, -Vector3.up, NuotolisIkiZemes + 0.5f);
+    }
+
+    public void KeistiPelesJautruma()
+    {
+        PelesJautrumas = PelesJautrumoSlankiklis.value;
+    }
+
+    public void KeistiUILanguAtidarymoBusena(bool Atidarytas)
+    {
+        if (Atidarytas)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            AtidarytasUILangas = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            AtidarytasUILangas = false;
+        }
     }
 }

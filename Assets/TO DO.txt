@@ -1,9 +1,11 @@
 ﻿BUGS:
 Spyglių spinduliai turėtų ignoruoti žaidėjus
+(De)buff juostos nesichnorizuoja kitiems žaidėjams
 Cunamis eina kiauriai objektus
 Mirus neatsistato greitis
 Įlindimas į sienas
 Root rašo visada
+Text Mesh Pro daro nesąmones
 
 
 
@@ -14,8 +16,9 @@ Debesies mesh
 Vortex atsiradimas (dabar counter-intuitive)
 Atnaujinti duomenis (vardai, skin'ai ir t.t.) tik atsiradus naujam žaidėjui
 Pagerinimų UI (Tekstas ir nerodyti negalimų)
-Pelės jautrumo valdymas
 Reljefas
+Galima judėti naudojant VandensU3
+Cooldown'us aktyvinus gebėjimą imti tiesiai iš gebėjimo (tada cooldown reduction'ą galima būtų padaryt)
 
 
 

@@ -273,6 +273,7 @@
      <Compile Include="Assets\Kodai\Kulkos\Kulka.cs" />
      <Compile Include="Assets\Kodai\Meniu\Paskyros\Pranesimai.cs" />
      <Compile Include="Assets\Pagalbinės programos\PlayFab\PlayFabSdk\Shared\Public\OneDSEventsModels.cs" />
+     <Compile Include="Assets\Kodai\Žaidėjas\AtrakinimoMygtukas.cs" />
      <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\Pagalbinės programos\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\Pagalbinės programos\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />

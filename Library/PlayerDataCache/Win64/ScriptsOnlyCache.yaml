@@ -122,7 +122,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    - TMPro.TMP_SubMeshUI
     - TMPro.TextMeshPro
     - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
@@ -146,6 +145,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
@@ -464,8 +464,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13858}
     - Class: 114
-      Script: {instanceID: 13976}
-    - Class: 114
       Script: {instanceID: 14360}
     - Class: 114
       Script: {instanceID: 14414}
@@ -531,6 +529,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 19610}
     - Class: 114
       Script: {instanceID: 19692}
+    - Class: 114
+      Script: {instanceID: 19724}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -644,8 +644,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13686}
     - Class: 114
       Script: {instanceID: 13858}
-    - Class: 114
-      Script: {instanceID: 13976}
     - Class: 114
       Script: {instanceID: 14254}
     - Class: 114
@@ -766,6 +764,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 19654}
     - Class: 114
       Script: {instanceID: 19692}
+    - Class: 114
+      Script: {instanceID: 19724}
     - Class: 114
       Script: {instanceID: 19896}
     - Class: 114
@@ -1619,7 +1619,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: f7f7c99c85146f8b962a3bacc76463ac
+      Hash: 5d26b4977a5bee982b8284d81cdc741c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Zaidejas
@@ -2093,7 +2093,7 @@ ScriptsOnlyBuild:
     className: CustomPassVolume
   - hash:
       serializedVersion: 2
-      Hash: 2d72c8b6a270d3eb8167e6c2634b4ecc
+      Hash: b257150cedcd7f58ac35c53a1c26d239
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Judejimas
