@@ -60,9 +60,6 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
 
     private ZaidimoValdymas ZaidimoValdymoKodas; /// Negerai, jei atsiras daugiau zaidimo rezimu
 
-    public Transform KulkuAtsiradimoVieta;
-    public Transform KojuVieta;
-
     public Oras OroKodas;
     public Vanduo VandensKodas;
     public Zeme ZemesKodas;
@@ -719,12 +716,41 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
 
     private IEnumerator _Suletinti(float SuletinimoStipris, float SoklumoSilpninimoStipris, float SuletinimoLaikas)
     {
-        GreicioMod *= SuletinimoStipris;
-        SoklumoMod *= SoklumoSilpninimoStipris;
+        if (SuletinimoStipris < 1)
+        {
+            GreicioMod *= (1f - SuletinimoStipris);
+        }
+        else
+        {
+            JudejimoCCLaikas += SuletinimoLaikas;
+        }
+
+        if (SoklumoSilpninimoStipris < 1)
+        {
+            SoklumoMod *= (1f - SoklumoSilpninimoStipris);
+        }
+        else
+        {
+            SoklumoMod *= 0.999f;
+        }
+
         GreicioIrSoklumoPerskaiciavimas();
         yield return new WaitForSeconds(SuletinimoLaikas);
-        GreicioMod /= SuletinimoStipris;
-        SoklumoMod /= SoklumoSilpninimoStipris;
+
+        if (SuletinimoStipris < 1)
+        {
+            GreicioMod /= (1f - SuletinimoStipris);
+        }
+
+        if (SoklumoSilpninimoStipris < 1)
+        {
+            SoklumoMod /= (1f - SoklumoSilpninimoStipris);
+        }
+        else
+        {
+            SoklumoMod /= 0.999f;
+        }
+
         GreicioIrSoklumoPerskaiciavimas();
     }
 

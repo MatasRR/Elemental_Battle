@@ -94,6 +94,7 @@ public class Vanduo : Elementas
     public float U3Jega;
     public float U3IlgejimoGreitis;
     public float U3Delsimas;
+    public bool U3GalimaJudetiAktyvinant;
     public GameObject U3SaltinioDaiktas;
     public GameObject U3Daiktas;
 
@@ -244,28 +245,9 @@ public class Vanduo : Elementas
 
     public override void B5()
     {
-        if (Physics.Raycast(Kamera.ScreenPointToRay(Input.mousePosition), out RaycastHit PataikytasObjektas))
-        {
-            photonView.RPC("RPCKurtiVanduoB5", RpcTarget.All, PataikytasObjektas.point);
-        }
+        
     }
-    /*
-    [PunRPC]
-    void RPCKurtiVanduoB5(Vector3 ZiurimasTaskas)
-    {
-        GameObject VanduoB5 = Instantiate(B5Daiktas, KulkuAtsiradimoVieta.position, KulkuAtsiradimoVieta.rotation);
-        Kulka KulkosKodas = VanduoB5.GetComponent<Kulka>();
 
-        VanduoB5.transform.LookAt(ZiurimasTaskas);
-
-        KulkosKodas.Greitis = B5DaiktoGreitis;
-        KulkosKodas.Zala = B5Zala;
-        KulkosKodas.SustingdymoLaikas = B5JudejimoCCLaikas;
-        KulkosKodas.Autorius = gameObject;
-
-        Destroy(VanduoB5, 10);
-    }
-    */
     public override void U1 ()
 	{
         photonView.RPC("RPCKurtiVanduoU1", RpcTarget.All);
@@ -323,17 +305,26 @@ public class Vanduo : Elementas
 
     IEnumerator U3Aktyvavimas(Vector3 ZiurimasTaskas)
     {
-        ZaidejoKodas.PradetiGebejimoAktyvavimoLaukima(U3Delsimas, true);
+        ZaidejoKodas.PradetiGebejimoAktyvavimoLaukima(U3Delsimas, !U3GalimaJudetiAktyvinant);
 
         photonView.RPC("RPCKurtiVanduoU3Saltini", RpcTarget.All, ZiurimasTaskas);
         yield return new WaitForSeconds(U3Delsimas);
-        photonView.RPC("RPCKurtiVanduoU3", RpcTarget.All, ZiurimasTaskas);
+
+        if (Physics.Raycast(Kamera.ScreenPointToRay(Input.mousePosition), out RaycastHit PataikytasObjektas))
+        {
+            photonView.RPC("RPCKurtiVanduoU3", RpcTarget.All, PataikytasObjektas.point);
+        }
+        else
+        {
+            photonView.RPC("RPCKurtiVanduoU3", RpcTarget.All, ZiurimasTaskas);
+        }
     }
 
     [PunRPC]
     void RPCKurtiVanduoU3Saltini(Vector3 ZiurimasTaskas)
     {
         GameObject VanduoU3Saltinis = Instantiate(U3SaltinioDaiktas, KulkosVieta(U3Nuotolis), transform.rotation);
+        VanduoU3Saltinis.transform.SetParent(transform);
         Destroy(VanduoU3Saltinis, U3Delsimas + 0.1f);
     }
 

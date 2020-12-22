@@ -45,7 +45,7 @@ public class Judejimas : MonoBehaviourPun
             ZaidejoJudejimas();
         }
         
-        if (!AtidarytasUILangas)
+        if (!AtidarytasUILangas && (ZaidejoKodas.LikesGebejimuAktyvavimoLaikas <= 0 || !ZaidejoKodas.StiprusGebejimoAktyvavimas))
         {
             ZaidejoSukimasis();
         }

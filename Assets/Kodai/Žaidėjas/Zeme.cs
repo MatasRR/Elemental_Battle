@@ -134,7 +134,7 @@ public class Zeme : Elementas
         else
         {
             AtsiradimoVieta = KulkosVieta(B2Nuotolis);
-            AtsiradimoVieta.y = KojuVieta.position.y;
+            AtsiradimoVieta.y = transform.position.y - 1;
         }
         
         GameObject ZemeB2 = Instantiate(B2Daiktas, AtsiradimoVieta, transform.rotation);

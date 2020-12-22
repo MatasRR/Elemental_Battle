@@ -17,12 +17,6 @@ public class Elementas : MonoBehaviourPun
     [HideInInspector]
     public Camera Kamera;
 
-    [HideInInspector]
-    public Transform KulkuAtsiradimoVieta;
-
-    [HideInInspector]
-    public Transform KojuVieta;
-
 
     [HideInInspector]
     public float Patirtis;
@@ -70,8 +64,6 @@ public class Elementas : MonoBehaviourPun
         ZaidejoKodas = GetComponent<Zaidejas>();
         JudejimoKodas = GetComponent<Judejimas>();
         Kamera = ZaidejoKodas.Kamera;
-        KulkuAtsiradimoVieta = ZaidejoKodas.KulkuAtsiradimoVieta;
-        KojuVieta = ZaidejoKodas.KojuVieta;
 
         BCDTekstas = ZaidejoKodas.BCDTekstas;
         BBCDTekstas = ZaidejoKodas.BBCDTekstas;

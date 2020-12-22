@@ -1,0 +1,1043 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.0f1 (3721df5a8b28) revision 3613151'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 16111 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Matas/Documents/Unity projects/Elemental_Battle
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+56843
+Successfully changed project path to: C:/Users/Matas/Documents/Unity projects/Elemental_Battle
+C:/Users/Matas/Documents/Unity projects/Elemental_Battle
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 99.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.0f1 (3721df5a8b28)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Matas/Documents/Unity projects/Elemental_Battle/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f91)
+    Vendor:   
+    VRAM:     3964 MB
+    Driver:   27.21.14.6079
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56220
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001750 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 143.07 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.073 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005088 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 103.78 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+HDRP Internally changed the storage of Cube Cookie to use Octahedral Projection inside the 2D Cookie Atlas. It is recommended that you increase the size of the 2D Cookie Atlas if your cookies no longer fit.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset/<>c:<.cctor>b__110_12 (UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset) (at Library/PackageCache/com.unity.render-pipelines.high-definition@10.2.2/Runtime/RenderPipeline/HDRenderPipelineAsset.Migration.cs:126)
+UnityEngine.Rendering.HighDefinition.MigrationStep`2<UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset/Version, UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset>:Migrate (UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset) (at Library/PackageCache/com.unity.render-pipelines.high-definition@10.2.2/Runtime/Core/Migration/MigrationStep.cs:52)
+UnityEngine.Rendering.HighDefinition.MigrationDescription`2<UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset/Version, UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset>:Migrate (UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset) (at Library/PackageCache/com.unity.render-pipelines.high-definition@10.2.2/Runtime/Core/Migration/MigrationDescription.cs:101)
+UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset:OnEnable () (at Library/PackageCache/com.unity.render-pipelines.high-definition@10.2.2/Runtime/RenderPipeline/HDRenderPipelineAsset.Migration.cs:146)
+UnityEngine.Rendering.GraphicsSettings:get_currentRenderPipeline ()
+UnityEditor.Rendering.HighDefinition.HDBakedReflectionSystem:Initialize () (at Library/PackageCache/com.unity.render-pipelines.high-definition@10.2.2/Editor/Lighting/Reflection/HDBakedReflectionSystem.cs:42)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.high-definition@10.2.2/Runtime/RenderPipeline/HDRenderPipelineAsset.Migration.cs Line: 126)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.653 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.84 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4494 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 217.7 MB.
+System memory in use after: 217.8 MB.
+
+Unloading 52 unused Assets to reduce memory usage. Loaded Objects now: 4951.
+Total: 2.922500 ms (FindLiveObjects: 0.377100 ms CreateObjectMapping: 0.186600 ms MarkObjects: 2.187900 ms  DeleteObjects: 0.169700 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Kodai/Meniu
+  artifactKey: Guid(b55074be14911504d9eb528f6b36bf35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kodai/Meniu using Guid(b55074be14911504d9eb528f6b36bf35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4fd0e1e7c0a012e0dd0a33fa310e345') in 0.023271 seconds
+  Import took 0.036735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000813 seconds.
+  path: Assets/Kodai/Žaidėjas/AtrakinimoMygtukas.cs
+  artifactKey: Guid(61c4af0a6b066514cbb788ae4eb3b547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kodai/Žaidėjas/AtrakinimoMygtukas.cs using Guid(61c4af0a6b066514cbb788ae4eb3b547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34ffbac955a769e2b844c9fb9537643e') in 0.077568 seconds
+  Import took 0.091013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.388063 seconds.
+  path: Assets/Kodai/Žaidėjas/Elementas.cs
+  artifactKey: Guid(d1f9f914b4f11824fb75e0dfc31566dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kodai/Žaidėjas/Elementas.cs using Guid(d1f9f914b4f11824fb75e0dfc31566dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64cb842030275c832a25c82cbe209aba') in 0.006107 seconds
+  Import took 0.023226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.044601 seconds.
+  path: Assets/Kodai/Žaidėjas/Elementas.cs
+  artifactKey: Guid(d1f9f914b4f11824fb75e0dfc31566dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kodai/Žaidėjas/Elementas.cs using Guid(d1f9f914b4f11824fb75e0dfc31566dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64cb842030275c832a25c82cbe209aba') in 0.005355 seconds
+  Import took 0.048367 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005293 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.370 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.91 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 200.7 MB.
+System memory in use after: 200.8 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 4954.
+Total: 3.970600 ms (FindLiveObjects: 0.490900 ms CreateObjectMapping: 0.420200 ms MarkObjects: 2.902600 ms  DeleteObjects: 0.155500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006054 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.399 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 200.8 MB.
+System memory in use after: 200.9 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 4957.
+Total: 5.158200 ms (FindLiveObjects: 0.572000 ms CreateObjectMapping: 0.423300 ms MarkObjects: 3.977200 ms  DeleteObjects: 0.184300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005317 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.368 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.92 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 200.9 MB.
+System memory in use after: 200.9 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 4960.
+Total: 3.915700 ms (FindLiveObjects: 0.617200 ms CreateObjectMapping: 0.363400 ms MarkObjects: 2.661500 ms  DeleteObjects: 0.272600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005322 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.353 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 200.9 MB.
+System memory in use after: 200.9 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 4963.
+Total: 3.423600 ms (FindLiveObjects: 0.642700 ms CreateObjectMapping: 0.325400 ms MarkObjects: 2.283600 ms  DeleteObjects: 0.171000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 5097.950289 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '246c0dc967a9305df8e2d0932292618b') in 0.803663 seconds
+  Import took 0.822806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.103631 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '557b38951e0aaa522ff3b6402393c449') in 0.187523 seconds
+  Import took 0.221660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.845346 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db6cc91945fefb2702edb67fa201ab78') in 0.126292 seconds
+  Import took 0.147725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002547 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db6cc91945fefb2702edb67fa201ab78') in 0.120198 seconds
+  Import took 0.142031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.935824 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdb45e2ea4936eb5979713aa5bcc4d54') in 0.109936 seconds
+  Import took 0.154778 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.331088 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b29647537b6de4033c39f81d175027ed') in 0.094889 seconds
+  Import took 0.110496 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.745311 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16a103788eb330dfd231d9541351781d') in 0.103214 seconds
+  Import took 0.117876 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.631760 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3194edd7a885a000b931cd5e8c151184') in 0.092791 seconds
+  Import took 0.108980 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.079662 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e299eb3557d1c9af70deb396a7568304') in 0.107842 seconds
+  Import took 0.123842 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 251.236618 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c388c90c128936d1891043ae185cf249') in 0.105374 seconds
+  Import took 0.123300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.950973 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f70efd7547452a5627e485dfee9273a5') in 0.200412 seconds
+  Import took 0.222252 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.599888 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e43fce3ec9d762d16d06a3176b442c79') in 0.104491 seconds
+  Import took 0.123176 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.470901 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc735d43e795aecc15c5a66e89dea2b6') in 0.108547 seconds
+  Import took 0.293933 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005837 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.520 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.91 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4165 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 214.1 MB.
+System memory in use after: 214.2 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 5107.
+Total: 3.596000 ms (FindLiveObjects: 0.722400 ms CreateObjectMapping: 0.369600 ms MarkObjects: 2.300000 ms  DeleteObjects: 0.202900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 192.404534 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '316dba19b80d12ab6c53bf9888a6dd23') in 1.193491 seconds
+  Import took 1.213209 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 10.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 31 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.6 MB.
+System memory in use after: 141.7 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 5406.
+Total: 5.613000 ms (FindLiveObjects: 0.443200 ms CreateObjectMapping: 0.218700 ms MarkObjects: 4.731200 ms  DeleteObjects: 0.219000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 627.393820 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b03678b4e16fb090c6ce578ce4e3a56') in 0.165655 seconds
+  Import took 0.211754 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.534278 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d8972e09a337083275613f4ff4189c7') in 0.105663 seconds
+  Import took 0.124137 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 69.507597 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99f49f46bf1baafedae7249d414f5e59') in 0.182150 seconds
+  Import took 0.208126 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.518796 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed9eadf5fbafd572e6ea7af2126dac5e') in 0.102160 seconds
+  Import took 0.117546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.726106 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca7c57e59f30b27a11e4860c7d6cb39d') in 0.102366 seconds
+  Import took 0.117979 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.820080 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ded67e2ab6ac820ec48c1641e408ae8') in 0.178559 seconds
+  Import took 0.197914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.413213 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fcb48c731ade1c6906c2b2ba1e297e7') in 0.102331 seconds
+  Import took 0.118591 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005358 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.450 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 214.5 MB.
+System memory in use after: 214.6 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 5212.
+Total: 3.335300 ms (FindLiveObjects: 0.438800 ms CreateObjectMapping: 0.208300 ms MarkObjects: 2.516100 ms  DeleteObjects: 0.171100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1252.382254 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eb99e08b8e8f3eea57d69946ad0e0de') in 1.229735 seconds
+  Import took 1.242846 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 205.729131 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aff0adca32b8f5b0dc400186cb45f8b5') in 0.188671 seconds
+  Import took 0.328412 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.226371 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ccad807b30b05c2f67799b1e22df63a') in 0.104385 seconds
+  Import took 0.116443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.362906 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d3f340a3d80e63f93a3cfdd3b9737f0') in 0.104963 seconds
+  Import took 0.289611 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.477830 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed8907f22f4a8ee066696b08634a78db') in 0.106020 seconds
+  Import took 0.121452 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.928198 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bd582a4d09b2d403520e3a511d2c039') in 0.141478 seconds
+  Import took 0.297960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.808995 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aad46d2c2140864b7ed5c56b471b4ae6') in 0.103788 seconds
+  Import took 0.117368 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.446151 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8da66ac91ba44a0bc73db1b10c1787ee') in 0.226797 seconds
+  Import took 0.242054 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.363141 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '180254f45a5eb266ab43c9b248fd4597') in 0.103084 seconds
+  Import took 0.113733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.924246 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a305872dca84309e595e2788666cb54') in 0.208737 seconds
+  Import took 0.304121 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.044171 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a305872dca84309e595e2788666cb54') in 0.096871 seconds
+  Import took 0.109480 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.107337 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c4438901373b96bdd34a64ad794599c') in 0.108056 seconds
+  Import took 0.122213 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.334878 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa89113ef478dbe5543377d2ddd01a8d') in 0.147541 seconds
+  Import took 0.166020 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.023871 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b8990909c70eeb56ae7498a3440126e') in 0.105959 seconds
+  Import took 0.117213 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.218755 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e25a8eea9a316a74583dea44df5d63cf') in 0.099789 seconds
+  Import took 0.111454 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.009461 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07c00d6393040d3e7684d7c9653b394c') in 0.103443 seconds
+  Import took 0.116579 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.002447 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00a2c407002b9b58a0b3b6fdb1db3c9e') in 0.111246 seconds
+  Import took 0.125477 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.113803 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d2d90220ad374f6cc204316d0e5be8d') in 0.108527 seconds
+  Import took 0.120074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.153364 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03a289f772596ca436d5e766fda1fb0f') in 0.163750 seconds
+  Import took 0.700350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.640071 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '577b9626987fc401bb3f1688a43ff8c3') in 0.097353 seconds
+  Import took 0.110226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.269974 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aefbc9dd63468a2d2418172c2938e13b') in 0.096299 seconds
+  Import took 0.108470 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.060936 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '554a867ee31ae1de33a44dc5a386661e') in 0.106646 seconds
+  Import took 0.117436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.345255 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf5187acfa84a78dd0cf54faac91515d') in 0.099085 seconds
+  Import took 0.110611 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.821216 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0b05890bc4b903d6b0930ffb01618c0') in 0.109925 seconds
+  Import took 0.120957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.720851 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5f6d46789732bb3f760b6cce2431893') in 0.097105 seconds
+  Import took 0.109349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.192022 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4bab108f854fe2fedffa7fd0a62afc8') in 0.107524 seconds
+  Import took 0.123551 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.933822 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96d809c35b7b0aa48dd62e28d0d0feaa') in 0.106378 seconds
+  Import took 0.118669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.207561 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db92fabb22dc6a6302cc4a20b485ea59') in 0.101880 seconds
+  Import took 0.114571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.125805 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b5770c29a198a1da4a42128df2e9724') in 0.221958 seconds
+  Import took 0.314099 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.903561 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afd4a6825bd5898307e6bf2efa54ca1a') in 0.107828 seconds
+  Import took 0.121120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.669909 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b28fda9877c928f93acc514a8c2ded0') in 0.106926 seconds
+  Import took 0.119399 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.139365 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a21b3eaec55474e669f7634cc70813f') in 0.208066 seconds
+  Import took 0.326675 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.104769 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59e2ed34f35f2f4f22f16f1af9e3e9d5') in 0.196736 seconds
+  Import took 0.289451 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.164616 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f16d7b9cfe339b9bf3be3c8bf10a5e14') in 0.261727 seconds
+  Import took 0.274480 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.971228 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f2d81fd89b248c94703f71f8a75cd76') in 0.102219 seconds
+  Import took 0.113501 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005846 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.438 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 216.2 MB.
+System memory in use after: 216.3 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 5317.
+Total: 3.291600 ms (FindLiveObjects: 0.426800 ms CreateObjectMapping: 0.228000 ms MarkObjects: 2.423500 ms  DeleteObjects: 0.212200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 118.970456 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb84eafbb0c8055214c71e68dee348f8') in 0.816107 seconds
+  Import took 0.841212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.160708 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fbf709076def1d5185e014d43ddc597') in 0.512284 seconds
+  Import took 0.698116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.076870 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74b92cfef71aa3bb0f53a2c2ddaabf92') in 0.194190 seconds
+  Import took 0.311239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.790436 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcbef62ebf149f399617c415f545bb7a') in 0.111957 seconds
+  Import took 0.124530 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.405036 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ce22075a0a6793ca8b95683538f436b') in 0.105124 seconds
+  Import took 0.123008 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005802 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.751 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.91 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4151 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 216.6 MB.
+System memory in use after: 216.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 5422.
+Total: 4.048200 ms (FindLiveObjects: 0.468600 ms CreateObjectMapping: 0.226000 ms MarkObjects: 3.165300 ms  DeleteObjects: 0.187100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007433 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.514 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.96 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4151 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 216.4 MB.
+System memory in use after: 216.5 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 5425.
+Total: 4.220100 ms (FindLiveObjects: 0.413300 ms CreateObjectMapping: 0.179400 ms MarkObjects: 3.415900 ms  DeleteObjects: 0.210400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005655 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.499 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.09 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4151 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 216.6 MB.
+System memory in use after: 216.7 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 5428.
+Total: 3.941200 ms (FindLiveObjects: 0.446600 ms CreateObjectMapping: 0.224500 ms MarkObjects: 3.039900 ms  DeleteObjects: 0.229100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005517 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.419 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.94 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4151 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 216.7 MB.
+System memory in use after: 216.7 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 5431.
+Total: 3.435400 ms (FindLiveObjects: 0.417500 ms CreateObjectMapping: 0.166800 ms MarkObjects: 2.665300 ms  DeleteObjects: 0.184600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 760.545159 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28be40a3d133b65447ddba6ba0c24d7f') in 0.656672 seconds
+  Import took 0.674964 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.405789 seconds.
+  path: Assets/Scenos/Savarankiškas.unity
+  artifactKey: Guid(7e06956ee0e42f444b85b19a52a5e683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenos/Savarankiškas.unity using Guid(7e06956ee0e42f444b85b19a52a5e683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '540bdd9925aa0625e5d9b27f8607d8c2') in 0.004330 seconds
+  Import took 0.024308 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004376 seconds.
+  path: Assets/Scenos/Savarankiškas.unity
+  artifactKey: Guid(7e06956ee0e42f444b85b19a52a5e683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenos/Savarankiškas.unity using Guid(7e06956ee0e42f444b85b19a52a5e683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '540bdd9925aa0625e5d9b27f8607d8c2') in 0.003461 seconds
+  Import took 0.015229 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.021550 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 3.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.793 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.16 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4151 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 217.0 MB.
+System memory in use after: 217.3 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 5536.
+Total: 13.552500 ms (FindLiveObjects: 1.312100 ms CreateObjectMapping: 0.637400 ms MarkObjects: 10.890400 ms  DeleteObjects: 0.709700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 502.407490 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c95e5885d2f325a872a7948511878dc6') in 2.603235 seconds
+  Import took 2.642973 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.376310 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c68ef1ee67a7a979d79021cc9f2af16d') in 0.388477 seconds
+  Import took 0.420808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.394138 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c260a5d9fd5b2d87e8ebb1e6318b622e') in 0.328371 seconds
+  Import took 0.367038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.024958 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14216800f4c75bc0bed6d306af5a6340') in 0.371436 seconds
+  Import took 0.401481 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.702985 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '103ea2eee6473964d6282eeb38800e45') in 0.331388 seconds
+  Import took 0.376988 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.804781 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a13944292907215954b23a00f1fc3c99') in 0.357437 seconds
+  Import took 0.393966 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.419694 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb342121fd0fd7b82c5bb8a96bf76512') in 0.353856 seconds
+  Import took 0.387992 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.923588 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc5412874c7ae50c43d3be5241ee1c8f') in 0.398727 seconds
+  Import took 0.444281 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.384917 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '105303dcae40dd2c3b8a025ce17c15ad') in 0.436571 seconds
+  Import took 0.474844 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.536537 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5852b065b4331a7404aa542e74c0893e') in 0.421832 seconds
+  Import took 0.454069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.777457 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdd05f9b8992227a4393a2d627a1bb0b') in 0.422898 seconds
+  Import took 0.458499 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.501045 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb71559ff45a2cf44316ca11a7f2924d') in 0.429491 seconds
+  Import took 0.475425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.565367 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '484966a4bc8c4c6247ab9423a380a5a1') in 1.480464 seconds
+  Import took 1.517763 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.733295 seconds.
+  path: Assets/Resources/_Žaidėjas.prefab
+  artifactKey: Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/_Žaidėjas.prefab using Guid(0ceb4d7b559c77448b5356fdfc1f4127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92e089d39788387181b196894566321f') in 0.370797 seconds
+  Import took 0.408973 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 32.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 31 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 145.1 MB.
+System memory in use after: 145.4 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 6394.
+Total: 24.091900 ms (FindLiveObjects: 1.579100 ms CreateObjectMapping: 0.635500 ms MarkObjects: 21.226200 ms  DeleteObjects: 0.648100 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

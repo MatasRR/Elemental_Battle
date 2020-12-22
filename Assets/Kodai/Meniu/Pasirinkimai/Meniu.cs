@@ -12,6 +12,7 @@ public class Meniu : MonoBehaviour
     [Header("Meniu")]
     public GameObject[] MeniuLangai;
     public Button ZaidimoMygtukas;
+    public Button AntrasZaidimoMygtukas;
 
     [Header("Profilis")]
     public TextMeshProUGUI DabartinisSlapyvardis;
@@ -37,7 +38,6 @@ public class Meniu : MonoBehaviour
 
     private int DabMygtukas = 0;
 
-    //[Header("Įgūdžiai")]
 
     //[Header("Žaidimas")] 
 
@@ -59,10 +59,12 @@ public class Meniu : MonoBehaviour
         if (Duomenys.Slapyvardis == null || Duomenys.B1 == 0 || Duomenys.B2 == 0 || Duomenys.B3 == 0 || Duomenys.U == 0)
         {
             ZaidimoMygtukas.interactable = false;
+            AntrasZaidimoMygtukas.interactable = false;
         }
         else
         {
             ZaidimoMygtukas.interactable = true;
+            AntrasZaidimoMygtukas.interactable = true;
         }
 
         DabartinisSlapyvardis.text = Duomenys.Slapyvardis;
@@ -211,6 +213,11 @@ public class Meniu : MonoBehaviour
         }
 
         MeniuLangai[Nr].SetActive(true);
+    }
+
+    public void Iseiti()
+    {
+        Application.Quit();
     }
 
     public void KeistiSlapyvardi()

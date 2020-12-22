@@ -53,7 +53,7 @@ public class TinkloValdymas : MonoBehaviourPunCallbacks
         PhotonNetwork.AutomaticallySyncScene = true;
 
         RoomOptions RO = new RoomOptions { MaxPlayers = 20, IsOpen = true, IsVisible = true };
-        PhotonNetwork.CreateRoom("S1", RO, TypedLobby.Default);
+        PhotonNetwork.CreateRoom(Duomenys.Slapyvardis, RO, TypedLobby.Default);
     }
 
     public override void OnJoinedRoom()
