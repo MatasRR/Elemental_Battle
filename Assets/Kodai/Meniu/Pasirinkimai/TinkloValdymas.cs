@@ -2,24 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 using Photon;
 using Photon.Pun;
 using Photon.Realtime;
 
 public class TinkloValdymas : MonoBehaviourPunCallbacks
 {
-    public GameObject JungimosiTekstas;
+    public TextMeshProUGUI JungimosiTekstas;
     public GameObject PagrindinisMeniu;
+    public GameObject ZaidimoLangas;
     private bool DarNeprisijunge = true;
 
     private void Start()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        JungimosiTekstas.SetActive(true);
+        JungimosiTekstas.gameObject.SetActive(true);
         PagrindinisMeniu.SetActive(false);
         
-        PhotonNetwork.ConnectUsingSettings();
+        if (Duomenys.AutomatinisPrisijungimas)
+        {
+            PhotonNetwork.PhotonServerSettings.AppSettings.FixedRegion = "";
+            PhotonNetwork.ConnectUsingSettings();
+        }
+        else
+        {
+            PhotonNetwork.PhotonServerSettings.AppSettings.FixedRegion = "eu";
+            //PhotonNetwork.PhotonServerSettings.AppSettings.UseNameServer = true;
+            //PhotonNetwork.PhotonServerSettings.AppSettings.AppIdRealtime = "EuropePUNAppId";
+            //PhotonNetwork.PhotonServerSettings.AppSettings.Server = "ns.photonengine.cn"; CN - Kinija
+            PhotonNetwork.ConnectUsingSettings();
+        }
+        
     }
 
     void Update()
@@ -29,7 +44,7 @@ public class TinkloValdymas : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        JungimosiTekstas.SetActive(false);
+        JungimosiTekstas.gameObject.SetActive(false);
         PagrindinisMeniu.SetActive(true);
     }
 

@@ -11,6 +11,7 @@ public class Duomenys : MonoBehaviour
     public static int KomandosNr = 0;
     public static int GebejimuPaveiksleliuNr = 0;
     public static int IsvaizdosMedziagosNr = 0;
+    public static bool AutomatinisPrisijungimas = true;
 
     void Start ()
     {

@@ -168,8 +168,6 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public GameObject MazasisPaveiksliukasSkraidymas;
 
     public GameObject GebejimuAktyvinimoLangas;
-    public TextMeshProUGUI NuzudymuIrMirciuTekstas;
-    public TextMeshProUGUI KomandosTekstas;
     public GameObject MirtiesPranesimuLangas;
     public GameObject MirtiesPranesimoObjektas;
     public GameObject ZaidejuIrKomanduInformacijosLangas;
@@ -179,7 +177,11 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public GameObject NustatymuLangas;
     public GameObject PagerinimuLangas;
     public GameObject PatirtiesLangas;
+
     public TextMeshProUGUI PatirtiesTekstas;
+    public TextMeshProUGUI NuzudymuIrMirciuTekstas;
+    public TextMeshProUGUI RegionoTekstas;
+    public TextMeshProUGUI KomandosTekstas;
 
     public GameObject EkranoDrobe;
     public GameObject ZaidimoDrobe;
@@ -214,6 +216,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         GreicioMod = SoklumoMod = AtakosMod = GynybosMod = 1f;
         SkraidymoCCLaikas = JudejimoCCLaikas = PuolimoCCLaikas = PaskutinioZalojusioZaidejoLaikmatis = 0f;
         SkraidymoLaikoIgnoravimas = JudejimoLaikoIgnoravimas = PuolimoLaikoIgnoravimas = 0;
+        RegionoTekstas.text = PhotonNetwork.CloudRegion.ToUpper().Substring(0, PhotonNetwork.CloudRegion.Length - 2);
         KomandosTekstas.text = (KomandosNr == 0) ? "SOLO" : "TEAM " + KomandosNr;
         ZaidejoIsvaizdosMedziagosNr = Duomenys.IsvaizdosMedziagosNr;
         ZaidejoPaveiksleliuNr = Duomenys.GebejimuPaveiksleliuNr;

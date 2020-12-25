@@ -169,7 +169,7 @@ public class VandensPagerinimai : MonoBehaviour
 
         if (Atrakinta)
         {
-            if (Mygtukas.interactable)
+            if (true /*Mygtukas.interactable*/)
             {
                 string VertePries;
                 string VertePo;
