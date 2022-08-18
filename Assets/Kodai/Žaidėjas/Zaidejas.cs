@@ -13,108 +13,80 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public Material[] ZaidejoIsvaizdosMedziagos;
     public Color[] VardoKomanduSpalvos;
 
-    [HideInInspector]
-    public string Vardas;
-    [HideInInspector]
-    public int ElementoNr;
-    [HideInInspector]
-    public int KomandosNr;
+    [HideInInspector] public string Vardas;
+    [HideInInspector] public int ElementoNr;
+    [HideInInspector] public int KomandosNr;
 
-    [HideInInspector]
-    public float Gyvybes;
-    [HideInInspector]
-    public float Skydas;
-    [HideInInspector]
-    public bool Gyvas;
+    [HideInInspector] public float Gyvybes;
+    [HideInInspector] public float Skydas;
+    [HideInInspector] public bool Gyvas;
 
-    [HideInInspector]
-    public float GyvybiuProcentas;
-    [HideInInspector]
-    public float SkydoProcentas;
+    [HideInInspector] public float GyvybiuProcentas;
+    [HideInInspector] public float SkydoProcentas;
 
-    public int MaxGyvybes;
+    public float MaxGyvybes;
+    public float Regeneracija;
 
     public float PradinisGreitis;
-    [HideInInspector]
-    public float GreicioMod;
-    [HideInInspector]
-    public float Greitis;
-
     public float PradinisSoklumas;
-    [HideInInspector]
-    public float SoklumoMod;
-    [HideInInspector]
-    public float Soklumas;
+    [HideInInspector] public float Greitis;
+    [HideInInspector] public float Soklumas;
 
-    [HideInInspector]
-    public float AtakosMod;
-    [HideInInspector]
-    public float GynybosMod;
+    [HideInInspector] public float GreicioMod;
+    [HideInInspector] public float SoklumoMod;
+    [HideInInspector] public float GynybosMod;
+    [HideInInspector] public float TvirtumoMod;
+    [HideInInspector] public float AtakosMod;
+    [HideInInspector] public float GebejimuAtsikrovimoMod;
+    
+    [HideInInspector] public float Patirtis = 0f;
+    public float PatirtisUzNuzudyma;
 
     public float PrisikelimoLaikas;
-    [HideInInspector]
-    public float LikesPrisikelimoLaikas;
+    [HideInInspector] public float LikesPrisikelimoLaikas;
 
     public Camera Kamera;
     private Camera BendraKamera;
-
-    private ZaidimoValdymas ZaidimoValdymoKodas; /// Negerai, jei atsiras daugiau zaidimo rezimu
 
     public Oras OroKodas;
     public Vanduo VandensKodas;
     public Zeme ZemesKodas;
     public Ugnis UgniesKodas;
     private Judejimas JudejimoKodas;
+    private ZaidimoValdymas ZaidimoValdymoKodas; /// Negerai, jei atsiras daugiau zaidimo rezimu
 
-    [HideInInspector]
-    public bool GaliSkraidyti;
-    [HideInInspector]
-    public bool GaliJudeti;
-    [HideInInspector]
-    public bool GaliPulti;
+    [HideInInspector] public bool GaliSkraidyti;
+    [HideInInspector] public bool GaliJudeti;
+    [HideInInspector] public bool GaliPulti;
 
-    [HideInInspector]
-    public int SkraidymoLaikoIgnoravimas;
-    [HideInInspector]
-    public int JudejimoLaikoIgnoravimas;
-    [HideInInspector]
-    public int PuolimoLaikoIgnoravimas;
+    [HideInInspector] public int SkraidymoLaikoIgnoravimas;
+    [HideInInspector] public int JudejimoLaikoIgnoravimas;
+    [HideInInspector] public int PuolimoLaikoIgnoravimas;
 
-    [HideInInspector]
-    public float SkraidymoCCLaikas;
-    [HideInInspector]
-    public float JudejimoCCLaikas;
-    [HideInInspector]
-    public float PuolimoCCLaikas;
-    [HideInInspector]
-    public float GebejimuAktyvavimoLaikas;
-    [HideInInspector]
-    public float LikesGebejimuAktyvavimoLaikas;
-    [HideInInspector]
-    public bool StiprusGebejimoAktyvavimas;
+    [HideInInspector] public float SkraidymoCCLaikas;
+    [HideInInspector] public float JudejimoCCLaikas;
+    [HideInInspector] public float PuolimoCCLaikas;
+    [HideInInspector] public float GebejimuAktyvavimoLaikas;
+    [HideInInspector] public float LikesGebejimuAktyvavimoLaikas;
+    [HideInInspector] public bool StiprusGebejimoAktyvavimas;
 
-    [HideInInspector]
-    public int NuzudymuSk;
-    [HideInInspector]
-    public int MirciuSk;
+    [HideInInspector] public int NuzudymuSk;
+    [HideInInspector] public int MirciuSk;
 
     public float PaskutinioZalojusioZaidejoLaikas;
-    [HideInInspector]
-    public Zaidejas PaskutinisZalojesZaidejas;
-    [HideInInspector]
-    public float PaskutinioZalojusioZaidejoLaikmatis;
+    [HideInInspector] public Zaidejas PaskutinisZalojesZaidejas;
+    [HideInInspector] public float PaskutinioZalojusioZaidejoLaikmatis;
 
     public MeshRenderer ZaidejoGrafikosObjektas;
-    [HideInInspector]
-    public int ZaidejoIsvaizdosMedziagosNr;
-    [HideInInspector]
-    public int ZaidejoPaveiksleliuNr;
+    [HideInInspector] public int ZaidejoIsvaizdosMedziagosNr;
+    [HideInInspector] public int ZaidejoPaveiksleliuNr;
 
     public GameObject ZalosTekstoObjektas;
     public Color OroSpalva;
     public Color VandensSpalva;
     public Color ZemesSpalva;
     public Color UgniesSpalva;
+
 
     //private bool DuomenysAtnaujinti;
 
@@ -186,7 +158,10 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     public GameObject EkranoDrobe;
     public GameObject ZaidimoDrobe;
 
+    // Asmeniniai testavimo įrankiai
     public TextMeshProUGUI TestinisTekstas;
+    private bool PatirtiesPriedasDuotas = false;
+    private float PatirtiesPriedas = 2000f;
     #endregion
 
     void Start()
@@ -206,6 +181,16 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         ZaidejoDuomenuValdymas();
         UIValdymas();
         MygtukuValdymas();
+
+        TestinisTekstas.text = "G: " + GreicioMod.ToString() + ", S: " + SoklumoMod.ToString() + ", A: " + AtakosMod.ToString() + ", G: " + GynybosMod.ToString();
+        Patirtis += Time.deltaTime;
+        PatirtiesTekstas.text = Mathf.Floor(Patirtis).ToString();
+
+        if(Input.GetKey(KeyCode.LeftAlt) && Input.GetKey(KeyCode.X) && !PatirtiesPriedasDuotas)
+        {
+            Patirtis += PatirtiesPriedas;
+            PatirtiesPriedasDuotas = true;
+        }
     }
 
     void AtsiradimoDarbai()
@@ -213,11 +198,13 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         Gyvybes = MaxGyvybes;
         Greitis = PradinisGreitis;
         Soklumas = PradinisSoklumas;
-        GreicioMod = SoklumoMod = AtakosMod = GynybosMod = 1f;
+        GreicioMod = SoklumoMod = GynybosMod = TvirtumoMod = AtakosMod = GebejimuAtsikrovimoMod = 1f;
         SkraidymoCCLaikas = JudejimoCCLaikas = PuolimoCCLaikas = PaskutinioZalojusioZaidejoLaikmatis = 0f;
         SkraidymoLaikoIgnoravimas = JudejimoLaikoIgnoravimas = PuolimoLaikoIgnoravimas = 0;
+
         RegionoTekstas.text = PhotonNetwork.CloudRegion.ToUpper().Substring(0, PhotonNetwork.CloudRegion.Length - 2);
         KomandosTekstas.text = (KomandosNr == 0) ? "SOLO" : "TEAM " + KomandosNr;
+
         ZaidejoIsvaizdosMedziagosNr = Duomenys.IsvaizdosMedziagosNr;
         ZaidejoPaveiksleliuNr = Duomenys.GebejimuPaveiksleliuNr;
         ZaidejoGrafikosObjektas.enabled = true;
@@ -263,6 +250,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     {
         if (photonView.IsMine)
         {
+            Gyvybes += Regeneracija * Time.deltaTime;
             Skydas -= Time.deltaTime;
             if (Skydas < 0)
             {
@@ -373,8 +361,8 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         {
             GyvybiuJuostele.fillAmount = Gyvybes / MaxGyvybes;
             SkydoJuostele.fillAmount = Mathf.Min(Skydas / MaxGyvybes, 1);
-            GyvybiuTekstas.text = Mathf.Ceil(Gyvybes).ToString() + " / " + MaxGyvybes.ToString();
-            SkydoTekstas.text = Mathf.Ceil(Skydas).ToString();
+            GyvybiuTekstas.text = (Gyvas ? Mathf.Ceil(Gyvybes).ToString() : "0") + " / " + MaxGyvybes.ToString();
+            SkydoTekstas.text = (Gyvas ? Mathf.Ceil(Skydas).ToString() : "0");
 
             NuzudymuIrMirciuTekstas.text = NuzudymuSk.ToString() + " / " + MirciuSk.ToString();
             //PrisikelimoLaikoTekstas.text = LikesPrisikelimoLaikas.ToString();
@@ -637,7 +625,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
 
     public void PradetiGebejimoAktyvavimoLaukima (float Laikas, bool Stiprus = false)
     {
-        GebejimuAktyvavimoLaikas = LikesGebejimuAktyvavimoLaikas = Laikas;
+        GebejimuAktyvavimoLaikas = LikesGebejimuAktyvavimoLaikas = Laikas / GebejimuAtsikrovimoMod;
         StiprusGebejimoAktyvavimas = Stiprus;
     }
 
@@ -651,8 +639,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     {
         if (photonView.IsMine)
         {
-            float ModifikuotaZala = Zala * GynybosMod;
-            photonView.RPC("RPCGautiZalos", RpcTarget.All, ModifikuotaZala, ZalosElementoNr);
+            photonView.RPC("RPCGautiZalos", RpcTarget.All, Zala, ZalosElementoNr);
         }
     }
 
@@ -668,8 +655,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     {
         for (float i = 0; i < Trukme; i += Daznis)
         {
-            float ModifikuotaZala = Zala * GynybosMod;
-            photonView.RPC("RPCGautiZalos", RpcTarget.All, ModifikuotaZala, ZalosElementoNr);
+            photonView.RPC("RPCGautiZalos", RpcTarget.All, Zala, ZalosElementoNr);
             yield return new WaitForSeconds(Daznis);
         }        
     }
@@ -677,6 +663,8 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
     [PunRPC]
     private void RPCGautiZalos(float Zala, int ZalosElementoNr)
     {
+        Zala /= GynybosMod;
+
         if (Zala <= 0)
         {
             return;
@@ -719,6 +707,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
 
     private IEnumerator _Suletinti(float SuletinimoStipris, float SoklumoSilpninimoStipris, float SuletinimoLaikas)
     {
+        Debug.Log(SuletinimoStipris.ToString() + " " + SoklumoSilpninimoStipris.ToString() + " " + SuletinimoLaikas.ToString());
         if (SuletinimoStipris < 1)
         {
             GreicioMod *= (1f - SuletinimoStipris);
@@ -737,7 +726,6 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
             SoklumoMod *= 0.999f;
         }
 
-        GreicioIrSoklumoPerskaiciavimas();
         yield return new WaitForSeconds(SuletinimoLaikas);
 
         if (SuletinimoStipris < 1)
@@ -753,8 +741,6 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         {
             SoklumoMod /= 0.999f;
         }
-
-        GreicioIrSoklumoPerskaiciavimas();
     }
 
     public void KeistiAtakaIrGynyba(float AtakosPokytis, float GynybosPokytis, float Trukme)
@@ -777,6 +763,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         {
             NuzudymuSk++;
             Duomenys.K++;
+            Patirtis += PatirtisUzNuzudyma;
         }
         else
         {
@@ -854,6 +841,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         gameObject.GetComponent<Rigidbody>().isKinematic = false;
         gameObject.GetComponent<Judejimas>().enabled = true;
         PuolimoLaikoIgnoravimas = 0;//
+        GreicioMod = SoklumoMod = 1f;
         
         //
         if (!photonView.IsMine)
@@ -865,12 +853,6 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
             ZaidimoDrobe.SetActive(false);
         }
         //
-    }
-
-    public void GreicioIrSoklumoPerskaiciavimas()
-    {
-        Greitis = PradinisGreitis * GreicioMod;
-        Soklumas = PradinisSoklumas * SoklumoMod;
     }
 
     private void ZaidejuInformacijosLangoValdymas(bool ArAktyvinti)
@@ -973,6 +955,7 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
         if (stream.IsWriting)
         {
             stream.SendNext(Gyvybes);
+            stream.SendNext(MaxGyvybes);
             stream.SendNext(Skydas);
             stream.SendNext(Gyvas);
             stream.SendNext(Vardas);
@@ -981,10 +964,13 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
             stream.SendNext(MirciuSk);
             stream.SendNext(KomandosNr);
             stream.SendNext(ZaidejoIsvaizdosMedziagosNr);
+            stream.SendNext(AtakosMod);
+            stream.SendNext(GynybosMod);
         }
         else if (stream.IsReading)
         {
             Gyvybes = (float)stream.ReceiveNext();
+            MaxGyvybes = (float)stream.ReceiveNext();
             Skydas = (float)stream.ReceiveNext();
             Gyvas = (bool)stream.ReceiveNext();
             Vardas = (string)stream.ReceiveNext();
@@ -993,6 +979,8 @@ public class Zaidejas : MonoBehaviourPun, IPunObservable
             MirciuSk = (int)stream.ReceiveNext();
             KomandosNr = (int)stream.ReceiveNext();
             ZaidejoIsvaizdosMedziagosNr = (int)stream.ReceiveNext();
+            AtakosMod = (float)stream.ReceiveNext();
+            GynybosMod = (float)stream.ReceiveNext();
         }
     }
 

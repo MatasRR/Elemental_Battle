@@ -439,6 +439,7 @@
     <Compile Include="Assets\Pagalbinės programos\PlayFab\PlayFabSdk\Shared\Internal\PlayFabHttp\OneDsWebRequestPlugin.cs" />
     <Compile Include="Assets\Photon\Simple\Components\SyncState\SyncState.cs" />
     <Compile Include="Assets\Photon\Simple\Utilities\Networking\AutoDestroyWrongNetLib.cs" />
+    <Compile Include="Assets\Kodai\Meniu\Paskyros\RegionoValdymas.cs" />
     <Compile Include="Assets\Photon\PhotonUtilities\TransformCrusher\RigidbodyCrusherDrawer.cs" />
     <Compile Include="Assets\Pagalbinės programos\PlayFab\PlayFabSdk\Shared\External\aria\CompactBinaryProtocolWriter.cs" />
     <Compile Include="Assets\Photon\PhotonUtilities\Animator\AnimatorControllerTools.cs" />
@@ -470,7 +471,7 @@
     <Compile Include="Assets\Photon\Simple\Utilities\Callbacks\CallbackUtilities.cs" />
     <Compile Include="Assets\Pagalbinės programos\PlayFab\PlayFabSdk\Shared\Ionic.Zlib\ZlibCodec.cs" />
     <Compile Include="Assets\Kodai\Žaidėjas\Vanduo.cs" />
-    <Compile Include="Assets\Kodai\Žaidėjas\PagerinimuUI.cs" />
+    <Compile Include="Assets\Kodai\Žaidėjas\Pagerinimai.cs" />
     <Compile Include="Assets\Photon\Simple\Components\Mount\MountMaskSelector.cs" />
     <Compile Include="Assets\Pagalbinės programos\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Kodai\Žaidėjas\Elementas.cs" />
@@ -500,7 +501,6 @@
     <Compile Include="Assets\Photon\Simple\Core\SyncObject.cs" />
     <Compile Include="Assets\Photon\Simple\Components\Assistants\TriggerAssists.cs" />
     <Compile Include="Assets\Photon\Simple\Components\SyncOculus\Assistants\OculusAssist.cs" />
-    <Compile Include="Assets\Kodai\Meniu\Paskyros\RegionoValdymas.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />

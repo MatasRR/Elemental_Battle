@@ -4,7 +4,10 @@ Cunamis eina kiauriai objektus
 Mirus neatsistato greitis
 Įlindimas į sienas
 Galima paimti vienodus gebėjimus
-
+Bo greičio pokyčių blogai veikia ikonos virš žaidėjo
+Žemės sieną mato tik kūrėjas
+DOT neduoda xp
+Oro cast time (force orb)
 
 
 QUALITY OF LIFE:

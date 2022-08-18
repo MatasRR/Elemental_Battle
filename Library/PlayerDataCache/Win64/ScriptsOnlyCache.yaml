@@ -14,7 +14,7 @@ ScriptsOnlyBuild:
     - OrasU1
     - OrasU2
     - OroPagerinimai
-    - PagerinimuUI
+    - Pagerinimai
     - Photon.Compression.Internal.TypeCatalogue
     - Photon.Compression.PackObjectSettings
     - Photon.Compression.WorldBoundsSettings
@@ -86,7 +86,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
     PhotonUnityNetworking.Editor.dll:
     - Photon.Pun.PunSceneSettings
-    - ServerSettingsInspector
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -1162,7 +1161,7 @@ ScriptsOnlyBuild:
     className: DensityVolume
   - hash:
       serializedVersion: 2
-      Hash: f2ee93286d6ec73c283661ebe8eb4898
+      Hash: 4345be0ef17a265f23d17c7459da9782
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OrasB5
@@ -1390,7 +1389,7 @@ ScriptsOnlyBuild:
     className: IndirectLightingController
   - hash:
       serializedVersion: 2
-      Hash: 4e0656f77ef2b848dbe91ac435fd8e13
+      Hash: 69f321c734f60ac4e4830de847f8f92d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UgnisB3
@@ -1408,7 +1407,7 @@ ScriptsOnlyBuild:
     className: CurrentRoomPropertiesListedInLobbyProperty
   - hash:
       serializedVersion: 2
-      Hash: 9bd709bd2678240071b7730bd6443c10
+      Hash: 043c36cb086a619c6028d8a56b81b8c7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ZemeB4
@@ -1486,7 +1485,7 @@ ScriptsOnlyBuild:
     className: CountOfPlayersProperty
   - hash:
       serializedVersion: 2
-      Hash: 35e29c149f1ef89ef736bd1345d38d36
+      Hash: 58742317f870b221337a7bee45b2cd81
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UgnisU2
@@ -1858,7 +1857,7 @@ ScriptsOnlyBuild:
     className: TextMeshPro
   - hash:
       serializedVersion: 2
-      Hash: 5e6d2377665a9422748cfac1369463ec
+      Hash: 9066efe91c33a7402c5c4e11ef37f972
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Kulka
@@ -1918,7 +1917,7 @@ ScriptsOnlyBuild:
     className: BackgroundTimeOutField
   - hash:
       serializedVersion: 2
-      Hash: 9ccd6b72076d518c3232318270f8bfaa
+      Hash: aa283b078ce68aa212c2ecfc16c0d424
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Zeme
@@ -2152,7 +2151,7 @@ ScriptsOnlyBuild:
     className: PunCockpitEmbed
   - hash:
       serializedVersion: 2
-      Hash: 89242121f964951ecddc61e494352ee6
+      Hash: 3a6ac59cd36db4a184f949934900d947
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ugnis
@@ -2800,7 +2799,7 @@ ScriptsOnlyBuild:
     className: NamePickGui
   - hash:
       serializedVersion: 2
-      Hash: c0e06d3a4843c45fed9d631608d079cd
+      Hash: c17330b481312365047813bf5942f183
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Zaidejas
@@ -2860,7 +2859,7 @@ ScriptsOnlyBuild:
     className: RayTracingSettings
   - hash:
       serializedVersion: 2
-      Hash: 32ec251b494058d41963866528ce7b73
+      Hash: 4726748f51406b4804c8ca5c3a3c975f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VanduoU1
@@ -2914,7 +2913,7 @@ ScriptsOnlyBuild:
     className: ContactGroupAssign
   - hash:
       serializedVersion: 2
-      Hash: a4640cb52589ef7c2a27a4c902947747
+      Hash: 4a80b1684206d2bd2754408a0a9c2fda
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VanduoU3
@@ -2956,7 +2955,7 @@ ScriptsOnlyBuild:
     className: StaticLightingSky
   - hash:
       serializedVersion: 2
-      Hash: 5e6d2377665a9422748cfac1369463ec
+      Hash: 9066efe91c33a7402c5c4e11ef37f972
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ZemeU1
@@ -3046,7 +3045,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerBitField
   - hash:
       serializedVersion: 2
-      Hash: 4d5d3d804e8cbe95ec75750e9da9a439
+      Hash: a57ff0caeac2877d06ab5a853f1a5a1d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UgnisU1
@@ -3268,7 +3267,7 @@ ScriptsOnlyBuild:
     className: OnClickDestroy
   - hash:
       serializedVersion: 2
-      Hash: b1073ce230461edd277b351e0576a894
+      Hash: a8a7ec8029b871c0836997ad314ae486
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OrasU2
@@ -3280,7 +3279,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 2217e86ae91c64b3a94ac87b2228fcef
+      Hash: 5ef8c59a9be4d818ce6fae65d5166196
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OrasU1
@@ -3436,7 +3435,7 @@ ScriptsOnlyBuild:
     className: SuperBasicController
   - hash:
       serializedVersion: 2
-      Hash: 81ddf11c2ba5020d799a66890c383e0d
+      Hash: 05b7384c2b92d1809364b723099947cd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VanduoU2
@@ -3514,7 +3513,7 @@ ScriptsOnlyBuild:
     className: VFXAudioSpectrumBinder
   - hash:
       serializedVersion: 2
-      Hash: 7ac773b1e67394ebcaa820e08c7575e8
+      Hash: b4616a7bc5e5f44088d418df558ea927
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ZemeU2
@@ -3646,7 +3645,7 @@ ScriptsOnlyBuild:
     className: RenderPipelineResources
   - hash:
       serializedVersion: 2
-      Hash: 6be73cd3ddbda511089d9c413d51fa73
+      Hash: 351b7286117af1bc6c3c71d73a4cc3ec
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Oras
@@ -3790,7 +3789,7 @@ ScriptsOnlyBuild:
     className: TextToggleIsOnTransition
   - hash:
       serializedVersion: 2
-      Hash: 7e74c27859967b93f358ba031c25bab8
+      Hash: 3f8eb89deb4936f2b310d07ff9c24294
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Vanduo
@@ -3802,10 +3801,10 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 5cde27834b97e82d2c29e97f1a6a861c
+      Hash: 7ddae4b4014453d2fc4fb1b6cf30dbf9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PagerinimuUI
+    className: Pagerinimai
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -3820,7 +3819,7 @@ ScriptsOnlyBuild:
     className: Volume
   - hash:
       serializedVersion: 2
-      Hash: 3d79157d6b5a1f7cdf1028ed8064509d
+      Hash: 5eeb6f18afda6d399e7af15ec65c0785
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Elementas

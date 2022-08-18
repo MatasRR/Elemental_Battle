@@ -57,16 +57,16 @@ public class Judejimas : MonoBehaviourPun
         Vector3 JudX = Input.GetAxisRaw("Horizontal") * transform.right;
         Vector3 JudZ = Input.GetAxisRaw("Vertical") * transform.forward;
 
-        Vector3 Jud = (JudX + JudZ).normalized * ZaidejoKodas.Greitis;
+        Vector3 Jud = (JudX + JudZ).normalized * ZaidejoKodas.Greitis * ZaidejoKodas.GreicioMod;
         RB.MovePosition(RB.position + Jud * Time.fixedDeltaTime);
 
         if (Input.GetKey(KeyCode.Space) && (ZaidejoKodas.GaliSkraidyti || AntZemes()))
         {
-            RB.AddForce(Vector3.up * ZaidejoKodas.Soklumas, ForceMode.Impulse);
+            RB.AddForce(Vector3.up * ZaidejoKodas.Soklumas * ZaidejoKodas.SoklumoMod, ForceMode.Impulse);
         }
         else if (Input.GetKey(KeyCode.LeftShift) && ZaidejoKodas.GaliSkraidyti)
         {
-            RB.AddForce(-Vector3.up * ZaidejoKodas.Soklumas * 0.5f, ForceMode.Impulse);
+            RB.AddForce(-Vector3.up * ZaidejoKodas.Soklumas * ZaidejoKodas.SoklumoMod * 0.5f, ForceMode.Impulse);
         }
 
         if (!ZaidejoKodas.GaliSkraidyti)

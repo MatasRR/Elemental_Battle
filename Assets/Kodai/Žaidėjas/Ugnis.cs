@@ -200,10 +200,8 @@ public class Ugnis : Elementas
     {
         ZaidejoKodas.SkraidymoCCLaikas += B4Trukme;
         ZaidejoKodas.SoklumoMod *= SoklumoKompensacija;
-        ZaidejoKodas.GreicioIrSoklumoPerskaiciavimas();
         yield return new WaitForSeconds(B4Trukme);
         ZaidejoKodas.SoklumoMod /= SoklumoKompensacija;
-        ZaidejoKodas.GreicioIrSoklumoPerskaiciavimas();
     }
 
     void B4Liepsnos()

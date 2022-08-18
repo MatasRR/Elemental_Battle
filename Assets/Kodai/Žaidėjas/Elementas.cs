@@ -17,12 +17,6 @@ public class Elementas : MonoBehaviourPun
     [HideInInspector]
     public Camera Kamera;
 
-
-    [HideInInspector]
-    public float Patirtis;
-    [HideInInspector]
-    public TextMeshProUGUI PatirtiesTekstas;
-
     [HideInInspector]
     public float BCD = 0;
     [HideInInspector]
@@ -74,20 +68,15 @@ public class Elementas : MonoBehaviourPun
         BBBCDFonas = ZaidejoKodas.BBBCDFonas;
         UCDFonas = ZaidejoKodas.UCDFonas;
 
-        PatirtiesTekstas = ZaidejoKodas.PatirtiesTekstas;
-
         CDNustatymas();
     }
 
     public virtual void Update()
     {
-        Patirtis += Time.deltaTime;
-        PatirtiesTekstas.text = Mathf.Floor(Patirtis).ToString();
-
-        DabBCD -= Time.deltaTime;
-        DabBBCD -= Time.deltaTime;
-        DabBBBCD -= Time.deltaTime;
-        DabUCD -= Time.deltaTime;
+        DabBCD -= Time.deltaTime * ZaidejoKodas.GebejimuAtsikrovimoMod;
+        DabBBCD -= Time.deltaTime * ZaidejoKodas.GebejimuAtsikrovimoMod;
+        DabBBBCD -= Time.deltaTime * ZaidejoKodas.GebejimuAtsikrovimoMod;
+        DabUCD -= Time.deltaTime * ZaidejoKodas.GebejimuAtsikrovimoMod;
 
         DabBCD = Mathf.Max(DabBCD, 0);
         DabBBCD = Mathf.Max(DabBBCD, 0);

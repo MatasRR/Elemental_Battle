@@ -4,40 +4,23 @@ using UnityEngine;
 
 public class Kulka : MonoBehaviour
 {
-    [HideInInspector]
-    public float Zala;
-    [HideInInspector]
-    public float DOTZala;
-    [HideInInspector]
-    public float DOTDaznis;
-    [HideInInspector]
-    public float DOTTrukme;
+    [HideInInspector] public float Zala;
+    [HideInInspector] public float DOTZala;
+    [HideInInspector] public float DOTDaznis;
+    [HideInInspector] public float DOTTrukme = 0f;
 
-    [HideInInspector]
-    public float Greitis;
-    [HideInInspector]
-    public GameObject Autorius;
-    [HideInInspector]
-    public Zaidejas AutoriausZaidejoKodas;
-    [HideInInspector]
-    public Elementas AutoriausElementoKodas;
-    [HideInInspector]
-    public int KomandosNr;
-    [HideInInspector]
-    public int ElementoNr;
-    [HideInInspector]
-    public float AtakosMod;
+    [HideInInspector] public float Greitis;
+    [HideInInspector] public GameObject Autorius;
+    [HideInInspector] public Zaidejas AutoriausZaidejoKodas;
+    [HideInInspector] public int KomandosNr;
+    [HideInInspector] public int ElementoNr;
+    [HideInInspector] public float AtakosMod;
 
-    [HideInInspector]
-    public float SustingdymoLaikas;
-    [HideInInspector]
-    public float NuginklavimoLaikas;
-    [HideInInspector]
-    public float SuletinimoLaikas;
-    [HideInInspector]
-    public float SuletinimoStipris = 1f;
-    [HideInInspector]
-    public float SoklumoSilpninimoStipris = 1f;
+    [HideInInspector] public float SustingdymoLaikas = 0f;
+    [HideInInspector] public float NuginklavimoLaikas = 0f;
+    [HideInInspector] public float SuletinimoLaikas = 0f;
+    [HideInInspector] public float SuletinimoStipris = 0f;
+    [HideInInspector] public float SoklumoSilpninimoStipris = 0f;
 
     public bool EinaKiaurai = false;
     public bool TuriFizikosEfektu = false;
@@ -59,22 +42,6 @@ public class Kulka : MonoBehaviour
         ElementoNr = AutoriausZaidejoKodas.ElementoNr;
         KomandosNr = AutoriausZaidejoKodas.KomandosNr;
         AtakosMod = AutoriausZaidejoKodas.AtakosMod;
-
-        switch(ElementoNr)
-        {
-            case 1:
-                AutoriausElementoKodas = Autorius.GetComponent<Oras>();
-                break;
-            case 2:
-                AutoriausElementoKodas = Autorius.GetComponent<Vanduo>();
-                break;
-            case 3:
-                AutoriausElementoKodas = Autorius.GetComponent<Zeme>();
-                break;
-            case 4:
-                AutoriausElementoKodas = Autorius.GetComponent<Ugnis>();
-                break;
-        }
     }
 
     public virtual void Update()
@@ -134,28 +101,16 @@ public class Kulka : MonoBehaviour
                 ZaidejoKodas.KeistiPaskutiniZalojusiZaideja(AutoriausZaidejoKodas);
                 ZaidejoKodas.GautiZalos(Zala * AtakosMod, ElementoNr);
 
-                AutoriausElementoKodas.Patirtis += Zala;
+                AutoriausZaidejoKodas.Patirtis += Zala * AtakosMod / ZaidejoKodas.GynybosMod;
+
+                ZaidejoKodas.GautiDOTZalos(DOTZala * AtakosMod, DOTDaznis, DOTTrukme, ElementoNr);
+                ZaidejoKodas.JudejimoCCLaikas += SustingdymoLaikas;
+                ZaidejoKodas.PuolimoCCLaikas += NuginklavimoLaikas;
+                ZaidejoKodas.Suletinti(SuletinimoStipris, SoklumoSilpninimoStipris, SuletinimoLaikas);
 
                 if (TuriFizikosEfektu)
                 {
                     FizikosEfektai(go.GetComponent<Rigidbody>());
-                }
-
-                if (DOTZala != 0)
-                {
-                    ZaidejoKodas.GautiDOTZalos(DOTZala * AtakosMod, DOTDaznis, DOTTrukme, ElementoNr);
-                }
-                if (SustingdymoLaikas != 0)
-                {
-                    ZaidejoKodas.JudejimoCCLaikas += SustingdymoLaikas;
-                }
-                if (NuginklavimoLaikas != 0)
-                {
-                    ZaidejoKodas.PuolimoCCLaikas += NuginklavimoLaikas;
-                }
-                if (SuletinimoLaikas != 0)
-                {
-                    ZaidejoKodas.Suletinti(SuletinimoStipris, SoklumoSilpninimoStipris, SuletinimoLaikas);
                 }
             }
         }
@@ -171,11 +126,7 @@ public class Kulka : MonoBehaviour
                 else
                 {
                     SkydoKodas.GautiZalos(Zala);
-
-                    if (DOTZala != 0)
-                    {
-                        StartCoroutine(SkydoKodas.GautiDOTZalos(DOTZala * AtakosMod, DOTDaznis, DOTTrukme));
-                    }
+                    StartCoroutine(SkydoKodas.GautiDOTZalos(DOTZala * AtakosMod, DOTDaznis, DOTTrukme));
 
                     if (Zala < SkydoKodas.MaxSugeriamaZala)
                     {

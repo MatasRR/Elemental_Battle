@@ -115,18 +115,7 @@ public class Oras : Elementas
 
     public override void B3()
     {
-        StartCoroutine(_B3());
-    }
-
-	IEnumerator _B3 ()
-	{
-		ZaidejoKodas.GreicioMod *= B3GreicioMod;
-		ZaidejoKodas.SoklumoMod *= B3SoklumoMod;
-        ZaidejoKodas.GreicioIrSoklumoPerskaiciavimas();
-		yield return new WaitForSeconds (B3Trukme);
-		ZaidejoKodas.GreicioMod /= B3GreicioMod;
-		ZaidejoKodas.SoklumoMod /= B3SoklumoMod;
-        ZaidejoKodas.GreicioIrSoklumoPerskaiciavimas();
+        ZaidejoKodas.Suletinti(-B3GreicioMod, -B3SoklumoMod, B3Trukme);
     }
 
     public override void B4 ()
@@ -138,11 +127,9 @@ public class Oras : Elementas
 	{
         ZaidejoKodas.SkraidymoCCLaikas += B4Trukme;
         ZaidejoKodas.SoklumoMod *= SoklumoKompensacija;
-        ZaidejoKodas.GreicioIrSoklumoPerskaiciavimas();
         //gameObject.GetComponent<Rigidbody>().useGravity = false;
 		yield return new WaitForSeconds (B4Trukme);
         ZaidejoKodas.SoklumoMod /= SoklumoKompensacija;
-        ZaidejoKodas.GreicioIrSoklumoPerskaiciavimas();
         //gameObject.GetComponent<Rigidbody>().useGravity = true;
     }
 
